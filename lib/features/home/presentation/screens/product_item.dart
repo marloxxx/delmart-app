@@ -1,12 +1,13 @@
-import 'package:delmart/features/home/data/models/products/product_model.dart';
-import 'package:delmart/routes/app_routers.gr.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
+
+import '../../../../routes/app_routers.dart';
+import '../../data/models/products/product_model.dart';
 
 class ProductItem extends StatefulWidget {
   final ProductList? productList;
 
-  const ProductItem({Key? key, this.productList}) : super(key: key);
+  const ProductItem({super.key, this.productList});
 
   @override
   State<ProductItem> createState() => _ProductItemState();
@@ -23,7 +24,7 @@ class _ProductItemState extends State<ProductItem> {
         return InkWell(
           onTap: () {
             AutoRouter.of(context).push(
-                ProductDetailScreen(productId: widget.productList![index].id));
+                ProductDetailRoute(productId: widget.productList![index].id));
           },
           child: Container(
             margin: const EdgeInsets.only(top: 20),

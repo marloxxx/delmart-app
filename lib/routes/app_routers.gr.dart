@@ -1,539 +1,480 @@
-// **************************************************************************
-// AutoRouteGenerator
-// **************************************************************************
-
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
-// AutoRouteGenerator
+// AutoRouterGenerator
 // **************************************************************************
-//
+
 // ignore_for_file: type=lint
+// coverage:ignore-file
 
-// ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i17;
-import 'package:flutter/material.dart' as _i18;
+part of 'app_routers.dart';
 
-import '../features/cart/presentation/screens/cart_screen.dart' as _i11;
-import '../features/checkout/data/models/order/order_model.dart' as _i21;
-import '../features/checkout/presentation/screens/checkout_screen.dart' as _i12;
-import '../features/checkout/presentation/screens/checkout_success_screen.dart'
-    as _i13;
-import '../features/credit/data/models/credit/credit_model.dart' as _i19;
-import '../features/credit/data/models/order/order_model.dart' as _i20;
-import '../features/credit/presentation/screens/credit_checkout_screen.dart'
-    as _i7;
-import '../features/credit/presentation/screens/credit_checkout_success_screen.dart'
-    as _i8;
-import '../features/credit/presentation/screens/credit_screen.dart' as _i6;
-import '../features/home/presentation/screens/home_screen.dart' as _i4;
-import '../features/login/presentation/screens/login_screen.dart' as _i2;
-import '../features/order/presentation/screens/order_screen.dart' as _i15;
-import '../features/product_detail/presentation/screens/product_detail_screen.dart'
-    as _i5;
-import '../features/profile/presentation/screens/profile_screen.dart' as _i14;
-import '../features/register/presentation/screens/register_screen.dart' as _i3;
-import '../features/request_room/presentation/screens/request_room_screen.dart'
-    as _i16;
-import '../features/room/presentation/screens/room_screen.dart' as _i9;
-import '../features/room_detail/presentation/screens/room_detail_screen.dart'
-    as _i10;
-import '../features/splash/presentation/splash_screen.dart' as _i1;
-
-class FlutterRouter extends _i17.RootStackRouter {
-  FlutterRouter([_i18.GlobalKey<_i18.NavigatorState>? navigatorKey])
-      : super(navigatorKey);
+abstract class _$AppRouter extends RootStackRouter {
+  // ignore: unused_element
+  _$AppRouter({super.navigatorKey});
 
   @override
-  final Map<String, _i17.PageFactory> pagesMap = {
-    SplashScreen.name: (routeData) {
-      return _i17.MaterialPageX<bool>(
+  final Map<String, PageFactory> pagesMap = {
+    CartRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i1.SplashScreen(),
+        child: const CartScreen(),
       );
     },
-    LoginScreen.name: (routeData) {
-      return _i17.MaterialPageX<bool>(
+    CheckoutRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.LoginScreen(),
+        child: const CheckoutScreen(),
       );
     },
-    RegisterScreen.name: (routeData) {
-      return _i17.MaterialPageX<bool>(
+    CheckoutSuccessRoute.name: (routeData) {
+      final args = routeData.argsAs<CheckoutSuccessRouteArgs>();
+      return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.RegisterScreen(),
-      );
-    },
-    HomeScreen.name: (routeData) {
-      return _i17.MaterialPageX<bool>(
-        routeData: routeData,
-        child: const _i4.HomeScreen(),
-      );
-    },
-    ProductDetailScreen.name: (routeData) {
-      final args = routeData.argsAs<ProductDetailScreenArgs>();
-      return _i17.MaterialPageX<bool>(
-        routeData: routeData,
-        child: _i5.ProductDetailScreen(
+        child: CheckoutSuccessScreen(
           key: args.key,
-          productId: args.productId,
+          order: args.order,
         ),
       );
     },
-    CreditScreen.name: (routeData) {
-      return _i17.MaterialPageX<bool>(
+    CreditCheckoutRoute.name: (routeData) {
+      final args = routeData.argsAs<CreditCheckoutRouteArgs>();
+      return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i6.CreditScreen(),
-      );
-    },
-    CreditCheckoutScreen.name: (routeData) {
-      final args = routeData.argsAs<CreditCheckoutScreenArgs>();
-      return _i17.MaterialPageX<bool>(
-        routeData: routeData,
-        child: _i7.CreditCheckoutScreen(
+        child: CreditCheckoutScreen(
           args.credit,
           key: args.key,
         ),
       );
     },
-    CreditCheckoutSuccessScreen.name: (routeData) {
-      final args = routeData.argsAs<CreditCheckoutSuccessScreenArgs>();
-      return _i17.MaterialPageX<bool>(
+    CreditCheckoutSuccessRoute.name: (routeData) {
+      final args = routeData.argsAs<CreditCheckoutSuccessRouteArgs>();
+      return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i8.CreditCheckoutSuccessScreen(
+        child: CreditCheckoutSuccessScreen(
           key: args.key,
           order: args.order,
         ),
       );
     },
-    RoomScreen.name: (routeData) {
-      return _i17.MaterialPageX<bool>(
+    CreditRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i9.RoomScreen(),
+        child: const CreditScreen(),
       );
     },
-    RoomDetailScreen.name: (routeData) {
-      final args = routeData.argsAs<RoomDetailScreenArgs>();
-      return _i17.MaterialPageX<bool>(
+    HomeRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i10.RoomDetailScreen(
+        child: const HomeScreen(),
+      );
+    },
+    LoginRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const LoginScreen(),
+      );
+    },
+    OrderRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const OrderScreen(),
+      );
+    },
+    ProductDetailRoute.name: (routeData) {
+      final args = routeData.argsAs<ProductDetailRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: ProductDetailScreen(
+          key: args.key,
+          productId: args.productId,
+        ),
+      );
+    },
+    ProfileRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ProfileScreen(),
+      );
+    },
+    RegisterRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const RegisterScreen(),
+      );
+    },
+    RequestRoomRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const RequestRoomScreen(),
+      );
+    },
+    RoomDetailRoute.name: (routeData) {
+      final args = routeData.argsAs<RoomDetailRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: RoomDetailScreen(
           key: args.key,
           roomId: args.roomId,
         ),
       );
     },
-    CartScreen.name: (routeData) {
-      return _i17.MaterialPageX<bool>(
+    RoomRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i11.CartScreen(),
+        child: const RoomScreen(),
       );
     },
-    CheckoutScreen.name: (routeData) {
-      return _i17.MaterialPageX<bool>(
+    SplashRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i12.CheckoutScreen(),
-      );
-    },
-    CheckoutSuccessScreen.name: (routeData) {
-      final args = routeData.argsAs<CheckoutSuccessScreenArgs>();
-      return _i17.MaterialPageX<bool>(
-        routeData: routeData,
-        child: _i13.CheckoutSuccessScreen(
-          key: args.key,
-          order: args.order,
-        ),
-      );
-    },
-    ProfileScreen.name: (routeData) {
-      return _i17.MaterialPageX<bool>(
-        routeData: routeData,
-        child: const _i14.ProfileScreen(),
-      );
-    },
-    OrderScreen.name: (routeData) {
-      return _i17.MaterialPageX<bool>(
-        routeData: routeData,
-        child: const _i15.OrderScreen(),
-      );
-    },
-    RequestRoomScreen.name: (routeData) {
-      return _i17.MaterialPageX<bool>(
-        routeData: routeData,
-        child: const _i16.RequestRoomScreen(),
+        child: const SplashScreen(),
       );
     },
   };
+}
+
+/// generated route for
+/// [CartScreen]
+class CartRoute extends PageRouteInfo<void> {
+  const CartRoute({List<PageRouteInfo>? children})
+      : super(
+          CartRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CartRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [CheckoutScreen]
+class CheckoutRoute extends PageRouteInfo<void> {
+  const CheckoutRoute({List<PageRouteInfo>? children})
+      : super(
+          CheckoutRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CheckoutRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [CheckoutSuccessScreen]
+class CheckoutSuccessRoute extends PageRouteInfo<CheckoutSuccessRouteArgs> {
+  CheckoutSuccessRoute({
+    Key? key,
+    required checkout.OrderModel order,
+    List<PageRouteInfo>? children,
+  }) : super(
+          CheckoutSuccessRoute.name,
+          args: CheckoutSuccessRouteArgs(
+            key: key,
+            order: order,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'CheckoutSuccessRoute';
+
+  static const PageInfo<CheckoutSuccessRouteArgs> page =
+      PageInfo<CheckoutSuccessRouteArgs>(name);
+}
+
+class CheckoutSuccessRouteArgs {
+  const CheckoutSuccessRouteArgs({
+    this.key,
+    required this.order,
+  });
+
+  final Key? key;
+
+  final checkout.OrderModel order;
 
   @override
-  List<_i17.RouteConfig> get routes => [
-        _i17.RouteConfig(
-          SplashScreen.name,
-          path: '/',
-        ),
-        _i17.RouteConfig(
-          LoginScreen.name,
-          path: '/login',
-        ),
-        _i17.RouteConfig(
-          RegisterScreen.name,
-          path: '/register',
-        ),
-        _i17.RouteConfig(
-          HomeScreen.name,
-          path: '/home',
-        ),
-        _i17.RouteConfig(
-          ProductDetailScreen.name,
-          path: '/product-detail',
-        ),
-        _i17.RouteConfig(
-          CreditScreen.name,
-          path: '/credit',
-        ),
-        _i17.RouteConfig(
-          CreditCheckoutScreen.name,
-          path: '/credit/checkout',
-        ),
-        _i17.RouteConfig(
-          CreditCheckoutSuccessScreen.name,
-          path: '/credit/checkout/success',
-        ),
-        _i17.RouteConfig(
-          RoomScreen.name,
-          path: '/room',
-        ),
-        _i17.RouteConfig(
-          RoomDetailScreen.name,
-          path: '/room-detail',
-        ),
-        _i17.RouteConfig(
-          CartScreen.name,
-          path: '/cart',
-        ),
-        _i17.RouteConfig(
-          CheckoutScreen.name,
-          path: '/checkout',
-        ),
-        _i17.RouteConfig(
-          CheckoutSuccessScreen.name,
-          path: '/checkout-success',
-        ),
-        _i17.RouteConfig(
-          ProfileScreen.name,
-          path: '/profile',
-        ),
-        _i17.RouteConfig(
-          OrderScreen.name,
-          path: '/order',
-        ),
-        _i17.RouteConfig(
-          RequestRoomScreen.name,
-          path: '/request-room',
-        ),
-      ];
+  String toString() {
+    return 'CheckoutSuccessRouteArgs{key: $key, order: $order}';
+  }
 }
 
 /// generated route for
-/// [_i1.SplashScreen]
-class SplashScreen extends _i17.PageRouteInfo<void> {
-  const SplashScreen()
-      : super(
-          SplashScreen.name,
-          path: '/',
-        );
-
-  static const String name = 'SplashScreen';
-}
-
-/// generated route for
-/// [_i2.LoginScreen]
-class LoginScreen extends _i17.PageRouteInfo<void> {
-  const LoginScreen()
-      : super(
-          LoginScreen.name,
-          path: '/login',
-        );
-
-  static const String name = 'LoginScreen';
-}
-
-/// generated route for
-/// [_i3.RegisterScreen]
-class RegisterScreen extends _i17.PageRouteInfo<void> {
-  const RegisterScreen()
-      : super(
-          RegisterScreen.name,
-          path: '/register',
-        );
-
-  static const String name = 'RegisterScreen';
-}
-
-/// generated route for
-/// [_i4.HomeScreen]
-class HomeScreen extends _i17.PageRouteInfo<void> {
-  const HomeScreen()
-      : super(
-          HomeScreen.name,
-          path: '/home',
-        );
-
-  static const String name = 'HomeScreen';
-}
-
-/// generated route for
-/// [_i5.ProductDetailScreen]
-class ProductDetailScreen extends _i17.PageRouteInfo<ProductDetailScreenArgs> {
-  ProductDetailScreen({
-    _i18.Key? key,
-    required int productId,
+/// [CreditCheckoutScreen]
+class CreditCheckoutRoute extends PageRouteInfo<CreditCheckoutRouteArgs> {
+  CreditCheckoutRoute({
+    required Credit credit,
+    Key? key,
+    List<PageRouteInfo>? children,
   }) : super(
-          ProductDetailScreen.name,
-          path: '/product-detail',
-          args: ProductDetailScreenArgs(
+          CreditCheckoutRoute.name,
+          args: CreditCheckoutRouteArgs(
+            credit: credit,
+            key: key,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'CreditCheckoutRoute';
+
+  static const PageInfo<CreditCheckoutRouteArgs> page =
+      PageInfo<CreditCheckoutRouteArgs>(name);
+}
+
+class CreditCheckoutRouteArgs {
+  const CreditCheckoutRouteArgs({
+    required this.credit,
+    this.key,
+  });
+
+  final Credit credit;
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'CreditCheckoutRouteArgs{credit: $credit, key: $key}';
+  }
+}
+
+/// generated route for
+/// [CreditCheckoutSuccessScreen]
+class CreditCheckoutSuccessRoute
+    extends PageRouteInfo<CreditCheckoutSuccessRouteArgs> {
+  CreditCheckoutSuccessRoute({
+    Key? key,
+    required credit.OrderModel order,
+    List<PageRouteInfo>? children,
+  }) : super(
+          CreditCheckoutSuccessRoute.name,
+          args: CreditCheckoutSuccessRouteArgs(
+            key: key,
+            order: order,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'CreditCheckoutSuccessRoute';
+
+  static const PageInfo<CreditCheckoutSuccessRouteArgs> page =
+      PageInfo<CreditCheckoutSuccessRouteArgs>(name);
+}
+
+class CreditCheckoutSuccessRouteArgs {
+  const CreditCheckoutSuccessRouteArgs({
+    this.key,
+    required this.order,
+  });
+
+  final Key? key;
+
+  final credit.OrderModel order;
+
+  @override
+  String toString() {
+    return 'CreditCheckoutSuccessRouteArgs{key: $key, order: $order}';
+  }
+}
+
+/// generated route for
+/// [CreditScreen]
+class CreditRoute extends PageRouteInfo<void> {
+  const CreditRoute({List<PageRouteInfo>? children})
+      : super(
+          CreditRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CreditRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [HomeScreen]
+class HomeRoute extends PageRouteInfo<void> {
+  const HomeRoute({List<PageRouteInfo>? children})
+      : super(
+          HomeRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'HomeRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [LoginScreen]
+class LoginRoute extends PageRouteInfo<void> {
+  const LoginRoute({List<PageRouteInfo>? children})
+      : super(
+          LoginRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'LoginRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [OrderScreen]
+class OrderRoute extends PageRouteInfo<void> {
+  const OrderRoute({List<PageRouteInfo>? children})
+      : super(
+          OrderRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'OrderRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ProductDetailScreen]
+class ProductDetailRoute extends PageRouteInfo<ProductDetailRouteArgs> {
+  ProductDetailRoute({
+    Key? key,
+    required int productId,
+    List<PageRouteInfo>? children,
+  }) : super(
+          ProductDetailRoute.name,
+          args: ProductDetailRouteArgs(
             key: key,
             productId: productId,
           ),
+          initialChildren: children,
         );
 
-  static const String name = 'ProductDetailScreen';
+  static const String name = 'ProductDetailRoute';
+
+  static const PageInfo<ProductDetailRouteArgs> page =
+      PageInfo<ProductDetailRouteArgs>(name);
 }
 
-class ProductDetailScreenArgs {
-  const ProductDetailScreenArgs({
+class ProductDetailRouteArgs {
+  const ProductDetailRouteArgs({
     this.key,
     required this.productId,
   });
 
-  final _i18.Key? key;
+  final Key? key;
 
   final int productId;
 
   @override
   String toString() {
-    return 'ProductDetailScreenArgs{key: $key, productId: $productId}';
+    return 'ProductDetailRouteArgs{key: $key, productId: $productId}';
   }
 }
 
 /// generated route for
-/// [_i6.CreditScreen]
-class CreditScreen extends _i17.PageRouteInfo<void> {
-  const CreditScreen()
+/// [ProfileScreen]
+class ProfileRoute extends PageRouteInfo<void> {
+  const ProfileRoute({List<PageRouteInfo>? children})
       : super(
-          CreditScreen.name,
-          path: '/credit',
+          ProfileRoute.name,
+          initialChildren: children,
         );
 
-  static const String name = 'CreditScreen';
+  static const String name = 'ProfileRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i7.CreditCheckoutScreen]
-class CreditCheckoutScreen
-    extends _i17.PageRouteInfo<CreditCheckoutScreenArgs> {
-  CreditCheckoutScreen({
-    required _i19.Credit credit,
-    _i18.Key? key,
-  }) : super(
-          CreditCheckoutScreen.name,
-          path: '/credit/checkout',
-          args: CreditCheckoutScreenArgs(
-            credit: credit,
-            key: key,
-          ),
-        );
-
-  static const String name = 'CreditCheckoutScreen';
-}
-
-class CreditCheckoutScreenArgs {
-  const CreditCheckoutScreenArgs({
-    required this.credit,
-    this.key,
-  });
-
-  final _i19.Credit credit;
-
-  final _i18.Key? key;
-
-  @override
-  String toString() {
-    return 'CreditCheckoutScreenArgs{credit: $credit, key: $key}';
-  }
-}
-
-/// generated route for
-/// [_i8.CreditCheckoutSuccessScreen]
-class CreditCheckoutSuccessScreen
-    extends _i17.PageRouteInfo<CreditCheckoutSuccessScreenArgs> {
-  CreditCheckoutSuccessScreen({
-    _i18.Key? key,
-    required _i20.OrderModel order,
-  }) : super(
-          CreditCheckoutSuccessScreen.name,
-          path: '/credit/checkout/success',
-          args: CreditCheckoutSuccessScreenArgs(
-            key: key,
-            order: order,
-          ),
-        );
-
-  static const String name = 'CreditCheckoutSuccessScreen';
-}
-
-class CreditCheckoutSuccessScreenArgs {
-  const CreditCheckoutSuccessScreenArgs({
-    this.key,
-    required this.order,
-  });
-
-  final _i18.Key? key;
-
-  final _i20.OrderModel order;
-
-  @override
-  String toString() {
-    return 'CreditCheckoutSuccessScreenArgs{key: $key, order: $order}';
-  }
-}
-
-/// generated route for
-/// [_i9.RoomScreen]
-class RoomScreen extends _i17.PageRouteInfo<void> {
-  const RoomScreen()
+/// [RegisterScreen]
+class RegisterRoute extends PageRouteInfo<void> {
+  const RegisterRoute({List<PageRouteInfo>? children})
       : super(
-          RoomScreen.name,
-          path: '/room',
+          RegisterRoute.name,
+          initialChildren: children,
         );
 
-  static const String name = 'RoomScreen';
+  static const String name = 'RegisterRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i10.RoomDetailScreen]
-class RoomDetailScreen extends _i17.PageRouteInfo<RoomDetailScreenArgs> {
-  RoomDetailScreen({
-    _i18.Key? key,
+/// [RequestRoomScreen]
+class RequestRoomRoute extends PageRouteInfo<void> {
+  const RequestRoomRoute({List<PageRouteInfo>? children})
+      : super(
+          RequestRoomRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'RequestRoomRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [RoomDetailScreen]
+class RoomDetailRoute extends PageRouteInfo<RoomDetailRouteArgs> {
+  RoomDetailRoute({
+    Key? key,
     required int roomId,
+    List<PageRouteInfo>? children,
   }) : super(
-          RoomDetailScreen.name,
-          path: '/room-detail',
-          args: RoomDetailScreenArgs(
+          RoomDetailRoute.name,
+          args: RoomDetailRouteArgs(
             key: key,
             roomId: roomId,
           ),
+          initialChildren: children,
         );
 
-  static const String name = 'RoomDetailScreen';
+  static const String name = 'RoomDetailRoute';
+
+  static const PageInfo<RoomDetailRouteArgs> page =
+      PageInfo<RoomDetailRouteArgs>(name);
 }
 
-class RoomDetailScreenArgs {
-  const RoomDetailScreenArgs({
+class RoomDetailRouteArgs {
+  const RoomDetailRouteArgs({
     this.key,
     required this.roomId,
   });
 
-  final _i18.Key? key;
+  final Key? key;
 
   final int roomId;
 
   @override
   String toString() {
-    return 'RoomDetailScreenArgs{key: $key, roomId: $roomId}';
+    return 'RoomDetailRouteArgs{key: $key, roomId: $roomId}';
   }
 }
 
 /// generated route for
-/// [_i11.CartScreen]
-class CartScreen extends _i17.PageRouteInfo<void> {
-  const CartScreen()
+/// [RoomScreen]
+class RoomRoute extends PageRouteInfo<void> {
+  const RoomRoute({List<PageRouteInfo>? children})
       : super(
-          CartScreen.name,
-          path: '/cart',
+          RoomRoute.name,
+          initialChildren: children,
         );
 
-  static const String name = 'CartScreen';
+  static const String name = 'RoomRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i12.CheckoutScreen]
-class CheckoutScreen extends _i17.PageRouteInfo<void> {
-  const CheckoutScreen()
+/// [SplashScreen]
+class SplashRoute extends PageRouteInfo<void> {
+  const SplashRoute({List<PageRouteInfo>? children})
       : super(
-          CheckoutScreen.name,
-          path: '/checkout',
+          SplashRoute.name,
+          initialChildren: children,
         );
 
-  static const String name = 'CheckoutScreen';
-}
+  static const String name = 'SplashRoute';
 
-/// generated route for
-/// [_i13.CheckoutSuccessScreen]
-class CheckoutSuccessScreen
-    extends _i17.PageRouteInfo<CheckoutSuccessScreenArgs> {
-  CheckoutSuccessScreen({
-    _i18.Key? key,
-    required _i21.OrderModel order,
-  }) : super(
-          CheckoutSuccessScreen.name,
-          path: '/checkout-success',
-          args: CheckoutSuccessScreenArgs(
-            key: key,
-            order: order,
-          ),
-        );
-
-  static const String name = 'CheckoutSuccessScreen';
-}
-
-class CheckoutSuccessScreenArgs {
-  const CheckoutSuccessScreenArgs({
-    this.key,
-    required this.order,
-  });
-
-  final _i18.Key? key;
-
-  final _i21.OrderModel order;
-
-  @override
-  String toString() {
-    return 'CheckoutSuccessScreenArgs{key: $key, order: $order}';
-  }
-}
-
-/// generated route for
-/// [_i14.ProfileScreen]
-class ProfileScreen extends _i17.PageRouteInfo<void> {
-  const ProfileScreen()
-      : super(
-          ProfileScreen.name,
-          path: '/profile',
-        );
-
-  static const String name = 'ProfileScreen';
-}
-
-/// generated route for
-/// [_i15.OrderScreen]
-class OrderScreen extends _i17.PageRouteInfo<void> {
-  const OrderScreen()
-      : super(
-          OrderScreen.name,
-          path: '/order',
-        );
-
-  static const String name = 'OrderScreen';
-}
-
-/// generated route for
-/// [_i16.RequestRoomScreen]
-class RequestRoomScreen extends _i17.PageRouteInfo<void> {
-  const RequestRoomScreen()
-      : super(
-          RequestRoomScreen.name,
-          path: '/request-room',
-        );
-
-  static const String name = 'RequestRoomScreen';
+  static const PageInfo<void> page = PageInfo<void>(name);
 }

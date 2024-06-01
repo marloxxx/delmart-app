@@ -1,9 +1,10 @@
-import 'package:delmart/routes/app_routers.gr.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart'
     show FontAwesomeIcons, FaIcon;
+
+import '../../../../routes/app_routers.dart';
 import '../../../../shared/theme.dart';
 import '../bloc/register_bloc.dart';
 import '../bloc/register_event.dart';
@@ -12,7 +13,7 @@ import '../shared/custom_text_form_field.dart';
 import '../shared/custom_filled_button.dart';
 import '../../data/models/user_model.dart';
 
-// this is the login page
+@RoutePage()
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
   static const String routeName = '/register';
@@ -40,7 +41,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             // on success delete navigator stack and push to home
             if (state is RegisterLoadedState) {
               AutoRouter.of(context).pushAndPopUntil(
-                const HomeScreen(),
+                const HomeRoute(),
                 predicate: (_) => false,
               );
             } else if (state is RegisterErrorState) {
@@ -307,7 +308,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   }
 
   void _showLoginPage() {
-    AutoRouter.of(context).replace(const LoginScreen());
+    AutoRouter.of(context).replace(const LoginRoute());
   }
 
   void _register() {

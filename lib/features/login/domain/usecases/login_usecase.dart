@@ -34,18 +34,4 @@ class LoginUserUsecase {
     }
     return response;
   }
-
-  // facebook login
-  Future<Either<Failure, User>> loginUserWithFacebook() async {
-    final response =
-        await serviceLocator<LoginUserRepository>().loginWithFacebook();
-    if (response.isRight()) {
-      final remoteUser = response.getOrElse(() => User());
-      serviceLocator<Request>().updateAuthorization(
-        remoteUser.token,
-      );
-      await serviceLocator<UserCacheService>().saveUser(remoteUser);
-    }
-    return response;
-  }
 }

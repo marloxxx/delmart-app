@@ -1,16 +1,16 @@
 import 'package:dartz/dartz.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import '../../../../core/failure.dart';
 import '../../../../core/request.dart';
 import '../../../../core/service_locator.dart';
-import '../models/user_model.dart';
+import '../models/user_model.dart' as model;
 
 final GoogleSignIn _googleSignIn = GoogleSignIn();
 
 abstract class LoginRemoteDataSource {
-  Future<Either<Failure, User>> loginUser({required User user});
-  Future<Either<Failure, User>> loginUserWithGoogle();
-  Future<Either<Failure, User>> loginUserWithFacebook();
+  Future<Either<Failure, model.User>> loginUser({required model.User user});
+  Future<Either<Failure, model.User>> loginUserWithGoogle();
 }
 
 class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
@@ -18,7 +18,8 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
 
   // normal login
   @override
-  Future<Either<Failure, User>> loginUser({required User user}) async {
+  Future<Either<Failure, model.User>> loginUser(
+      {required model.User user}) async {
     try {
       final response = await request.post(
         '/auth/login',
@@ -29,7 +30,7 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
         request.updateAuthorization(response.data['data']['access_token']);
         var data = response.data['data']['user'];
         data['token'] = response.data['data']['access_token'];
-        return Right(User.fromJson(data));
+        return Right(model.User.fromJson(data));
       }
       return Left(ConnectionFailure(response.data['message']));
     } catch (e) {
@@ -41,12 +42,24 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
 
   // google login
   @override
-  Future<Either<Failure, User>> loginUserWithGoogle() async {
+  Future<Either<Failure, model.User>> loginUserWithGoogle() async {
     try {
       final GoogleSignInAccount? googleSignInAccount =
           await _googleSignIn.signIn();
 
       if (googleSignInAccount != null) {
+        final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+
+        final GoogleSignInAuthentication? googleAuth =
+            await googleUser?.authentication;
+
+        final credential = GoogleAuthProvider.credential(
+          accessToken: googleAuth?.accessToken,
+          idToken: googleAuth?.idToken,
+        );
+
+        await FirebaseAuth.instance.signInWithCredential(credential);
+
         final GoogleSignInAuthentication googleSignInAuthentication =
             await googleSignInAccount.authentication;
 
@@ -60,7 +73,7 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
           request.updateAuthorization(response.data['data']['access_token']);
           var data = response.data['data']['user'];
           data['token'] = response.data['data']['access_token'];
-          return Right(User.fromJson(data));
+          return Right(model.User.fromJson(data));
         } else {
           return Left(ConnectionFailure(response.data['message']));
         }
@@ -69,27 +82,6 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
           Exception('Exception Occured in LoginRemoteDataSourceImpl'),
         );
       }
-    } catch (e) {
-      return const Left(
-        Exception('Exception Occured in LoginRemoteDataSourceImpl'),
-      );
-    }
-  }
-
-  // facebook login
-  @override
-  Future<Either<Failure, User>> loginUserWithFacebook() async {
-    try {
-      final response = await request.post(
-        '/auth/facebook',
-      );
-      if (response.statusCode == 200) {
-        request.updateAuthorization(response.data['data']['access_token']);
-        var data = response.data['data']['user'];
-        data['token'] = response.data['data']['access_token'];
-        return Right(User.fromJson(data));
-      }
-      return Left(ConnectionFailure(response.data['message']));
     } catch (e) {
       return const Left(
         Exception('Exception Occured in LoginRemoteDataSourceImpl'),

@@ -18,6 +18,7 @@ const List<String> status = [
   'Cancelled',
 ];
 
+@RoutePage()
 class RequestRoomScreen extends StatefulWidget {
   static const String routeName = '/request-room';
   const RequestRoomScreen({super.key});
@@ -58,7 +59,7 @@ class _RequestRoomScreenState extends State<RequestRoomScreen> {
               color: dark,
             ),
             onPressed: () {
-              AutoRouter.of(context).pop();
+              AutoRouter.of(context).maybePop();
             },
           ),
         ),

@@ -9,17 +9,17 @@ abstract class Failure extends Equatable {
 }
 
 class Exception extends Failure {
-  const Exception(String message) : super(message);
+  const Exception(super.message);
 }
 
 class LocalDatabaseQueryFailure extends Failure {
-  const LocalDatabaseQueryFailure(String message) : super(message);
+  const LocalDatabaseQueryFailure(super.message);
 }
 
 class ConnectionFailure extends Failure {
-  const ConnectionFailure(String message) : super(message);
+  const ConnectionFailure(super.message);
 }
 
 class ParsingFailure extends Failure {
-  const ParsingFailure(String message) : super(message);
+  const ParsingFailure(super.message);
 }

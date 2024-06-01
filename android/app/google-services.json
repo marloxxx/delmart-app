@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "576475503656",
+    "project_id": "delmart-891cd",
+    "storage_bucket": "delmart-891cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576475503656:android:1c13a9c7276dbc398e691d",
+        "android_client_info": {
+          "package_name": "com.example.delmart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGZywv10fZPVjt-mC8tpmSEJQSuCRbrMU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../routes/app_routers.gr.dart';
+import '../../../../routes/app_routers.dart';
 import '../../../../shared/theme.dart';
 
 class NavigationBarScreen extends StatefulWidget {
@@ -38,26 +38,26 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
       setState(() {
         if (index == 0) {
           AutoRouter.of(context).pushAndPopUntil(
-            const HomeScreen(),
+            const HomeRoute(),
             predicate: (_) => false,
           );
         } else if (index == 1) {
           AutoRouter.of(context).pushAndPopUntil(
-            const CreditScreen(),
+            const CreditRoute(),
             predicate: (_) => false,
           );
         } else if (index == 2) {
           AutoRouter.of(context).pushAndPopUntil(
-            const RoomScreen(),
+            const RoomRoute(),
             predicate: (_) => false,
           );
         } else if (index == 3) {
           AutoRouter.of(context).push(
-            const CartScreen(),
+            const CartRoute(),
           );
         } else if (index == 4) {
           AutoRouter.of(context).pushAndPopUntil(
-            const ProfileScreen(),
+            const ProfileRoute(),
             predicate: (_) => false,
           );
         }

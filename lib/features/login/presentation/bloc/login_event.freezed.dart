@@ -20,21 +20,18 @@ mixin _$LoginEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(User user) onLoginTapped,
     required TResult Function() onGoogleLoginTapped,
-    required TResult Function() onFacebookLoginTapped,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(User user)? onLoginTapped,
     TResult? Function()? onGoogleLoginTapped,
-    TResult? Function()? onFacebookLoginTapped,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(User user)? onLoginTapped,
     TResult Function()? onGoogleLoginTapped,
-    TResult Function()? onFacebookLoginTapped,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -42,22 +39,18 @@ mixin _$LoginEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(LoginUserEvent value) onLoginTapped,
     required TResult Function(LoginUserGoogleEvent value) onGoogleLoginTapped,
-    required TResult Function(LoginUserFacebookEvent value)
-        onFacebookLoginTapped,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(LoginUserEvent value)? onLoginTapped,
     TResult? Function(LoginUserGoogleEvent value)? onGoogleLoginTapped,
-    TResult? Function(LoginUserFacebookEvent value)? onFacebookLoginTapped,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(LoginUserEvent value)? onLoginTapped,
     TResult Function(LoginUserGoogleEvent value)? onGoogleLoginTapped,
-    TResult Function(LoginUserFacebookEvent value)? onFacebookLoginTapped,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -158,7 +151,6 @@ class _$LoginUserEventImpl implements LoginUserEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(User user) onLoginTapped,
     required TResult Function() onGoogleLoginTapped,
-    required TResult Function() onFacebookLoginTapped,
   }) {
     return onLoginTapped(user);
   }
@@ -168,7 +160,6 @@ class _$LoginUserEventImpl implements LoginUserEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(User user)? onLoginTapped,
     TResult? Function()? onGoogleLoginTapped,
-    TResult? Function()? onFacebookLoginTapped,
   }) {
     return onLoginTapped?.call(user);
   }
@@ -178,7 +169,6 @@ class _$LoginUserEventImpl implements LoginUserEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(User user)? onLoginTapped,
     TResult Function()? onGoogleLoginTapped,
-    TResult Function()? onFacebookLoginTapped,
     required TResult orElse(),
   }) {
     if (onLoginTapped != null) {
@@ -192,8 +182,6 @@ class _$LoginUserEventImpl implements LoginUserEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(LoginUserEvent value) onLoginTapped,
     required TResult Function(LoginUserGoogleEvent value) onGoogleLoginTapped,
-    required TResult Function(LoginUserFacebookEvent value)
-        onFacebookLoginTapped,
   }) {
     return onLoginTapped(this);
   }
@@ -203,7 +191,6 @@ class _$LoginUserEventImpl implements LoginUserEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(LoginUserEvent value)? onLoginTapped,
     TResult? Function(LoginUserGoogleEvent value)? onGoogleLoginTapped,
-    TResult? Function(LoginUserFacebookEvent value)? onFacebookLoginTapped,
   }) {
     return onLoginTapped?.call(this);
   }
@@ -213,7 +200,6 @@ class _$LoginUserEventImpl implements LoginUserEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(LoginUserEvent value)? onLoginTapped,
     TResult Function(LoginUserGoogleEvent value)? onGoogleLoginTapped,
-    TResult Function(LoginUserFacebookEvent value)? onFacebookLoginTapped,
     required TResult orElse(),
   }) {
     if (onLoginTapped != null) {
@@ -274,7 +260,6 @@ class _$LoginUserGoogleEventImpl implements LoginUserGoogleEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(User user) onLoginTapped,
     required TResult Function() onGoogleLoginTapped,
-    required TResult Function() onFacebookLoginTapped,
   }) {
     return onGoogleLoginTapped();
   }
@@ -284,7 +269,6 @@ class _$LoginUserGoogleEventImpl implements LoginUserGoogleEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(User user)? onLoginTapped,
     TResult? Function()? onGoogleLoginTapped,
-    TResult? Function()? onFacebookLoginTapped,
   }) {
     return onGoogleLoginTapped?.call();
   }
@@ -294,7 +278,6 @@ class _$LoginUserGoogleEventImpl implements LoginUserGoogleEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(User user)? onLoginTapped,
     TResult Function()? onGoogleLoginTapped,
-    TResult Function()? onFacebookLoginTapped,
     required TResult orElse(),
   }) {
     if (onGoogleLoginTapped != null) {
@@ -308,8 +291,6 @@ class _$LoginUserGoogleEventImpl implements LoginUserGoogleEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(LoginUserEvent value) onLoginTapped,
     required TResult Function(LoginUserGoogleEvent value) onGoogleLoginTapped,
-    required TResult Function(LoginUserFacebookEvent value)
-        onFacebookLoginTapped,
   }) {
     return onGoogleLoginTapped(this);
   }
@@ -319,7 +300,6 @@ class _$LoginUserGoogleEventImpl implements LoginUserGoogleEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(LoginUserEvent value)? onLoginTapped,
     TResult? Function(LoginUserGoogleEvent value)? onGoogleLoginTapped,
-    TResult? Function(LoginUserFacebookEvent value)? onFacebookLoginTapped,
   }) {
     return onGoogleLoginTapped?.call(this);
   }
@@ -329,7 +309,6 @@ class _$LoginUserGoogleEventImpl implements LoginUserGoogleEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(LoginUserEvent value)? onLoginTapped,
     TResult Function(LoginUserGoogleEvent value)? onGoogleLoginTapped,
-    TResult Function(LoginUserFacebookEvent value)? onFacebookLoginTapped,
     required TResult orElse(),
   }) {
     if (onGoogleLoginTapped != null) {
@@ -341,116 +320,4 @@ class _$LoginUserGoogleEventImpl implements LoginUserGoogleEvent {
 
 abstract class LoginUserGoogleEvent implements LoginEvent {
   const factory LoginUserGoogleEvent() = _$LoginUserGoogleEventImpl;
-}
-
-/// @nodoc
-abstract class _$$LoginUserFacebookEventImplCopyWith<$Res> {
-  factory _$$LoginUserFacebookEventImplCopyWith(
-          _$LoginUserFacebookEventImpl value,
-          $Res Function(_$LoginUserFacebookEventImpl) then) =
-      __$$LoginUserFacebookEventImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoginUserFacebookEventImplCopyWithImpl<$Res>
-    extends _$LoginEventCopyWithImpl<$Res, _$LoginUserFacebookEventImpl>
-    implements _$$LoginUserFacebookEventImplCopyWith<$Res> {
-  __$$LoginUserFacebookEventImplCopyWithImpl(
-      _$LoginUserFacebookEventImpl _value,
-      $Res Function(_$LoginUserFacebookEventImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoginUserFacebookEventImpl implements LoginUserFacebookEvent {
-  const _$LoginUserFacebookEventImpl();
-
-  @override
-  String toString() {
-    return 'LoginEvent.onFacebookLoginTapped()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$LoginUserFacebookEventImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(User user) onLoginTapped,
-    required TResult Function() onGoogleLoginTapped,
-    required TResult Function() onFacebookLoginTapped,
-  }) {
-    return onFacebookLoginTapped();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(User user)? onLoginTapped,
-    TResult? Function()? onGoogleLoginTapped,
-    TResult? Function()? onFacebookLoginTapped,
-  }) {
-    return onFacebookLoginTapped?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(User user)? onLoginTapped,
-    TResult Function()? onGoogleLoginTapped,
-    TResult Function()? onFacebookLoginTapped,
-    required TResult orElse(),
-  }) {
-    if (onFacebookLoginTapped != null) {
-      return onFacebookLoginTapped();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(LoginUserEvent value) onLoginTapped,
-    required TResult Function(LoginUserGoogleEvent value) onGoogleLoginTapped,
-    required TResult Function(LoginUserFacebookEvent value)
-        onFacebookLoginTapped,
-  }) {
-    return onFacebookLoginTapped(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(LoginUserEvent value)? onLoginTapped,
-    TResult? Function(LoginUserGoogleEvent value)? onGoogleLoginTapped,
-    TResult? Function(LoginUserFacebookEvent value)? onFacebookLoginTapped,
-  }) {
-    return onFacebookLoginTapped?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(LoginUserEvent value)? onLoginTapped,
-    TResult Function(LoginUserGoogleEvent value)? onGoogleLoginTapped,
-    TResult Function(LoginUserFacebookEvent value)? onFacebookLoginTapped,
-    required TResult orElse(),
-  }) {
-    if (onFacebookLoginTapped != null) {
-      return onFacebookLoginTapped(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LoginUserFacebookEvent implements LoginEvent {
-  const factory LoginUserFacebookEvent() = _$LoginUserFacebookEventImpl;
 }

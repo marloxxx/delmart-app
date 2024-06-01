@@ -37,7 +37,7 @@ class Request {
       )
       ..interceptors.add(
         InterceptorsWrapper(
-          onError: (DioError e, handler) {
+          onError: (DioException e, handler) {
             if (e.response?.statusCode == 402) {
               //logout user and go to login page
             }

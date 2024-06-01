@@ -20,10 +20,4 @@ class LoginUserRepositoryImpl implements LoginUserRepository {
   Future<Either<Failure, User>> loginWithGoogle() {
     return serviceLocator<LoginRemoteDataSource>().loginUserWithGoogle();
   }
-
-  // facebook login
-  @override
-  Future<Either<Failure, User>> loginWithFacebook() {
-    return serviceLocator<LoginRemoteDataSource>().loginUserWithFacebook();
-  }
 }

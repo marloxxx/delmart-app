@@ -9,11 +9,11 @@ class CardItemMenu extends StatelessWidget {
   final IconData icon;
 
   const CardItemMenu({
-    Key? key,
+    super.key,
     required this.title,
     this.onTap,
     required this.icon,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

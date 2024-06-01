@@ -17,7 +17,7 @@ class CustomTextFormField extends StatelessWidget {
   final bool autofocus;
 
   const CustomTextFormField({
-    Key? key,
+    super.key,
     this.hintText,
     this.hintStyle = const TextStyle(
       fontSize: 14,
@@ -43,7 +43,7 @@ class CustomTextFormField extends StatelessWidget {
     this.onChanged,
     this.enabled,
     this.autofocus = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

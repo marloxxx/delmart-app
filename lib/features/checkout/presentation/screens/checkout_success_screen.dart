@@ -1,15 +1,15 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:delmart/routes/app_routers.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../routes/app_routers.gr.dart';
 import '../../../../shared/theme.dart';
 import '../../data/models/order/order_model.dart';
 
+@RoutePage()
 class CheckoutSuccessScreen extends StatefulWidget {
   static const String routeName = '/checkout-success';
   final OrderModel order;
-  const CheckoutSuccessScreen({Key? key, required this.order})
-      : super(key: key);
+  const CheckoutSuccessScreen({super.key, required this.order});
 
   @override
   State<CheckoutSuccessScreen> createState() => _CheckoutSuccessScreenState();
@@ -22,7 +22,7 @@ class _CheckoutSuccessScreenState extends State<CheckoutSuccessScreen> {
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
       AutoRouter.of(context).pushAndPopUntil(
-        const OrderScreen(),
+        const OrderRoute(),
         predicate: (route) => false,
       );
     });

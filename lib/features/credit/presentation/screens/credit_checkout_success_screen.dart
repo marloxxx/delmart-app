@@ -1,15 +1,15 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../routes/app_routers.gr.dart';
+import '../../../../routes/app_routers.dart';
 import '../../../../shared/theme.dart';
 import '../../data/models/order/order_model.dart';
 
+@RoutePage()
 class CreditCheckoutSuccessScreen extends StatefulWidget {
   static const String routeName = '/credit/checkout/success';
   final OrderModel order;
-  const CreditCheckoutSuccessScreen({Key? key, required this.order})
-      : super(key: key);
+  const CreditCheckoutSuccessScreen({super.key, required this.order});
 
   @override
   State<CreditCheckoutSuccessScreen> createState() =>
@@ -24,7 +24,7 @@ class _CreditCheckoutSuccessScreenState
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
       AutoRouter.of(context).pushAndPopUntil(
-        const OrderScreen(),
+        const OrderRoute(),
         predicate: (route) => false,
       );
     });

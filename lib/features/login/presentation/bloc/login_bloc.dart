@@ -38,20 +38,5 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
         );
       },
     );
-    on<LoginUserFacebookEvent>(
-      (event, emit) async {
-        emit(const LoginState.loading());
-        var result =
-            await serviceLocator<LoginUserUsecase>().loginUserWithFacebook();
-        result.fold(
-          (failure) {
-            emit(LoginState.error(failure.message));
-          },
-          (data) {
-            emit(LoginState.loaded(user: data));
-          },
-        );
-      },
-    );
   }
 }

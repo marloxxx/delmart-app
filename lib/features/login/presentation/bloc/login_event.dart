@@ -6,5 +6,4 @@ part 'login_event.freezed.dart';
 abstract class LoginEvent with _$LoginEvent {
   const factory LoginEvent.onLoginTapped({required User user}) = LoginUserEvent;
   const factory LoginEvent.onGoogleLoginTapped() = LoginUserGoogleEvent;
-  const factory LoginEvent.onFacebookLoginTapped() = LoginUserFacebookEvent;
 }

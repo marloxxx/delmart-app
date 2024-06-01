@@ -10,7 +10,7 @@ import '../shared/custom_button.dart';
 
 class OrderItem extends StatelessWidget {
   final OrderModel order;
-  const OrderItem(this.order, {Key? key}) : super(key: key);
+  const OrderItem(this.order, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -136,7 +136,7 @@ class OrderItem extends StatelessWidget {
                           actions: [
                             TextButton(
                               onPressed: () {
-                                AutoRouter.of(context).pop();
+                                AutoRouter.of(context).maybePop();
                               },
                               child: const Text('No'),
                             ),
@@ -151,7 +151,7 @@ class OrderItem extends StatelessWidget {
                                       OrderEvent.cancelOrder(
                                           order.status, order));
                                 }
-                                AutoRouter.of(context).pop();
+                                AutoRouter.of(context).maybePop();
                               },
                               child: const Text('Yes'),
                             ),

@@ -13,10 +13,10 @@ class RequestItem extends StatelessWidget {
   final RequestRoom requestRoom;
 
   const RequestItem({
-    Key? key,
+    super.key,
     required this.status,
     required this.requestRoom,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -134,7 +134,7 @@ class RequestItem extends StatelessWidget {
                           actions: [
                             TextButton(
                               onPressed: () {
-                                AutoRouter.of(context).pop();
+                                AutoRouter.of(context).maybePop();
                               },
                               child: const Text('No'),
                             ),
@@ -149,7 +149,7 @@ class RequestItem extends StatelessWidget {
                                       RequestRoomEvent.cancelRequest(
                                           status, requestRoom));
                                 }
-                                AutoRouter.of(context).pop();
+                                AutoRouter.of(context).maybePop();
                               },
                               child: const Text('Yes'),
                             ),

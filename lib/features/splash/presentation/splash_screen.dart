@@ -1,12 +1,13 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:delmart/routes/app_routers.dart';
 import 'package:flutter/material.dart';
-import 'package:delmart/core/service_locator.dart';
-import 'package:delmart/features/splash/domain/usecase/check_user_login_status.dart';
-import 'package:delmart/routes/app_routers.gr.dart';
+import '../../../core/service_locator.dart';
+import '../domain/usecase/check_user_login_status.dart';
 import 'package:delmart/shared/theme.dart';
 
+@RoutePage()
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -24,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
             .checkIfUserLoggedIn()
             .then((isUserLoggedIn) {
           AutoRouter.of(context).pushAndPopUntil(
-            isUserLoggedIn ? const HomeScreen() : const LoginScreen(),
+            isUserLoggedIn ? const HomeRoute() : const LoginRoute(),
             predicate: (_) => false,
           );
         });

@@ -1,8 +1,9 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:delmart/routes/app_routers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import '../../../../routes/app_routers.gr.dart';
+
 import '../../../../shared/theme.dart';
 import '../../domain/entities/product_cart_entity.dart';
 import '../bloc/cart_event.dart';
@@ -11,6 +12,7 @@ import '../shared/custom_button.dart';
 import '../shared/custom_filled_button.dart';
 import '../bloc/cart_bloc.dart';
 
+@RoutePage()
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
   static const String routeName = '/cart';
@@ -69,7 +71,7 @@ class _CartScreenState extends State<CartScreen> {
                     color: dark,
                   ),
                   onPressed: () {
-                    AutoRouter.of(context).pop();
+                    AutoRouter.of(context).maybePop();
                   },
                 ),
               ),
@@ -131,8 +133,7 @@ class _CartScreenState extends State<CartScreen> {
                                       width: 100,
                                       height: 100,
                                       decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(10),
+                                        borderRadius: BorderRadius.circular(10),
                                         border: Border.all(
                                           color: Colors.grey.withOpacity(0.2),
                                         ),
@@ -145,9 +146,8 @@ class _CartScreenState extends State<CartScreen> {
                                     ),
                                     Container(
                                       margin: const EdgeInsets.only(left: 20),
-                                      width:
-                                          MediaQuery.of(context).size.width *
-                                              0.5,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.5,
                                       child: Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.start,
@@ -162,8 +162,7 @@ class _CartScreenState extends State<CartScreen> {
                                                 product.product.name,
                                                 style: const TextStyle(
                                                   fontSize: 18,
-                                                  fontWeight:
-                                                      FontWeight.bold,
+                                                  fontWeight: FontWeight.bold,
                                                 ),
                                               ),
                                             ],
@@ -186,8 +185,8 @@ class _CartScreenState extends State<CartScreen> {
                                           ),
                                           const SizedBox(height: 10),
                                           Container(
-                                            margin: const EdgeInsets.only(
-                                                top: 10),
+                                            margin:
+                                                const EdgeInsets.only(top: 10),
                                             child: Row(
                                               mainAxisAlignment:
                                                   MainAxisAlignment.end,
@@ -201,8 +200,8 @@ class _CartScreenState extends State<CartScreen> {
                                                   height: 30,
                                                   decoration: BoxDecoration(
                                                     borderRadius:
-                                                        BorderRadius
-                                                            .circular(5),
+                                                        BorderRadius.circular(
+                                                            5),
                                                     border: Border.all(
                                                       color: Colors.grey
                                                           .withOpacity(0.2),
@@ -219,21 +218,17 @@ class _CartScreenState extends State<CartScreen> {
                                                     CustomButton(
                                                       onPressed: () {
                                                         decreaseQuantity(
-                                                            product,
-                                                            context);
+                                                            product, context);
                                                       },
                                                       width: 30,
                                                       height: 30,
-                                                      decoration:
-                                                          BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         borderRadius:
                                                             BorderRadius
-                                                                .circular(
-                                                                    5),
+                                                                .circular(5),
                                                         border: Border.all(
                                                           color: Colors.grey
-                                                              .withOpacity(
-                                                                  0.2),
+                                                              .withOpacity(0.2),
                                                         ),
                                                       ),
                                                       child: const Icon(
@@ -243,40 +238,33 @@ class _CartScreenState extends State<CartScreen> {
                                                     ),
                                                     Container(
                                                       margin:
-                                                          const EdgeInsets
-                                                                  .only(
+                                                          const EdgeInsets.only(
                                                               left: 10,
                                                               right: 10),
                                                       child: Text(
                                                         product.quantity
                                                             .toString(),
-                                                        style:
-                                                            const TextStyle(
+                                                        style: const TextStyle(
                                                           fontSize: 18,
                                                           fontWeight:
-                                                              FontWeight
-                                                                  .bold,
+                                                              FontWeight.bold,
                                                         ),
                                                       ),
                                                     ),
                                                     CustomButton(
                                                       onPressed: () {
                                                         increaseQuantity(
-                                                            product,
-                                                            context);
+                                                            product, context);
                                                       },
                                                       width: 30,
                                                       height: 30,
-                                                      decoration:
-                                                          BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         borderRadius:
                                                             BorderRadius
-                                                                .circular(
-                                                                    5),
+                                                                .circular(5),
                                                         border: Border.all(
                                                           color: Colors.grey
-                                                              .withOpacity(
-                                                                  0.2),
+                                                              .withOpacity(0.2),
                                                         ),
                                                       ),
                                                       child: const Icon(
@@ -330,7 +318,7 @@ class _CartScreenState extends State<CartScreen> {
                             child: CustomFilledButton(
                               onPressed: () {
                                 AutoRouter.of(context)
-                                    .push(const CheckoutScreen());
+                                    .push(const CheckoutRoute());
                               },
                               gradient: gradient,
                               text: 'Checkout',
@@ -399,7 +387,7 @@ class _CartScreenState extends State<CartScreen> {
           actions: [
             TextButton(
               onPressed: () {
-                AutoRouter.of(context).pop();
+                AutoRouter.of(context).maybePop();
               },
               child: const Text('Cancel'),
             ),
@@ -408,7 +396,7 @@ class _CartScreenState extends State<CartScreen> {
                 context.read<CartBloc>().add(
                       DeleteFromCartEvent(productCartEntity: product),
                     );
-                AutoRouter.of(context).pop();
+                AutoRouter.of(context).maybePop();
               },
               child: const Text('Delete'),
             ),

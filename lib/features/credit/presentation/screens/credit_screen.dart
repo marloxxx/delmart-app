@@ -74,6 +74,7 @@ const List<String> _Tri = [
   '0899',
 ];
 
+@RoutePage()
 class CreditScreen extends StatefulWidget {
   static const routeName = '/credit';
   const CreditScreen({super.key});
@@ -131,7 +132,7 @@ class _CreditScreenState extends State<CreditScreen> {
               size: 30,
             ),
             onPressed: () {
-              AutoRouter.of(context).pop();
+              AutoRouter.of(context).maybePop();
             },
           ),
         ),

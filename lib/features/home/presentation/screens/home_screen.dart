@@ -1,4 +1,5 @@
 import 'dart:core';
+import 'package:auto_route/auto_route.dart';
 import 'package:delmart/features/navigation/presentation/screens/bottom_navigation_bar_screen.dart';
 
 import './product_item.dart';
@@ -10,6 +11,7 @@ import 'package:delmart/features/home/presentation/bloc/home_state.dart';
 import 'package:flutter/material.dart';
 import '../../../../../shared/theme.dart';
 
+@RoutePage()
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
   static const String routeName = '/home';

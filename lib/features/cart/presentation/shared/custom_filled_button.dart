@@ -12,7 +12,7 @@ class CustomFilledButton extends StatelessWidget {
   final Icon? icon;
 
   const CustomFilledButton({
-    Key? key,
+    super.key,
     this.gradient,
     this.color,
     required this.text,
@@ -21,7 +21,7 @@ class CustomFilledButton extends StatelessWidget {
     this.width = double.infinity,
     this.height = 50,
     this.icon,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

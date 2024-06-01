@@ -9,6 +9,7 @@ import '../bloc/product_detail_event.dart';
 import '../bloc/product_detail_state.dart';
 import '../../data/models/product_model.dart';
 
+@RoutePage()
 class ProductDetailScreen extends StatefulWidget {
   final int productId;
   static const String routeName = '/product-detail';
@@ -79,7 +80,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                     color: dark,
                   ),
                   onPressed: () {
-                    AutoRouter.of(context).pop();
+                    AutoRouter.of(context).maybePop();
                   },
                 ),
               ),

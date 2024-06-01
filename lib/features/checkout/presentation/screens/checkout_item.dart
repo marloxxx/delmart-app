@@ -5,7 +5,7 @@ import '../../data/models/cart/cart_model.dart';
 
 class CheckoutItem extends StatelessWidget {
   final Cart cart;
-  const CheckoutItem({Key? key, required this.cart}) : super(key: key);
+  const CheckoutItem({super.key, required this.cart});
 
   @override
   Widget build(BuildContext context) {

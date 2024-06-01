@@ -1,16 +1,16 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:delmart/features/room/data/models/room/room_model.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../routes/app_routers.gr.dart';
+import '../../../../routes/app_routers.dart';
 import '../../../../shared/theme.dart';
+import '../../data/models/room/room_model.dart';
 
 class RoomItem extends StatefulWidget {
   final RoomList roomList;
   const RoomItem({
-    Key? key,
+    super.key,
     required this.roomList,
-  }) : super(key: key);
+  });
 
   @override
   State<RoomItem> createState() => _RoomItemState();
@@ -34,7 +34,7 @@ class _RoomItemState extends State<RoomItem> {
           return InkWell(
             onTap: () {
               AutoRouter.of(context)
-                  .push(RoomDetailScreen(roomId: widget.roomList[index].id));
+                  .push(RoomDetailRoute(roomId: widget.roomList[index].id));
             },
             child: Container(
               // disable if room is not available

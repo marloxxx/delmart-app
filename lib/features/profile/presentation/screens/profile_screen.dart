@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 
-import '../../../../routes/app_routers.gr.dart';
+import '../../../../routes/app_routers.dart';
 import '../../../../shared/theme.dart';
 import '../../../navigation/presentation/screens/bottom_navigation_bar_screen.dart';
 import '../bloc/profile_bloc.dart';
@@ -11,6 +11,7 @@ import '../bloc/profile_event.dart';
 import '../bloc/profile_state.dart';
 import '../shared/card_item_menu.dart';
 
+@RoutePage()
 class ProfileScreen extends StatefulWidget {
   static const routeName = '/profile';
   const ProfileScreen({super.key});
@@ -37,7 +38,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             if (state is ProfileErrorState) {
               EasyLoading.showError(state.message);
             } else if (state is ProfileLogoutState) {
-              AutoRouter.of(context).replace(const LoginScreen());
+              AutoRouter.of(context).replace(const LoginRoute());
             }
           },
           builder: (context, state) {
@@ -156,7 +157,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   CardItemMenu(
                                     onTap: () {
                                       AutoRouter.of(context).push(
-                                        const OrderScreen(),
+                                        const OrderRoute(),
                                       );
                                     },
                                     icon: Icons.shopping_cart,
@@ -166,7 +167,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   CardItemMenu(
                                     onTap: () {
                                       AutoRouter.of(context).push(
-                                        const RequestRoomScreen(),
+                                        const RequestRoomRoute(),
                                       );
                                     },
                                     icon: Icons.bookmark,

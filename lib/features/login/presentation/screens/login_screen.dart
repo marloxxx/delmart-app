@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart'
     show FontAwesomeIcons;
 
-import '../../../../routes/app_routers.gr.dart';
+import '../../../../routes/app_routers.dart';
 import '../../../../shared/theme.dart';
 import '../bloc/login_bloc.dart';
 import '../bloc/login_event.dart';
@@ -13,7 +13,7 @@ import '../shared/custom_text_form_field.dart';
 import '../shared/custom_filled_button.dart';
 import '../../data/models/user_model.dart';
 
-// this is the login page
+@RoutePage()
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
   static const String routeName = '/login';
@@ -37,8 +37,8 @@ class _LoginScreenState extends State<LoginScreen> {
           listener: (context, state) {
             // on success delete navigator stack and push to home
             if (state is LoginLoadedState) {
-              AutoRouter.of(context).pushAndPopUntil(
-                const HomeScreen(),
+              context.router.pushAndPopUntil(
+                const HomeRoute(),
                 predicate: (_) => false,
               );
             } else if (state is LoginErrorState) {
@@ -181,35 +181,14 @@ class _LoginScreenState extends State<LoginScreen> {
                             const SizedBox(
                               height: 10,
                             ),
-                            // google and facebook login
-                            Row(
-                              children: [
-                                Expanded(
-                                  child: CustomFilledButton(
-                                      color: const Color(0xffdb3236),
-                                      text: "Google",
-                                      onPressed: _googleLogin,
-                                      icon: Icon(
-                                        FontAwesomeIcons.google,
-                                        color: white,
-                                      )),
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Expanded(
-                                  child: CustomFilledButton(
-                                    color: const Color(0xff3b5998),
-                                    text: "Facebook",
-                                    onPressed: _facebookLogin,
-                                    icon: Icon(
-                                      FontAwesomeIcons.facebookF,
-                                      color: white,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
+                            CustomFilledButton(
+                                color: const Color(0xffdb3236),
+                                text: "Google",
+                                onPressed: _googleLogin,
+                                icon: Icon(
+                                  FontAwesomeIcons.google,
+                                  color: white,
+                                )),
                           ]),
                         ),
                         const SizedBox(
@@ -276,14 +255,8 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  void _facebookLogin() {
-    BlocProvider.of<LoginBloc>(context).add(
-      const LoginEvent.onFacebookLoginTapped(),
-    );
-  }
-
   void _showRegisterPage() {
-    AutoRouter.of(context).push(const RegisterScreen());
+    AutoRouter.of(context).push(const RegisterRoute());
   }
 
   void _showSnackBar(String message) {

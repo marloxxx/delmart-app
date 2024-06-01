@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:delmart/features/room/presentation/bloc/room_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -9,6 +10,7 @@ import '../bloc/room_bloc.dart';
 import '../bloc/room_event.dart';
 import 'room_item.dart';
 
+@RoutePage()
 class RoomScreen extends StatefulWidget {
   static const routeName = '/room';
   const RoomScreen({super.key});
