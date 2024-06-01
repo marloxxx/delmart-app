@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+
 import '../../../../core/failure.dart';
 import '../../../../core/request.dart';
 import '../../../../core/service_locator.dart';
@@ -48,18 +48,6 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
           await _googleSignIn.signIn();
 
       if (googleSignInAccount != null) {
-        final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
-
-        final GoogleSignInAuthentication? googleAuth =
-            await googleUser?.authentication;
-
-        final credential = GoogleAuthProvider.credential(
-          accessToken: googleAuth?.accessToken,
-          idToken: googleAuth?.idToken,
-        );
-
-        await FirebaseAuth.instance.signInWithCredential(credential);
-
         final GoogleSignInAuthentication googleSignInAuthentication =
             await googleSignInAccount.authentication;
 
