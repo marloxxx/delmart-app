@@ -12,7 +12,7 @@ part of 'order_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 OrderModel _$OrderModelFromJson(Map<String, dynamic> json) {
   return _OrderModel.fromJson(json);
@@ -80,22 +80,22 @@ class _$OrderModelCopyWithImpl<$Res, $Val extends OrderModel>
 }
 
 /// @nodoc
-abstract class _$$_OrderModelCopyWith<$Res>
+abstract class _$$OrderModelImplCopyWith<$Res>
     implements $OrderModelCopyWith<$Res> {
-  factory _$$_OrderModelCopyWith(
-          _$_OrderModel value, $Res Function(_$_OrderModel) then) =
-      __$$_OrderModelCopyWithImpl<$Res>;
+  factory _$$OrderModelImplCopyWith(
+          _$OrderModelImpl value, $Res Function(_$OrderModelImpl) then) =
+      __$$OrderModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int id, String code, double total, String paymentMethod});
 }
 
 /// @nodoc
-class __$$_OrderModelCopyWithImpl<$Res>
-    extends _$OrderModelCopyWithImpl<$Res, _$_OrderModel>
-    implements _$$_OrderModelCopyWith<$Res> {
-  __$$_OrderModelCopyWithImpl(
-      _$_OrderModel _value, $Res Function(_$_OrderModel) _then)
+class __$$OrderModelImplCopyWithImpl<$Res>
+    extends _$OrderModelCopyWithImpl<$Res, _$OrderModelImpl>
+    implements _$$OrderModelImplCopyWith<$Res> {
+  __$$OrderModelImplCopyWithImpl(
+      _$OrderModelImpl _value, $Res Function(_$OrderModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -106,7 +106,7 @@ class __$$_OrderModelCopyWithImpl<$Res>
     Object? total = null,
     Object? paymentMethod = null,
   }) {
-    return _then(_$_OrderModel(
+    return _then(_$OrderModelImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -129,15 +129,15 @@ class __$$_OrderModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_OrderModel implements _OrderModel {
-  _$_OrderModel(
+class _$OrderModelImpl implements _OrderModel {
+  _$OrderModelImpl(
       {required this.id,
       required this.code,
       required this.total,
       required this.paymentMethod});
 
-  factory _$_OrderModel.fromJson(Map<String, dynamic> json) =>
-      _$$_OrderModelFromJson(json);
+  factory _$OrderModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$OrderModelImplFromJson(json);
 
   @override
   final int id;
@@ -154,10 +154,10 @@ class _$_OrderModel implements _OrderModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_OrderModel &&
+            other is _$OrderModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.code, code) || other.code == code) &&
             (identical(other.total, total) || other.total == total) &&
@@ -172,12 +172,12 @@ class _$_OrderModel implements _OrderModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_OrderModelCopyWith<_$_OrderModel> get copyWith =>
-      __$$_OrderModelCopyWithImpl<_$_OrderModel>(this, _$identity);
+  _$$OrderModelImplCopyWith<_$OrderModelImpl> get copyWith =>
+      __$$OrderModelImplCopyWithImpl<_$OrderModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OrderModelToJson(
+    return _$$OrderModelImplToJson(
       this,
     );
   }
@@ -188,10 +188,10 @@ abstract class _OrderModel implements OrderModel {
       {required final int id,
       required final String code,
       required final double total,
-      required final String paymentMethod}) = _$_OrderModel;
+      required final String paymentMethod}) = _$OrderModelImpl;
 
   factory _OrderModel.fromJson(Map<String, dynamic> json) =
-      _$_OrderModel.fromJson;
+      _$OrderModelImpl.fromJson;
 
   @override
   int get id;
@@ -203,6 +203,6 @@ abstract class _OrderModel implements OrderModel {
   String get paymentMethod;
   @override
   @JsonKey(ignore: true)
-  _$$_OrderModelCopyWith<_$_OrderModel> get copyWith =>
+  _$$OrderModelImplCopyWith<_$OrderModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

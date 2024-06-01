@@ -12,7 +12,7 @@ part of 'request_room_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 RequestRoom _$RequestRoomFromJson(Map<String, dynamic> json) {
   return _RequestRoom.fromJson(json);
@@ -122,11 +122,11 @@ class _$RequestRoomCopyWithImpl<$Res, $Val extends RequestRoom>
 }
 
 /// @nodoc
-abstract class _$$_RequestRoomCopyWith<$Res>
+abstract class _$$RequestRoomImplCopyWith<$Res>
     implements $RequestRoomCopyWith<$Res> {
-  factory _$$_RequestRoomCopyWith(
-          _$_RequestRoom value, $Res Function(_$_RequestRoom) then) =
-      __$$_RequestRoomCopyWithImpl<$Res>;
+  factory _$$RequestRoomImplCopyWith(
+          _$RequestRoomImpl value, $Res Function(_$RequestRoomImpl) then) =
+      __$$RequestRoomImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -144,11 +144,11 @@ abstract class _$$_RequestRoomCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_RequestRoomCopyWithImpl<$Res>
-    extends _$RequestRoomCopyWithImpl<$Res, _$_RequestRoom>
-    implements _$$_RequestRoomCopyWith<$Res> {
-  __$$_RequestRoomCopyWithImpl(
-      _$_RequestRoom _value, $Res Function(_$_RequestRoom) _then)
+class __$$RequestRoomImplCopyWithImpl<$Res>
+    extends _$RequestRoomCopyWithImpl<$Res, _$RequestRoomImpl>
+    implements _$$RequestRoomImplCopyWith<$Res> {
+  __$$RequestRoomImplCopyWithImpl(
+      _$RequestRoomImpl _value, $Res Function(_$RequestRoomImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -163,7 +163,7 @@ class __$$_RequestRoomCopyWithImpl<$Res>
     Object? createdAt = null,
     Object? updatedAt = null,
   }) {
-    return _then(_$_RequestRoom(
+    return _then(_$RequestRoomImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -202,8 +202,8 @@ class __$$_RequestRoomCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RequestRoom implements _RequestRoom {
-  const _$_RequestRoom(
+class _$RequestRoomImpl implements _RequestRoom {
+  const _$RequestRoomImpl(
       {required this.id,
       required this.room,
       required this.description,
@@ -213,8 +213,8 @@ class _$_RequestRoom implements _RequestRoom {
       required this.createdAt,
       required this.updatedAt});
 
-  factory _$_RequestRoom.fromJson(Map<String, dynamic> json) =>
-      _$$_RequestRoomFromJson(json);
+  factory _$RequestRoomImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RequestRoomImplFromJson(json);
 
   @override
   final int id;
@@ -239,10 +239,10 @@ class _$_RequestRoom implements _RequestRoom {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RequestRoom &&
+            other is _$RequestRoomImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.room, room) || other.room == room) &&
             (identical(other.description, description) ||
@@ -265,12 +265,12 @@ class _$_RequestRoom implements _RequestRoom {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RequestRoomCopyWith<_$_RequestRoom> get copyWith =>
-      __$$_RequestRoomCopyWithImpl<_$_RequestRoom>(this, _$identity);
+  _$$RequestRoomImplCopyWith<_$RequestRoomImpl> get copyWith =>
+      __$$RequestRoomImplCopyWithImpl<_$RequestRoomImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RequestRoomToJson(
+    return _$$RequestRoomImplToJson(
       this,
     );
   }
@@ -285,10 +285,10 @@ abstract class _RequestRoom implements RequestRoom {
       required final String startDate,
       required final String endDate,
       required final String createdAt,
-      required final String updatedAt}) = _$_RequestRoom;
+      required final String updatedAt}) = _$RequestRoomImpl;
 
   factory _RequestRoom.fromJson(Map<String, dynamic> json) =
-      _$_RequestRoom.fromJson;
+      _$RequestRoomImpl.fromJson;
 
   @override
   int get id;
@@ -308,6 +308,6 @@ abstract class _RequestRoom implements RequestRoom {
   String get updatedAt;
   @override
   @JsonKey(ignore: true)
-  _$$_RequestRoomCopyWith<_$_RequestRoom> get copyWith =>
+  _$$RequestRoomImplCopyWith<_$RequestRoomImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

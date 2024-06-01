@@ -6,14 +6,15 @@ part of 'credit_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Credit _$$_CreditFromJson(Map<String, dynamic> json) => _$_Credit(
-      id: json['id'] as int,
+_$CreditImpl _$$CreditImplFromJson(Map<String, dynamic> json) => _$CreditImpl(
+      id: (json['id'] as num).toInt(),
       provider: json['provider'] as String,
       nominal: json['nominal'] as String,
       price: (json['price'] as num).toDouble(),
     );
 
-Map<String, dynamic> _$$_CreditToJson(_$_Credit instance) => <String, dynamic>{
+Map<String, dynamic> _$$CreditImplToJson(_$CreditImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'provider': instance.provider,
       'nominal': instance.nominal,

@@ -12,7 +12,7 @@ part of 'room_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Room _$RoomFromJson(Map<String, dynamic> json) {
   return _Room.fromJson(json);
@@ -85,9 +85,10 @@ class _$RoomCopyWithImpl<$Res, $Val extends Room>
 }
 
 /// @nodoc
-abstract class _$$_RoomCopyWith<$Res> implements $RoomCopyWith<$Res> {
-  factory _$$_RoomCopyWith(_$_Room value, $Res Function(_$_Room) then) =
-      __$$_RoomCopyWithImpl<$Res>;
+abstract class _$$RoomImplCopyWith<$Res> implements $RoomCopyWith<$Res> {
+  factory _$$RoomImplCopyWith(
+          _$RoomImpl value, $Res Function(_$RoomImpl) then) =
+      __$$RoomImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -95,9 +96,10 @@ abstract class _$$_RoomCopyWith<$Res> implements $RoomCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_RoomCopyWithImpl<$Res> extends _$RoomCopyWithImpl<$Res, _$_Room>
-    implements _$$_RoomCopyWith<$Res> {
-  __$$_RoomCopyWithImpl(_$_Room _value, $Res Function(_$_Room) _then)
+class __$$RoomImplCopyWithImpl<$Res>
+    extends _$RoomCopyWithImpl<$Res, _$RoomImpl>
+    implements _$$RoomImplCopyWith<$Res> {
+  __$$RoomImplCopyWithImpl(_$RoomImpl _value, $Res Function(_$RoomImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -109,7 +111,7 @@ class __$$_RoomCopyWithImpl<$Res> extends _$RoomCopyWithImpl<$Res, _$_Room>
     Object? image = null,
     Object? status = null,
   }) {
-    return _then(_$_Room(
+    return _then(_$RoomImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -136,15 +138,16 @@ class __$$_RoomCopyWithImpl<$Res> extends _$RoomCopyWithImpl<$Res, _$_Room>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Room implements _Room {
-  _$_Room(
+class _$RoomImpl implements _Room {
+  _$RoomImpl(
       {this.id = 0,
       this.name = '',
       this.description = '',
       this.image = '',
       this.status = ''});
 
-  factory _$_Room.fromJson(Map<String, dynamic> json) => _$$_RoomFromJson(json);
+  factory _$RoomImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RoomImplFromJson(json);
 
   @override
   @JsonKey()
@@ -168,10 +171,10 @@ class _$_Room implements _Room {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Room &&
+            other is _$RoomImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.description, description) ||
@@ -188,12 +191,12 @@ class _$_Room implements _Room {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RoomCopyWith<_$_Room> get copyWith =>
-      __$$_RoomCopyWithImpl<_$_Room>(this, _$identity);
+  _$$RoomImplCopyWith<_$RoomImpl> get copyWith =>
+      __$$RoomImplCopyWithImpl<_$RoomImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RoomToJson(
+    return _$$RoomImplToJson(
       this,
     );
   }
@@ -205,9 +208,9 @@ abstract class _Room implements Room {
       final String name,
       final String description,
       final String image,
-      final String status}) = _$_Room;
+      final String status}) = _$RoomImpl;
 
-  factory _Room.fromJson(Map<String, dynamic> json) = _$_Room.fromJson;
+  factory _Room.fromJson(Map<String, dynamic> json) = _$RoomImpl.fromJson;
 
   @override
   int get id;
@@ -221,5 +224,6 @@ abstract class _Room implements Room {
   String get status;
   @override
   @JsonKey(ignore: true)
-  _$$_RoomCopyWith<_$_Room> get copyWith => throw _privateConstructorUsedError;
+  _$$RoomImplCopyWith<_$RoomImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

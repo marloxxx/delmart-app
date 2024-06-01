@@ -12,7 +12,7 @@ part of 'room_detail_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$RoomDetailState {
@@ -93,25 +93,27 @@ class _$RoomDetailStateCopyWithImpl<$Res, $Val extends RoomDetailState>
 }
 
 /// @nodoc
-abstract class _$$RoomDetailInitialStateCopyWith<$Res> {
-  factory _$$RoomDetailInitialStateCopyWith(_$RoomDetailInitialState value,
-          $Res Function(_$RoomDetailInitialState) then) =
-      __$$RoomDetailInitialStateCopyWithImpl<$Res>;
+abstract class _$$RoomDetailInitialStateImplCopyWith<$Res> {
+  factory _$$RoomDetailInitialStateImplCopyWith(
+          _$RoomDetailInitialStateImpl value,
+          $Res Function(_$RoomDetailInitialStateImpl) then) =
+      __$$RoomDetailInitialStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$RoomDetailInitialStateCopyWithImpl<$Res>
-    extends _$RoomDetailStateCopyWithImpl<$Res, _$RoomDetailInitialState>
-    implements _$$RoomDetailInitialStateCopyWith<$Res> {
-  __$$RoomDetailInitialStateCopyWithImpl(_$RoomDetailInitialState _value,
-      $Res Function(_$RoomDetailInitialState) _then)
+class __$$RoomDetailInitialStateImplCopyWithImpl<$Res>
+    extends _$RoomDetailStateCopyWithImpl<$Res, _$RoomDetailInitialStateImpl>
+    implements _$$RoomDetailInitialStateImplCopyWith<$Res> {
+  __$$RoomDetailInitialStateImplCopyWithImpl(
+      _$RoomDetailInitialStateImpl _value,
+      $Res Function(_$RoomDetailInitialStateImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$RoomDetailInitialState implements RoomDetailInitialState {
-  const _$RoomDetailInitialState();
+class _$RoomDetailInitialStateImpl implements RoomDetailInitialState {
+  const _$RoomDetailInitialStateImpl();
 
   @override
   String toString() {
@@ -119,9 +121,10 @@ class _$RoomDetailInitialState implements RoomDetailInitialState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$RoomDetailInitialState);
+        (other.runtimeType == runtimeType &&
+            other is _$RoomDetailInitialStateImpl);
   }
 
   @override
@@ -209,29 +212,31 @@ class _$RoomDetailInitialState implements RoomDetailInitialState {
 }
 
 abstract class RoomDetailInitialState implements RoomDetailState {
-  const factory RoomDetailInitialState() = _$RoomDetailInitialState;
+  const factory RoomDetailInitialState() = _$RoomDetailInitialStateImpl;
 }
 
 /// @nodoc
-abstract class _$$RoomDetailLoadingStateCopyWith<$Res> {
-  factory _$$RoomDetailLoadingStateCopyWith(_$RoomDetailLoadingState value,
-          $Res Function(_$RoomDetailLoadingState) then) =
-      __$$RoomDetailLoadingStateCopyWithImpl<$Res>;
+abstract class _$$RoomDetailLoadingStateImplCopyWith<$Res> {
+  factory _$$RoomDetailLoadingStateImplCopyWith(
+          _$RoomDetailLoadingStateImpl value,
+          $Res Function(_$RoomDetailLoadingStateImpl) then) =
+      __$$RoomDetailLoadingStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$RoomDetailLoadingStateCopyWithImpl<$Res>
-    extends _$RoomDetailStateCopyWithImpl<$Res, _$RoomDetailLoadingState>
-    implements _$$RoomDetailLoadingStateCopyWith<$Res> {
-  __$$RoomDetailLoadingStateCopyWithImpl(_$RoomDetailLoadingState _value,
-      $Res Function(_$RoomDetailLoadingState) _then)
+class __$$RoomDetailLoadingStateImplCopyWithImpl<$Res>
+    extends _$RoomDetailStateCopyWithImpl<$Res, _$RoomDetailLoadingStateImpl>
+    implements _$$RoomDetailLoadingStateImplCopyWith<$Res> {
+  __$$RoomDetailLoadingStateImplCopyWithImpl(
+      _$RoomDetailLoadingStateImpl _value,
+      $Res Function(_$RoomDetailLoadingStateImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$RoomDetailLoadingState implements RoomDetailLoadingState {
-  const _$RoomDetailLoadingState();
+class _$RoomDetailLoadingStateImpl implements RoomDetailLoadingState {
+  const _$RoomDetailLoadingStateImpl();
 
   @override
   String toString() {
@@ -239,9 +244,10 @@ class _$RoomDetailLoadingState implements RoomDetailLoadingState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$RoomDetailLoadingState);
+        (other.runtimeType == runtimeType &&
+            other is _$RoomDetailLoadingStateImpl);
   }
 
   @override
@@ -329,24 +335,24 @@ class _$RoomDetailLoadingState implements RoomDetailLoadingState {
 }
 
 abstract class RoomDetailLoadingState implements RoomDetailState {
-  const factory RoomDetailLoadingState() = _$RoomDetailLoadingState;
+  const factory RoomDetailLoadingState() = _$RoomDetailLoadingStateImpl;
 }
 
 /// @nodoc
-abstract class _$$RoomDetailErrorStateCopyWith<$Res> {
-  factory _$$RoomDetailErrorStateCopyWith(_$RoomDetailErrorState value,
-          $Res Function(_$RoomDetailErrorState) then) =
-      __$$RoomDetailErrorStateCopyWithImpl<$Res>;
+abstract class _$$RoomDetailErrorStateImplCopyWith<$Res> {
+  factory _$$RoomDetailErrorStateImplCopyWith(_$RoomDetailErrorStateImpl value,
+          $Res Function(_$RoomDetailErrorStateImpl) then) =
+      __$$RoomDetailErrorStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$RoomDetailErrorStateCopyWithImpl<$Res>
-    extends _$RoomDetailStateCopyWithImpl<$Res, _$RoomDetailErrorState>
-    implements _$$RoomDetailErrorStateCopyWith<$Res> {
-  __$$RoomDetailErrorStateCopyWithImpl(_$RoomDetailErrorState _value,
-      $Res Function(_$RoomDetailErrorState) _then)
+class __$$RoomDetailErrorStateImplCopyWithImpl<$Res>
+    extends _$RoomDetailStateCopyWithImpl<$Res, _$RoomDetailErrorStateImpl>
+    implements _$$RoomDetailErrorStateImplCopyWith<$Res> {
+  __$$RoomDetailErrorStateImplCopyWithImpl(_$RoomDetailErrorStateImpl _value,
+      $Res Function(_$RoomDetailErrorStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -354,7 +360,7 @@ class __$$RoomDetailErrorStateCopyWithImpl<$Res>
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$RoomDetailErrorState(
+    return _then(_$RoomDetailErrorStateImpl(
       null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -365,8 +371,8 @@ class __$$RoomDetailErrorStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RoomDetailErrorState implements RoomDetailErrorState {
-  const _$RoomDetailErrorState(this.message);
+class _$RoomDetailErrorStateImpl implements RoomDetailErrorState {
+  const _$RoomDetailErrorStateImpl(this.message);
 
   @override
   final String message;
@@ -377,10 +383,10 @@ class _$RoomDetailErrorState implements RoomDetailErrorState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RoomDetailErrorState &&
+            other is _$RoomDetailErrorStateImpl &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -390,9 +396,10 @@ class _$RoomDetailErrorState implements RoomDetailErrorState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$RoomDetailErrorStateCopyWith<_$RoomDetailErrorState> get copyWith =>
-      __$$RoomDetailErrorStateCopyWithImpl<_$RoomDetailErrorState>(
-          this, _$identity);
+  _$$RoomDetailErrorStateImplCopyWith<_$RoomDetailErrorStateImpl>
+      get copyWith =>
+          __$$RoomDetailErrorStateImplCopyWithImpl<_$RoomDetailErrorStateImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -477,19 +484,20 @@ class _$RoomDetailErrorState implements RoomDetailErrorState {
 
 abstract class RoomDetailErrorState implements RoomDetailState {
   const factory RoomDetailErrorState(final String message) =
-      _$RoomDetailErrorState;
+      _$RoomDetailErrorStateImpl;
 
   String get message;
   @JsonKey(ignore: true)
-  _$$RoomDetailErrorStateCopyWith<_$RoomDetailErrorState> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$RoomDetailErrorStateImplCopyWith<_$RoomDetailErrorStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$RoomDetailLoadedStateCopyWith<$Res> {
-  factory _$$RoomDetailLoadedStateCopyWith(_$RoomDetailLoadedState value,
-          $Res Function(_$RoomDetailLoadedState) then) =
-      __$$RoomDetailLoadedStateCopyWithImpl<$Res>;
+abstract class _$$RoomDetailLoadedStateImplCopyWith<$Res> {
+  factory _$$RoomDetailLoadedStateImplCopyWith(
+          _$RoomDetailLoadedStateImpl value,
+          $Res Function(_$RoomDetailLoadedStateImpl) then) =
+      __$$RoomDetailLoadedStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Room room});
 
@@ -497,11 +505,11 @@ abstract class _$$RoomDetailLoadedStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$RoomDetailLoadedStateCopyWithImpl<$Res>
-    extends _$RoomDetailStateCopyWithImpl<$Res, _$RoomDetailLoadedState>
-    implements _$$RoomDetailLoadedStateCopyWith<$Res> {
-  __$$RoomDetailLoadedStateCopyWithImpl(_$RoomDetailLoadedState _value,
-      $Res Function(_$RoomDetailLoadedState) _then)
+class __$$RoomDetailLoadedStateImplCopyWithImpl<$Res>
+    extends _$RoomDetailStateCopyWithImpl<$Res, _$RoomDetailLoadedStateImpl>
+    implements _$$RoomDetailLoadedStateImplCopyWith<$Res> {
+  __$$RoomDetailLoadedStateImplCopyWithImpl(_$RoomDetailLoadedStateImpl _value,
+      $Res Function(_$RoomDetailLoadedStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -509,7 +517,7 @@ class __$$RoomDetailLoadedStateCopyWithImpl<$Res>
   $Res call({
     Object? room = null,
   }) {
-    return _then(_$RoomDetailLoadedState(
+    return _then(_$RoomDetailLoadedStateImpl(
       room: null == room
           ? _value.room
           : room // ignore: cast_nullable_to_non_nullable
@@ -528,8 +536,8 @@ class __$$RoomDetailLoadedStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RoomDetailLoadedState implements RoomDetailLoadedState {
-  const _$RoomDetailLoadedState({required this.room});
+class _$RoomDetailLoadedStateImpl implements RoomDetailLoadedState {
+  const _$RoomDetailLoadedStateImpl({required this.room});
 
   @override
   final Room room;
@@ -540,10 +548,10 @@ class _$RoomDetailLoadedState implements RoomDetailLoadedState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RoomDetailLoadedState &&
+            other is _$RoomDetailLoadedStateImpl &&
             (identical(other.room, room) || other.room == room));
   }
 
@@ -553,9 +561,9 @@ class _$RoomDetailLoadedState implements RoomDetailLoadedState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$RoomDetailLoadedStateCopyWith<_$RoomDetailLoadedState> get copyWith =>
-      __$$RoomDetailLoadedStateCopyWithImpl<_$RoomDetailLoadedState>(
-          this, _$identity);
+  _$$RoomDetailLoadedStateImplCopyWith<_$RoomDetailLoadedStateImpl>
+      get copyWith => __$$RoomDetailLoadedStateImplCopyWithImpl<
+          _$RoomDetailLoadedStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -640,29 +648,31 @@ class _$RoomDetailLoadedState implements RoomDetailLoadedState {
 
 abstract class RoomDetailLoadedState implements RoomDetailState {
   const factory RoomDetailLoadedState({required final Room room}) =
-      _$RoomDetailLoadedState;
+      _$RoomDetailLoadedStateImpl;
 
   Room get room;
   @JsonKey(ignore: true)
-  _$$RoomDetailLoadedStateCopyWith<_$RoomDetailLoadedState> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$RoomDetailLoadedStateImplCopyWith<_$RoomDetailLoadedStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$RoomDetailRequestedStateCopyWith<$Res> {
-  factory _$$RoomDetailRequestedStateCopyWith(_$RoomDetailRequestedState value,
-          $Res Function(_$RoomDetailRequestedState) then) =
-      __$$RoomDetailRequestedStateCopyWithImpl<$Res>;
+abstract class _$$RoomDetailRequestedStateImplCopyWith<$Res> {
+  factory _$$RoomDetailRequestedStateImplCopyWith(
+          _$RoomDetailRequestedStateImpl value,
+          $Res Function(_$RoomDetailRequestedStateImpl) then) =
+      __$$RoomDetailRequestedStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$RoomDetailRequestedStateCopyWithImpl<$Res>
-    extends _$RoomDetailStateCopyWithImpl<$Res, _$RoomDetailRequestedState>
-    implements _$$RoomDetailRequestedStateCopyWith<$Res> {
-  __$$RoomDetailRequestedStateCopyWithImpl(_$RoomDetailRequestedState _value,
-      $Res Function(_$RoomDetailRequestedState) _then)
+class __$$RoomDetailRequestedStateImplCopyWithImpl<$Res>
+    extends _$RoomDetailStateCopyWithImpl<$Res, _$RoomDetailRequestedStateImpl>
+    implements _$$RoomDetailRequestedStateImplCopyWith<$Res> {
+  __$$RoomDetailRequestedStateImplCopyWithImpl(
+      _$RoomDetailRequestedStateImpl _value,
+      $Res Function(_$RoomDetailRequestedStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -670,7 +680,7 @@ class __$$RoomDetailRequestedStateCopyWithImpl<$Res>
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$RoomDetailRequestedState(
+    return _then(_$RoomDetailRequestedStateImpl(
       message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -681,8 +691,8 @@ class __$$RoomDetailRequestedStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RoomDetailRequestedState implements RoomDetailRequestedState {
-  const _$RoomDetailRequestedState({required this.message});
+class _$RoomDetailRequestedStateImpl implements RoomDetailRequestedState {
+  const _$RoomDetailRequestedStateImpl({required this.message});
 
   @override
   final String message;
@@ -693,10 +703,10 @@ class _$RoomDetailRequestedState implements RoomDetailRequestedState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RoomDetailRequestedState &&
+            other is _$RoomDetailRequestedStateImpl &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -706,10 +716,9 @@ class _$RoomDetailRequestedState implements RoomDetailRequestedState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$RoomDetailRequestedStateCopyWith<_$RoomDetailRequestedState>
-      get copyWith =>
-          __$$RoomDetailRequestedStateCopyWithImpl<_$RoomDetailRequestedState>(
-              this, _$identity);
+  _$$RoomDetailRequestedStateImplCopyWith<_$RoomDetailRequestedStateImpl>
+      get copyWith => __$$RoomDetailRequestedStateImplCopyWithImpl<
+          _$RoomDetailRequestedStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -794,10 +803,10 @@ class _$RoomDetailRequestedState implements RoomDetailRequestedState {
 
 abstract class RoomDetailRequestedState implements RoomDetailState {
   const factory RoomDetailRequestedState({required final String message}) =
-      _$RoomDetailRequestedState;
+      _$RoomDetailRequestedStateImpl;
 
   String get message;
   @JsonKey(ignore: true)
-  _$$RoomDetailRequestedStateCopyWith<_$RoomDetailRequestedState>
+  _$$RoomDetailRequestedStateImplCopyWith<_$RoomDetailRequestedStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

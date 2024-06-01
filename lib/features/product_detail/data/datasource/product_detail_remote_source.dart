@@ -3,7 +3,6 @@ import '../../../../core/failure.dart';
 import '../../../../core/request.dart';
 import '../../../../core/service_locator.dart';
 import './../models/product_model.dart';
-import 'package:flutter/foundation.dart';
 
 abstract class DetailProductRemoteDataSource {
   Future<Either<Failure, Product>> getDetailProductFromServer(

@@ -78,9 +78,7 @@ class _RoomDetailScreenState extends State<RoomDetailScreen> {
     final DateTime pickedDate = await _selectStartDate(context);
     final TimeOfDay pickedTime = await _pickTime(context);
     setState(() {
-      _startDateController.text = "${pickedDate.toLocal()}".split(' ')[0] +
-          " " +
-          "${pickedTime.format(context)}";
+      _startDateController.text = "${"${pickedDate.toLocal()}".split(' ')[0]} ${pickedTime.format(context)}";
     });
   }
 
@@ -88,9 +86,7 @@ class _RoomDetailScreenState extends State<RoomDetailScreen> {
     final DateTime pickedDate = await _selectEndDate(context);
     final TimeOfDay pickedTime = await _pickTime(context);
     setState(() {
-      _endDateController.text = "${pickedDate.toLocal()}".split(' ')[0] +
-          " " +
-          "${pickedTime.format(context)}";
+      _endDateController.text = "${"${pickedDate.toLocal()}".split(' ')[0]} ${pickedTime.format(context)}";
     });
   }
 

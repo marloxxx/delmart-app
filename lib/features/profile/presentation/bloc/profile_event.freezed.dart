@@ -12,7 +12,7 @@ part of 'profile_event.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ProfileEvent {
@@ -78,27 +78,28 @@ class _$ProfileEventCopyWithImpl<$Res, $Val extends ProfileEvent>
 }
 
 /// @nodoc
-abstract class _$$GetUserFromLocalStorageEventCopyWith<$Res> {
-  factory _$$GetUserFromLocalStorageEventCopyWith(
-          _$GetUserFromLocalStorageEvent value,
-          $Res Function(_$GetUserFromLocalStorageEvent) then) =
-      __$$GetUserFromLocalStorageEventCopyWithImpl<$Res>;
+abstract class _$$GetUserFromLocalStorageEventImplCopyWith<$Res> {
+  factory _$$GetUserFromLocalStorageEventImplCopyWith(
+          _$GetUserFromLocalStorageEventImpl value,
+          $Res Function(_$GetUserFromLocalStorageEventImpl) then) =
+      __$$GetUserFromLocalStorageEventImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GetUserFromLocalStorageEventCopyWithImpl<$Res>
-    extends _$ProfileEventCopyWithImpl<$Res, _$GetUserFromLocalStorageEvent>
-    implements _$$GetUserFromLocalStorageEventCopyWith<$Res> {
-  __$$GetUserFromLocalStorageEventCopyWithImpl(
-      _$GetUserFromLocalStorageEvent _value,
-      $Res Function(_$GetUserFromLocalStorageEvent) _then)
+class __$$GetUserFromLocalStorageEventImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$GetUserFromLocalStorageEventImpl>
+    implements _$$GetUserFromLocalStorageEventImplCopyWith<$Res> {
+  __$$GetUserFromLocalStorageEventImplCopyWithImpl(
+      _$GetUserFromLocalStorageEventImpl _value,
+      $Res Function(_$GetUserFromLocalStorageEventImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$GetUserFromLocalStorageEvent implements GetUserFromLocalStorageEvent {
-  const _$GetUserFromLocalStorageEvent();
+class _$GetUserFromLocalStorageEventImpl
+    implements GetUserFromLocalStorageEvent {
+  const _$GetUserFromLocalStorageEventImpl();
 
   @override
   String toString() {
@@ -106,10 +107,10 @@ class _$GetUserFromLocalStorageEvent implements GetUserFromLocalStorageEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetUserFromLocalStorageEvent);
+            other is _$GetUserFromLocalStorageEventImpl);
   }
 
   @override
@@ -182,29 +183,30 @@ class _$GetUserFromLocalStorageEvent implements GetUserFromLocalStorageEvent {
 }
 
 abstract class GetUserFromLocalStorageEvent implements ProfileEvent {
-  const factory GetUserFromLocalStorageEvent() = _$GetUserFromLocalStorageEvent;
+  const factory GetUserFromLocalStorageEvent() =
+      _$GetUserFromLocalStorageEventImpl;
 }
 
 /// @nodoc
-abstract class _$$LogoutEventCopyWith<$Res> {
-  factory _$$LogoutEventCopyWith(
-          _$LogoutEvent value, $Res Function(_$LogoutEvent) then) =
-      __$$LogoutEventCopyWithImpl<$Res>;
+abstract class _$$LogoutEventImplCopyWith<$Res> {
+  factory _$$LogoutEventImplCopyWith(
+          _$LogoutEventImpl value, $Res Function(_$LogoutEventImpl) then) =
+      __$$LogoutEventImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LogoutEventCopyWithImpl<$Res>
-    extends _$ProfileEventCopyWithImpl<$Res, _$LogoutEvent>
-    implements _$$LogoutEventCopyWith<$Res> {
-  __$$LogoutEventCopyWithImpl(
-      _$LogoutEvent _value, $Res Function(_$LogoutEvent) _then)
+class __$$LogoutEventImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$LogoutEventImpl>
+    implements _$$LogoutEventImplCopyWith<$Res> {
+  __$$LogoutEventImplCopyWithImpl(
+      _$LogoutEventImpl _value, $Res Function(_$LogoutEventImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LogoutEvent implements LogoutEvent {
-  const _$LogoutEvent();
+class _$LogoutEventImpl implements LogoutEvent {
+  const _$LogoutEventImpl();
 
   @override
   String toString() {
@@ -212,9 +214,9 @@ class _$LogoutEvent implements LogoutEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LogoutEvent);
+        (other.runtimeType == runtimeType && other is _$LogoutEventImpl);
   }
 
   @override
@@ -287,5 +289,5 @@ class _$LogoutEvent implements LogoutEvent {
 }
 
 abstract class LogoutEvent implements ProfileEvent {
-  const factory LogoutEvent() = _$LogoutEvent;
+  const factory LogoutEvent() = _$LogoutEventImpl;
 }

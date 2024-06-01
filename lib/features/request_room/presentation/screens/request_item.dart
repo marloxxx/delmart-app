@@ -104,9 +104,9 @@ class RequestItem extends StatelessWidget {
                       color: Colors.grey.withOpacity(0.2),
                     ),
                   ),
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
+                    children: [
                       Icon(
                         Icons.cancel,
                         color: Colors.red,

@@ -12,7 +12,7 @@ part of 'credit_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$CreditState {
@@ -93,25 +93,25 @@ class _$CreditStateCopyWithImpl<$Res, $Val extends CreditState>
 }
 
 /// @nodoc
-abstract class _$$CreditInitialStateCopyWith<$Res> {
-  factory _$$CreditInitialStateCopyWith(_$CreditInitialState value,
-          $Res Function(_$CreditInitialState) then) =
-      __$$CreditInitialStateCopyWithImpl<$Res>;
+abstract class _$$CreditInitialStateImplCopyWith<$Res> {
+  factory _$$CreditInitialStateImplCopyWith(_$CreditInitialStateImpl value,
+          $Res Function(_$CreditInitialStateImpl) then) =
+      __$$CreditInitialStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$CreditInitialStateCopyWithImpl<$Res>
-    extends _$CreditStateCopyWithImpl<$Res, _$CreditInitialState>
-    implements _$$CreditInitialStateCopyWith<$Res> {
-  __$$CreditInitialStateCopyWithImpl(
-      _$CreditInitialState _value, $Res Function(_$CreditInitialState) _then)
+class __$$CreditInitialStateImplCopyWithImpl<$Res>
+    extends _$CreditStateCopyWithImpl<$Res, _$CreditInitialStateImpl>
+    implements _$$CreditInitialStateImplCopyWith<$Res> {
+  __$$CreditInitialStateImplCopyWithImpl(_$CreditInitialStateImpl _value,
+      $Res Function(_$CreditInitialStateImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$CreditInitialState implements CreditInitialState {
-  const _$CreditInitialState();
+class _$CreditInitialStateImpl implements CreditInitialState {
+  const _$CreditInitialStateImpl();
 
   @override
   String toString() {
@@ -119,9 +119,9 @@ class _$CreditInitialState implements CreditInitialState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$CreditInitialState);
+        (other.runtimeType == runtimeType && other is _$CreditInitialStateImpl);
   }
 
   @override
@@ -209,29 +209,29 @@ class _$CreditInitialState implements CreditInitialState {
 }
 
 abstract class CreditInitialState implements CreditState {
-  const factory CreditInitialState() = _$CreditInitialState;
+  const factory CreditInitialState() = _$CreditInitialStateImpl;
 }
 
 /// @nodoc
-abstract class _$$CreditLoadingStateCopyWith<$Res> {
-  factory _$$CreditLoadingStateCopyWith(_$CreditLoadingState value,
-          $Res Function(_$CreditLoadingState) then) =
-      __$$CreditLoadingStateCopyWithImpl<$Res>;
+abstract class _$$CreditLoadingStateImplCopyWith<$Res> {
+  factory _$$CreditLoadingStateImplCopyWith(_$CreditLoadingStateImpl value,
+          $Res Function(_$CreditLoadingStateImpl) then) =
+      __$$CreditLoadingStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$CreditLoadingStateCopyWithImpl<$Res>
-    extends _$CreditStateCopyWithImpl<$Res, _$CreditLoadingState>
-    implements _$$CreditLoadingStateCopyWith<$Res> {
-  __$$CreditLoadingStateCopyWithImpl(
-      _$CreditLoadingState _value, $Res Function(_$CreditLoadingState) _then)
+class __$$CreditLoadingStateImplCopyWithImpl<$Res>
+    extends _$CreditStateCopyWithImpl<$Res, _$CreditLoadingStateImpl>
+    implements _$$CreditLoadingStateImplCopyWith<$Res> {
+  __$$CreditLoadingStateImplCopyWithImpl(_$CreditLoadingStateImpl _value,
+      $Res Function(_$CreditLoadingStateImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$CreditLoadingState implements CreditLoadingState {
-  const _$CreditLoadingState();
+class _$CreditLoadingStateImpl implements CreditLoadingState {
+  const _$CreditLoadingStateImpl();
 
   @override
   String toString() {
@@ -239,9 +239,9 @@ class _$CreditLoadingState implements CreditLoadingState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$CreditLoadingState);
+        (other.runtimeType == runtimeType && other is _$CreditLoadingStateImpl);
   }
 
   @override
@@ -329,24 +329,24 @@ class _$CreditLoadingState implements CreditLoadingState {
 }
 
 abstract class CreditLoadingState implements CreditState {
-  const factory CreditLoadingState() = _$CreditLoadingState;
+  const factory CreditLoadingState() = _$CreditLoadingStateImpl;
 }
 
 /// @nodoc
-abstract class _$$CreditErrorStateCopyWith<$Res> {
-  factory _$$CreditErrorStateCopyWith(
-          _$CreditErrorState value, $Res Function(_$CreditErrorState) then) =
-      __$$CreditErrorStateCopyWithImpl<$Res>;
+abstract class _$$CreditErrorStateImplCopyWith<$Res> {
+  factory _$$CreditErrorStateImplCopyWith(_$CreditErrorStateImpl value,
+          $Res Function(_$CreditErrorStateImpl) then) =
+      __$$CreditErrorStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$CreditErrorStateCopyWithImpl<$Res>
-    extends _$CreditStateCopyWithImpl<$Res, _$CreditErrorState>
-    implements _$$CreditErrorStateCopyWith<$Res> {
-  __$$CreditErrorStateCopyWithImpl(
-      _$CreditErrorState _value, $Res Function(_$CreditErrorState) _then)
+class __$$CreditErrorStateImplCopyWithImpl<$Res>
+    extends _$CreditStateCopyWithImpl<$Res, _$CreditErrorStateImpl>
+    implements _$$CreditErrorStateImplCopyWith<$Res> {
+  __$$CreditErrorStateImplCopyWithImpl(_$CreditErrorStateImpl _value,
+      $Res Function(_$CreditErrorStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -354,7 +354,7 @@ class __$$CreditErrorStateCopyWithImpl<$Res>
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$CreditErrorState(
+    return _then(_$CreditErrorStateImpl(
       null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -365,8 +365,8 @@ class __$$CreditErrorStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CreditErrorState implements CreditErrorState {
-  const _$CreditErrorState(this.message);
+class _$CreditErrorStateImpl implements CreditErrorState {
+  const _$CreditErrorStateImpl(this.message);
 
   @override
   final String message;
@@ -377,10 +377,10 @@ class _$CreditErrorState implements CreditErrorState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CreditErrorState &&
+            other is _$CreditErrorStateImpl &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -390,8 +390,9 @@ class _$CreditErrorState implements CreditErrorState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CreditErrorStateCopyWith<_$CreditErrorState> get copyWith =>
-      __$$CreditErrorStateCopyWithImpl<_$CreditErrorState>(this, _$identity);
+  _$$CreditErrorStateImplCopyWith<_$CreditErrorStateImpl> get copyWith =>
+      __$$CreditErrorStateImplCopyWithImpl<_$CreditErrorStateImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -475,29 +476,29 @@ class _$CreditErrorState implements CreditErrorState {
 }
 
 abstract class CreditErrorState implements CreditState {
-  const factory CreditErrorState(final String message) = _$CreditErrorState;
+  const factory CreditErrorState(final String message) = _$CreditErrorStateImpl;
 
   String get message;
   @JsonKey(ignore: true)
-  _$$CreditErrorStateCopyWith<_$CreditErrorState> get copyWith =>
+  _$$CreditErrorStateImplCopyWith<_$CreditErrorStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$CreditLoadedStateCopyWith<$Res> {
-  factory _$$CreditLoadedStateCopyWith(
-          _$CreditLoadedState value, $Res Function(_$CreditLoadedState) then) =
-      __$$CreditLoadedStateCopyWithImpl<$Res>;
+abstract class _$$CreditLoadedStateImplCopyWith<$Res> {
+  factory _$$CreditLoadedStateImplCopyWith(_$CreditLoadedStateImpl value,
+          $Res Function(_$CreditLoadedStateImpl) then) =
+      __$$CreditLoadedStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<Credit> creditList});
 }
 
 /// @nodoc
-class __$$CreditLoadedStateCopyWithImpl<$Res>
-    extends _$CreditStateCopyWithImpl<$Res, _$CreditLoadedState>
-    implements _$$CreditLoadedStateCopyWith<$Res> {
-  __$$CreditLoadedStateCopyWithImpl(
-      _$CreditLoadedState _value, $Res Function(_$CreditLoadedState) _then)
+class __$$CreditLoadedStateImplCopyWithImpl<$Res>
+    extends _$CreditStateCopyWithImpl<$Res, _$CreditLoadedStateImpl>
+    implements _$$CreditLoadedStateImplCopyWith<$Res> {
+  __$$CreditLoadedStateImplCopyWithImpl(_$CreditLoadedStateImpl _value,
+      $Res Function(_$CreditLoadedStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -505,7 +506,7 @@ class __$$CreditLoadedStateCopyWithImpl<$Res>
   $Res call({
     Object? creditList = null,
   }) {
-    return _then(_$CreditLoadedState(
+    return _then(_$CreditLoadedStateImpl(
       creditList: null == creditList
           ? _value._creditList
           : creditList // ignore: cast_nullable_to_non_nullable
@@ -516,8 +517,8 @@ class __$$CreditLoadedStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CreditLoadedState implements CreditLoadedState {
-  const _$CreditLoadedState({required final List<Credit> creditList})
+class _$CreditLoadedStateImpl implements CreditLoadedState {
+  const _$CreditLoadedStateImpl({required final List<Credit> creditList})
       : _creditList = creditList;
 
   final List<Credit> _creditList;
@@ -534,10 +535,10 @@ class _$CreditLoadedState implements CreditLoadedState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CreditLoadedState &&
+            other is _$CreditLoadedStateImpl &&
             const DeepCollectionEquality()
                 .equals(other._creditList, _creditList));
   }
@@ -549,8 +550,9 @@ class _$CreditLoadedState implements CreditLoadedState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CreditLoadedStateCopyWith<_$CreditLoadedState> get copyWith =>
-      __$$CreditLoadedStateCopyWithImpl<_$CreditLoadedState>(this, _$identity);
+  _$$CreditLoadedStateImplCopyWith<_$CreditLoadedStateImpl> get copyWith =>
+      __$$CreditLoadedStateImplCopyWithImpl<_$CreditLoadedStateImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -635,20 +637,20 @@ class _$CreditLoadedState implements CreditLoadedState {
 
 abstract class CreditLoadedState implements CreditState {
   const factory CreditLoadedState({required final List<Credit> creditList}) =
-      _$CreditLoadedState;
+      _$CreditLoadedStateImpl;
 
   List<Credit> get creditList;
   @JsonKey(ignore: true)
-  _$$CreditLoadedStateCopyWith<_$CreditLoadedState> get copyWith =>
+  _$$CreditLoadedStateImplCopyWith<_$CreditLoadedStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$CreditCheckoutSuccessStateCopyWith<$Res> {
-  factory _$$CreditCheckoutSuccessStateCopyWith(
-          _$CreditCheckoutSuccessState value,
-          $Res Function(_$CreditCheckoutSuccessState) then) =
-      __$$CreditCheckoutSuccessStateCopyWithImpl<$Res>;
+abstract class _$$CreditCheckoutSuccessStateImplCopyWith<$Res> {
+  factory _$$CreditCheckoutSuccessStateImplCopyWith(
+          _$CreditCheckoutSuccessStateImpl value,
+          $Res Function(_$CreditCheckoutSuccessStateImpl) then) =
+      __$$CreditCheckoutSuccessStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({OrderModel order});
 
@@ -656,12 +658,12 @@ abstract class _$$CreditCheckoutSuccessStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$CreditCheckoutSuccessStateCopyWithImpl<$Res>
-    extends _$CreditStateCopyWithImpl<$Res, _$CreditCheckoutSuccessState>
-    implements _$$CreditCheckoutSuccessStateCopyWith<$Res> {
-  __$$CreditCheckoutSuccessStateCopyWithImpl(
-      _$CreditCheckoutSuccessState _value,
-      $Res Function(_$CreditCheckoutSuccessState) _then)
+class __$$CreditCheckoutSuccessStateImplCopyWithImpl<$Res>
+    extends _$CreditStateCopyWithImpl<$Res, _$CreditCheckoutSuccessStateImpl>
+    implements _$$CreditCheckoutSuccessStateImplCopyWith<$Res> {
+  __$$CreditCheckoutSuccessStateImplCopyWithImpl(
+      _$CreditCheckoutSuccessStateImpl _value,
+      $Res Function(_$CreditCheckoutSuccessStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -669,7 +671,7 @@ class __$$CreditCheckoutSuccessStateCopyWithImpl<$Res>
   $Res call({
     Object? order = null,
   }) {
-    return _then(_$CreditCheckoutSuccessState(
+    return _then(_$CreditCheckoutSuccessStateImpl(
       order: null == order
           ? _value.order
           : order // ignore: cast_nullable_to_non_nullable
@@ -688,8 +690,8 @@ class __$$CreditCheckoutSuccessStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CreditCheckoutSuccessState implements CreditCheckoutSuccessState {
-  const _$CreditCheckoutSuccessState({required this.order});
+class _$CreditCheckoutSuccessStateImpl implements CreditCheckoutSuccessState {
+  const _$CreditCheckoutSuccessStateImpl({required this.order});
 
   @override
   final OrderModel order;
@@ -700,10 +702,10 @@ class _$CreditCheckoutSuccessState implements CreditCheckoutSuccessState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CreditCheckoutSuccessState &&
+            other is _$CreditCheckoutSuccessStateImpl &&
             (identical(other.order, order) || other.order == order));
   }
 
@@ -713,9 +715,9 @@ class _$CreditCheckoutSuccessState implements CreditCheckoutSuccessState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CreditCheckoutSuccessStateCopyWith<_$CreditCheckoutSuccessState>
-      get copyWith => __$$CreditCheckoutSuccessStateCopyWithImpl<
-          _$CreditCheckoutSuccessState>(this, _$identity);
+  _$$CreditCheckoutSuccessStateImplCopyWith<_$CreditCheckoutSuccessStateImpl>
+      get copyWith => __$$CreditCheckoutSuccessStateImplCopyWithImpl<
+          _$CreditCheckoutSuccessStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -800,10 +802,10 @@ class _$CreditCheckoutSuccessState implements CreditCheckoutSuccessState {
 
 abstract class CreditCheckoutSuccessState implements CreditState {
   const factory CreditCheckoutSuccessState({required final OrderModel order}) =
-      _$CreditCheckoutSuccessState;
+      _$CreditCheckoutSuccessStateImpl;
 
   OrderModel get order;
   @JsonKey(ignore: true)
-  _$$CreditCheckoutSuccessStateCopyWith<_$CreditCheckoutSuccessState>
+  _$$CreditCheckoutSuccessStateImplCopyWith<_$CreditCheckoutSuccessStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

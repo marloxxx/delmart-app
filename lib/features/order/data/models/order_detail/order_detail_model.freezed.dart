@@ -12,7 +12,7 @@ part of 'order_detail_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 OrderDetail _$OrderDetailFromJson(Map<String, dynamic> json) {
   return _OrderDetail.fromJson(json);
@@ -78,11 +78,11 @@ class _$OrderDetailCopyWithImpl<$Res, $Val extends OrderDetail>
 }
 
 /// @nodoc
-abstract class _$$_OrderDetailCopyWith<$Res>
+abstract class _$$OrderDetailImplCopyWith<$Res>
     implements $OrderDetailCopyWith<$Res> {
-  factory _$$_OrderDetailCopyWith(
-          _$_OrderDetail value, $Res Function(_$_OrderDetail) then) =
-      __$$_OrderDetailCopyWithImpl<$Res>;
+  factory _$$OrderDetailImplCopyWith(
+          _$OrderDetailImpl value, $Res Function(_$OrderDetailImpl) then) =
+      __$$OrderDetailImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Product product, int quantity});
@@ -92,11 +92,11 @@ abstract class _$$_OrderDetailCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_OrderDetailCopyWithImpl<$Res>
-    extends _$OrderDetailCopyWithImpl<$Res, _$_OrderDetail>
-    implements _$$_OrderDetailCopyWith<$Res> {
-  __$$_OrderDetailCopyWithImpl(
-      _$_OrderDetail _value, $Res Function(_$_OrderDetail) _then)
+class __$$OrderDetailImplCopyWithImpl<$Res>
+    extends _$OrderDetailCopyWithImpl<$Res, _$OrderDetailImpl>
+    implements _$$OrderDetailImplCopyWith<$Res> {
+  __$$OrderDetailImplCopyWithImpl(
+      _$OrderDetailImpl _value, $Res Function(_$OrderDetailImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -105,7 +105,7 @@ class __$$_OrderDetailCopyWithImpl<$Res>
     Object? product = null,
     Object? quantity = null,
   }) {
-    return _then(_$_OrderDetail(
+    return _then(_$OrderDetailImpl(
       product: null == product
           ? _value.product
           : product // ignore: cast_nullable_to_non_nullable
@@ -120,11 +120,11 @@ class __$$_OrderDetailCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_OrderDetail implements _OrderDetail {
-  _$_OrderDetail({required this.product, required this.quantity});
+class _$OrderDetailImpl implements _OrderDetail {
+  _$OrderDetailImpl({required this.product, required this.quantity});
 
-  factory _$_OrderDetail.fromJson(Map<String, dynamic> json) =>
-      _$$_OrderDetailFromJson(json);
+  factory _$OrderDetailImpl.fromJson(Map<String, dynamic> json) =>
+      _$$OrderDetailImplFromJson(json);
 
   @override
   final Product product;
@@ -137,10 +137,10 @@ class _$_OrderDetail implements _OrderDetail {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_OrderDetail &&
+            other is _$OrderDetailImpl &&
             (identical(other.product, product) || other.product == product) &&
             (identical(other.quantity, quantity) ||
                 other.quantity == quantity));
@@ -153,12 +153,12 @@ class _$_OrderDetail implements _OrderDetail {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_OrderDetailCopyWith<_$_OrderDetail> get copyWith =>
-      __$$_OrderDetailCopyWithImpl<_$_OrderDetail>(this, _$identity);
+  _$$OrderDetailImplCopyWith<_$OrderDetailImpl> get copyWith =>
+      __$$OrderDetailImplCopyWithImpl<_$OrderDetailImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OrderDetailToJson(
+    return _$$OrderDetailImplToJson(
       this,
     );
   }
@@ -167,10 +167,10 @@ class _$_OrderDetail implements _OrderDetail {
 abstract class _OrderDetail implements OrderDetail {
   factory _OrderDetail(
       {required final Product product,
-      required final int quantity}) = _$_OrderDetail;
+      required final int quantity}) = _$OrderDetailImpl;
 
   factory _OrderDetail.fromJson(Map<String, dynamic> json) =
-      _$_OrderDetail.fromJson;
+      _$OrderDetailImpl.fromJson;
 
   @override
   Product get product;
@@ -178,6 +178,6 @@ abstract class _OrderDetail implements OrderDetail {
   int get quantity;
   @override
   @JsonKey(ignore: true)
-  _$$_OrderDetailCopyWith<_$_OrderDetail> get copyWith =>
+  _$$OrderDetailImplCopyWith<_$OrderDetailImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

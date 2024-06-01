@@ -6,13 +6,14 @@ part of 'cart_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Cart _$$_CartFromJson(Map<String, dynamic> json) => _$_Cart(
-      id: json['id'] as int,
+_$CartImpl _$$CartImplFromJson(Map<String, dynamic> json) => _$CartImpl(
+      id: (json['id'] as num).toInt(),
       product: Product.fromJson(json['product'] as Map<String, dynamic>),
-      quantity: json['quantity'] as int,
+      quantity: (json['quantity'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_CartToJson(_$_Cart instance) => <String, dynamic>{
+Map<String, dynamic> _$$CartImplToJson(_$CartImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'product': instance.product,
       'quantity': instance.quantity,

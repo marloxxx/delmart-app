@@ -12,7 +12,7 @@ part of 'request_room_event.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$RequestRoomEvent {
@@ -97,22 +97,22 @@ class _$RequestRoomEventCopyWithImpl<$Res, $Val extends RequestRoomEvent>
 }
 
 /// @nodoc
-abstract class _$$GetRequestRoomsEventCopyWith<$Res>
+abstract class _$$GetRequestRoomsEventImplCopyWith<$Res>
     implements $RequestRoomEventCopyWith<$Res> {
-  factory _$$GetRequestRoomsEventCopyWith(_$GetRequestRoomsEvent value,
-          $Res Function(_$GetRequestRoomsEvent) then) =
-      __$$GetRequestRoomsEventCopyWithImpl<$Res>;
+  factory _$$GetRequestRoomsEventImplCopyWith(_$GetRequestRoomsEventImpl value,
+          $Res Function(_$GetRequestRoomsEventImpl) then) =
+      __$$GetRequestRoomsEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String status});
 }
 
 /// @nodoc
-class __$$GetRequestRoomsEventCopyWithImpl<$Res>
-    extends _$RequestRoomEventCopyWithImpl<$Res, _$GetRequestRoomsEvent>
-    implements _$$GetRequestRoomsEventCopyWith<$Res> {
-  __$$GetRequestRoomsEventCopyWithImpl(_$GetRequestRoomsEvent _value,
-      $Res Function(_$GetRequestRoomsEvent) _then)
+class __$$GetRequestRoomsEventImplCopyWithImpl<$Res>
+    extends _$RequestRoomEventCopyWithImpl<$Res, _$GetRequestRoomsEventImpl>
+    implements _$$GetRequestRoomsEventImplCopyWith<$Res> {
+  __$$GetRequestRoomsEventImplCopyWithImpl(_$GetRequestRoomsEventImpl _value,
+      $Res Function(_$GetRequestRoomsEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -120,7 +120,7 @@ class __$$GetRequestRoomsEventCopyWithImpl<$Res>
   $Res call({
     Object? status = null,
   }) {
-    return _then(_$GetRequestRoomsEvent(
+    return _then(_$GetRequestRoomsEventImpl(
       null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -131,8 +131,8 @@ class __$$GetRequestRoomsEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$GetRequestRoomsEvent implements GetRequestRoomsEvent {
-  const _$GetRequestRoomsEvent(this.status);
+class _$GetRequestRoomsEventImpl implements GetRequestRoomsEvent {
+  const _$GetRequestRoomsEventImpl(this.status);
 
   @override
   final String status;
@@ -143,10 +143,10 @@ class _$GetRequestRoomsEvent implements GetRequestRoomsEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetRequestRoomsEvent &&
+            other is _$GetRequestRoomsEventImpl &&
             (identical(other.status, status) || other.status == status));
   }
 
@@ -156,9 +156,10 @@ class _$GetRequestRoomsEvent implements GetRequestRoomsEvent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetRequestRoomsEventCopyWith<_$GetRequestRoomsEvent> get copyWith =>
-      __$$GetRequestRoomsEventCopyWithImpl<_$GetRequestRoomsEvent>(
-          this, _$identity);
+  _$$GetRequestRoomsEventImplCopyWith<_$GetRequestRoomsEventImpl>
+      get copyWith =>
+          __$$GetRequestRoomsEventImplCopyWithImpl<_$GetRequestRoomsEventImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -227,22 +228,22 @@ class _$GetRequestRoomsEvent implements GetRequestRoomsEvent {
 
 abstract class GetRequestRoomsEvent implements RequestRoomEvent {
   const factory GetRequestRoomsEvent(final String status) =
-      _$GetRequestRoomsEvent;
+      _$GetRequestRoomsEventImpl;
 
   @override
   String get status;
   @override
   @JsonKey(ignore: true)
-  _$$GetRequestRoomsEventCopyWith<_$GetRequestRoomsEvent> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetRequestRoomsEventImplCopyWith<_$GetRequestRoomsEventImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$CancelRequestEventCopyWith<$Res>
+abstract class _$$CancelRequestEventImplCopyWith<$Res>
     implements $RequestRoomEventCopyWith<$Res> {
-  factory _$$CancelRequestEventCopyWith(_$CancelRequestEvent value,
-          $Res Function(_$CancelRequestEvent) then) =
-      __$$CancelRequestEventCopyWithImpl<$Res>;
+  factory _$$CancelRequestEventImplCopyWith(_$CancelRequestEventImpl value,
+          $Res Function(_$CancelRequestEventImpl) then) =
+      __$$CancelRequestEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String status, RequestRoom requestRoom});
@@ -251,11 +252,11 @@ abstract class _$$CancelRequestEventCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CancelRequestEventCopyWithImpl<$Res>
-    extends _$RequestRoomEventCopyWithImpl<$Res, _$CancelRequestEvent>
-    implements _$$CancelRequestEventCopyWith<$Res> {
-  __$$CancelRequestEventCopyWithImpl(
-      _$CancelRequestEvent _value, $Res Function(_$CancelRequestEvent) _then)
+class __$$CancelRequestEventImplCopyWithImpl<$Res>
+    extends _$RequestRoomEventCopyWithImpl<$Res, _$CancelRequestEventImpl>
+    implements _$$CancelRequestEventImplCopyWith<$Res> {
+  __$$CancelRequestEventImplCopyWithImpl(_$CancelRequestEventImpl _value,
+      $Res Function(_$CancelRequestEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -264,7 +265,7 @@ class __$$CancelRequestEventCopyWithImpl<$Res>
     Object? status = null,
     Object? requestRoom = null,
   }) {
-    return _then(_$CancelRequestEvent(
+    return _then(_$CancelRequestEventImpl(
       null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -287,8 +288,8 @@ class __$$CancelRequestEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CancelRequestEvent implements CancelRequestEvent {
-  const _$CancelRequestEvent(this.status, this.requestRoom);
+class _$CancelRequestEventImpl implements CancelRequestEvent {
+  const _$CancelRequestEventImpl(this.status, this.requestRoom);
 
   @override
   final String status;
@@ -301,10 +302,10 @@ class _$CancelRequestEvent implements CancelRequestEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CancelRequestEvent &&
+            other is _$CancelRequestEventImpl &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.requestRoom, requestRoom) ||
                 other.requestRoom == requestRoom));
@@ -316,8 +317,8 @@ class _$CancelRequestEvent implements CancelRequestEvent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CancelRequestEventCopyWith<_$CancelRequestEvent> get copyWith =>
-      __$$CancelRequestEventCopyWithImpl<_$CancelRequestEvent>(
+  _$$CancelRequestEventImplCopyWith<_$CancelRequestEventImpl> get copyWith =>
+      __$$CancelRequestEventImplCopyWithImpl<_$CancelRequestEventImpl>(
           this, _$identity);
 
   @override
@@ -388,13 +389,13 @@ class _$CancelRequestEvent implements CancelRequestEvent {
 abstract class CancelRequestEvent implements RequestRoomEvent {
   const factory CancelRequestEvent(
           final String status, final RequestRoom requestRoom) =
-      _$CancelRequestEvent;
+      _$CancelRequestEventImpl;
 
   @override
   String get status;
   RequestRoom get requestRoom;
   @override
   @JsonKey(ignore: true)
-  _$$CancelRequestEventCopyWith<_$CancelRequestEvent> get copyWith =>
+  _$$CancelRequestEventImplCopyWith<_$CancelRequestEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

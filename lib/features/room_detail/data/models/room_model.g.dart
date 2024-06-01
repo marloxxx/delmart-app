@@ -6,15 +6,16 @@ part of 'room_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Room _$$_RoomFromJson(Map<String, dynamic> json) => _$_Room(
-      id: json['id'] as int? ?? 0,
+_$RoomImpl _$$RoomImplFromJson(Map<String, dynamic> json) => _$RoomImpl(
+      id: (json['id'] as num?)?.toInt() ?? 0,
       name: json['name'] as String? ?? '',
       description: json['description'] as String? ?? '',
       image: json['image'] as String? ?? '',
       status: json['status'] as String? ?? '',
     );
 
-Map<String, dynamic> _$$_RoomToJson(_$_Room instance) => <String, dynamic>{
+Map<String, dynamic> _$$RoomImplToJson(_$RoomImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
       'description': instance.description,

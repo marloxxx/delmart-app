@@ -186,8 +186,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   Radius.circular(10),
                                 ),
                               ),
-                              child: Column(
-                                children: const [
+                              child: const Column(
+                                children: [
                                   // list menu
                                   // settings
                                   CardItemMenu(

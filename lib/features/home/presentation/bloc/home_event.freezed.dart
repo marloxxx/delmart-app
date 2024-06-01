@@ -12,7 +12,7 @@ part of 'home_event.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$HomeEvent {
@@ -68,25 +68,25 @@ class _$HomeEventCopyWithImpl<$Res, $Val extends HomeEvent>
 }
 
 /// @nodoc
-abstract class _$$GetDataEventCopyWith<$Res> {
-  factory _$$GetDataEventCopyWith(
-          _$GetDataEvent value, $Res Function(_$GetDataEvent) then) =
-      __$$GetDataEventCopyWithImpl<$Res>;
+abstract class _$$GetDataEventImplCopyWith<$Res> {
+  factory _$$GetDataEventImplCopyWith(
+          _$GetDataEventImpl value, $Res Function(_$GetDataEventImpl) then) =
+      __$$GetDataEventImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GetDataEventCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$GetDataEvent>
-    implements _$$GetDataEventCopyWith<$Res> {
-  __$$GetDataEventCopyWithImpl(
-      _$GetDataEvent _value, $Res Function(_$GetDataEvent) _then)
+class __$$GetDataEventImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$GetDataEventImpl>
+    implements _$$GetDataEventImplCopyWith<$Res> {
+  __$$GetDataEventImplCopyWithImpl(
+      _$GetDataEventImpl _value, $Res Function(_$GetDataEventImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$GetDataEvent implements GetDataEvent {
-  const _$GetDataEvent();
+class _$GetDataEventImpl implements GetDataEvent {
+  const _$GetDataEventImpl();
 
   @override
   String toString() {
@@ -94,9 +94,9 @@ class _$GetDataEvent implements GetDataEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$GetDataEvent);
+        (other.runtimeType == runtimeType && other is _$GetDataEventImpl);
   }
 
   @override
@@ -160,5 +160,5 @@ class _$GetDataEvent implements GetDataEvent {
 }
 
 abstract class GetDataEvent implements HomeEvent {
-  const factory GetDataEvent() = _$GetDataEvent;
+  const factory GetDataEvent() = _$GetDataEventImpl;
 }

@@ -128,8 +128,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   color: Colors.grey.withOpacity(0.5),
                                 ),
                               ),
-                              child: Row(
-                                children: const [
+                              child: const Row(
+                                children: [
                                   Icon(
                                     Icons.search,
                                     color: Colors.grey,

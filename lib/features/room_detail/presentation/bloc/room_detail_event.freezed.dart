@@ -12,7 +12,7 @@ part of 'room_detail_event.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$RoomDetailEvent {
@@ -75,20 +75,20 @@ class _$RoomDetailEventCopyWithImpl<$Res, $Val extends RoomDetailEvent>
 }
 
 /// @nodoc
-abstract class _$$GetRoomDetailEventCopyWith<$Res> {
-  factory _$$GetRoomDetailEventCopyWith(_$GetRoomDetailEvent value,
-          $Res Function(_$GetRoomDetailEvent) then) =
-      __$$GetRoomDetailEventCopyWithImpl<$Res>;
+abstract class _$$GetRoomDetailEventImplCopyWith<$Res> {
+  factory _$$GetRoomDetailEventImplCopyWith(_$GetRoomDetailEventImpl value,
+          $Res Function(_$GetRoomDetailEventImpl) then) =
+      __$$GetRoomDetailEventImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int roomId});
 }
 
 /// @nodoc
-class __$$GetRoomDetailEventCopyWithImpl<$Res>
-    extends _$RoomDetailEventCopyWithImpl<$Res, _$GetRoomDetailEvent>
-    implements _$$GetRoomDetailEventCopyWith<$Res> {
-  __$$GetRoomDetailEventCopyWithImpl(
-      _$GetRoomDetailEvent _value, $Res Function(_$GetRoomDetailEvent) _then)
+class __$$GetRoomDetailEventImplCopyWithImpl<$Res>
+    extends _$RoomDetailEventCopyWithImpl<$Res, _$GetRoomDetailEventImpl>
+    implements _$$GetRoomDetailEventImplCopyWith<$Res> {
+  __$$GetRoomDetailEventImplCopyWithImpl(_$GetRoomDetailEventImpl _value,
+      $Res Function(_$GetRoomDetailEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -96,7 +96,7 @@ class __$$GetRoomDetailEventCopyWithImpl<$Res>
   $Res call({
     Object? roomId = null,
   }) {
-    return _then(_$GetRoomDetailEvent(
+    return _then(_$GetRoomDetailEventImpl(
       roomId: null == roomId
           ? _value.roomId
           : roomId // ignore: cast_nullable_to_non_nullable
@@ -107,8 +107,8 @@ class __$$GetRoomDetailEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$GetRoomDetailEvent implements GetRoomDetailEvent {
-  const _$GetRoomDetailEvent({required this.roomId});
+class _$GetRoomDetailEventImpl implements GetRoomDetailEvent {
+  const _$GetRoomDetailEventImpl({required this.roomId});
 
   @override
   final int roomId;
@@ -119,10 +119,10 @@ class _$GetRoomDetailEvent implements GetRoomDetailEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetRoomDetailEvent &&
+            other is _$GetRoomDetailEventImpl &&
             (identical(other.roomId, roomId) || other.roomId == roomId));
   }
 
@@ -132,8 +132,8 @@ class _$GetRoomDetailEvent implements GetRoomDetailEvent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetRoomDetailEventCopyWith<_$GetRoomDetailEvent> get copyWith =>
-      __$$GetRoomDetailEventCopyWithImpl<_$GetRoomDetailEvent>(
+  _$$GetRoomDetailEventImplCopyWith<_$GetRoomDetailEventImpl> get copyWith =>
+      __$$GetRoomDetailEventImplCopyWithImpl<_$GetRoomDetailEventImpl>(
           this, _$identity);
 
   @override
@@ -201,29 +201,29 @@ class _$GetRoomDetailEvent implements GetRoomDetailEvent {
 
 abstract class GetRoomDetailEvent implements RoomDetailEvent {
   const factory GetRoomDetailEvent({required final int roomId}) =
-      _$GetRoomDetailEvent;
+      _$GetRoomDetailEventImpl;
 
   int get roomId;
   @JsonKey(ignore: true)
-  _$$GetRoomDetailEventCopyWith<_$GetRoomDetailEvent> get copyWith =>
+  _$$GetRoomDetailEventImplCopyWith<_$GetRoomDetailEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$RequestRoomEventCopyWith<$Res> {
-  factory _$$RequestRoomEventCopyWith(
-          _$RequestRoomEvent value, $Res Function(_$RequestRoomEvent) then) =
-      __$$RequestRoomEventCopyWithImpl<$Res>;
+abstract class _$$RequestRoomEventImplCopyWith<$Res> {
+  factory _$$RequestRoomEventImplCopyWith(_$RequestRoomEventImpl value,
+          $Res Function(_$RequestRoomEventImpl) then) =
+      __$$RequestRoomEventImplCopyWithImpl<$Res>;
   @useResult
   $Res call({RequestRoomEntity requestRoomEntity});
 }
 
 /// @nodoc
-class __$$RequestRoomEventCopyWithImpl<$Res>
-    extends _$RoomDetailEventCopyWithImpl<$Res, _$RequestRoomEvent>
-    implements _$$RequestRoomEventCopyWith<$Res> {
-  __$$RequestRoomEventCopyWithImpl(
-      _$RequestRoomEvent _value, $Res Function(_$RequestRoomEvent) _then)
+class __$$RequestRoomEventImplCopyWithImpl<$Res>
+    extends _$RoomDetailEventCopyWithImpl<$Res, _$RequestRoomEventImpl>
+    implements _$$RequestRoomEventImplCopyWith<$Res> {
+  __$$RequestRoomEventImplCopyWithImpl(_$RequestRoomEventImpl _value,
+      $Res Function(_$RequestRoomEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -231,7 +231,7 @@ class __$$RequestRoomEventCopyWithImpl<$Res>
   $Res call({
     Object? requestRoomEntity = null,
   }) {
-    return _then(_$RequestRoomEvent(
+    return _then(_$RequestRoomEventImpl(
       null == requestRoomEntity
           ? _value.requestRoomEntity
           : requestRoomEntity // ignore: cast_nullable_to_non_nullable
@@ -242,8 +242,8 @@ class __$$RequestRoomEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RequestRoomEvent implements RequestRoomEvent {
-  const _$RequestRoomEvent(this.requestRoomEntity);
+class _$RequestRoomEventImpl implements RequestRoomEvent {
+  const _$RequestRoomEventImpl(this.requestRoomEntity);
 
   @override
   final RequestRoomEntity requestRoomEntity;
@@ -254,10 +254,10 @@ class _$RequestRoomEvent implements RequestRoomEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RequestRoomEvent &&
+            other is _$RequestRoomEventImpl &&
             (identical(other.requestRoomEntity, requestRoomEntity) ||
                 other.requestRoomEntity == requestRoomEntity));
   }
@@ -268,8 +268,9 @@ class _$RequestRoomEvent implements RequestRoomEvent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$RequestRoomEventCopyWith<_$RequestRoomEvent> get copyWith =>
-      __$$RequestRoomEventCopyWithImpl<_$RequestRoomEvent>(this, _$identity);
+  _$$RequestRoomEventImplCopyWith<_$RequestRoomEventImpl> get copyWith =>
+      __$$RequestRoomEventImplCopyWithImpl<_$RequestRoomEventImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -336,10 +337,10 @@ class _$RequestRoomEvent implements RequestRoomEvent {
 
 abstract class RequestRoomEvent implements RoomDetailEvent {
   const factory RequestRoomEvent(final RequestRoomEntity requestRoomEntity) =
-      _$RequestRoomEvent;
+      _$RequestRoomEventImpl;
 
   RequestRoomEntity get requestRoomEntity;
   @JsonKey(ignore: true)
-  _$$RequestRoomEventCopyWith<_$RequestRoomEvent> get copyWith =>
+  _$$RequestRoomEventImplCopyWith<_$RequestRoomEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

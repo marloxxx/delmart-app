@@ -12,7 +12,7 @@ part of 'request_room_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$RequestRoomState {
@@ -93,25 +93,27 @@ class _$RequestRoomStateCopyWithImpl<$Res, $Val extends RequestRoomState>
 }
 
 /// @nodoc
-abstract class _$$RequestRoomInitialStateCopyWith<$Res> {
-  factory _$$RequestRoomInitialStateCopyWith(_$RequestRoomInitialState value,
-          $Res Function(_$RequestRoomInitialState) then) =
-      __$$RequestRoomInitialStateCopyWithImpl<$Res>;
+abstract class _$$RequestRoomInitialStateImplCopyWith<$Res> {
+  factory _$$RequestRoomInitialStateImplCopyWith(
+          _$RequestRoomInitialStateImpl value,
+          $Res Function(_$RequestRoomInitialStateImpl) then) =
+      __$$RequestRoomInitialStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$RequestRoomInitialStateCopyWithImpl<$Res>
-    extends _$RequestRoomStateCopyWithImpl<$Res, _$RequestRoomInitialState>
-    implements _$$RequestRoomInitialStateCopyWith<$Res> {
-  __$$RequestRoomInitialStateCopyWithImpl(_$RequestRoomInitialState _value,
-      $Res Function(_$RequestRoomInitialState) _then)
+class __$$RequestRoomInitialStateImplCopyWithImpl<$Res>
+    extends _$RequestRoomStateCopyWithImpl<$Res, _$RequestRoomInitialStateImpl>
+    implements _$$RequestRoomInitialStateImplCopyWith<$Res> {
+  __$$RequestRoomInitialStateImplCopyWithImpl(
+      _$RequestRoomInitialStateImpl _value,
+      $Res Function(_$RequestRoomInitialStateImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$RequestRoomInitialState implements RequestRoomInitialState {
-  const _$RequestRoomInitialState();
+class _$RequestRoomInitialStateImpl implements RequestRoomInitialState {
+  const _$RequestRoomInitialStateImpl();
 
   @override
   String toString() {
@@ -119,10 +121,10 @@ class _$RequestRoomInitialState implements RequestRoomInitialState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RequestRoomInitialState);
+            other is _$RequestRoomInitialStateImpl);
   }
 
   @override
@@ -210,29 +212,31 @@ class _$RequestRoomInitialState implements RequestRoomInitialState {
 }
 
 abstract class RequestRoomInitialState implements RequestRoomState {
-  const factory RequestRoomInitialState() = _$RequestRoomInitialState;
+  const factory RequestRoomInitialState() = _$RequestRoomInitialStateImpl;
 }
 
 /// @nodoc
-abstract class _$$RequestRoomLoadingStateCopyWith<$Res> {
-  factory _$$RequestRoomLoadingStateCopyWith(_$RequestRoomLoadingState value,
-          $Res Function(_$RequestRoomLoadingState) then) =
-      __$$RequestRoomLoadingStateCopyWithImpl<$Res>;
+abstract class _$$RequestRoomLoadingStateImplCopyWith<$Res> {
+  factory _$$RequestRoomLoadingStateImplCopyWith(
+          _$RequestRoomLoadingStateImpl value,
+          $Res Function(_$RequestRoomLoadingStateImpl) then) =
+      __$$RequestRoomLoadingStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$RequestRoomLoadingStateCopyWithImpl<$Res>
-    extends _$RequestRoomStateCopyWithImpl<$Res, _$RequestRoomLoadingState>
-    implements _$$RequestRoomLoadingStateCopyWith<$Res> {
-  __$$RequestRoomLoadingStateCopyWithImpl(_$RequestRoomLoadingState _value,
-      $Res Function(_$RequestRoomLoadingState) _then)
+class __$$RequestRoomLoadingStateImplCopyWithImpl<$Res>
+    extends _$RequestRoomStateCopyWithImpl<$Res, _$RequestRoomLoadingStateImpl>
+    implements _$$RequestRoomLoadingStateImplCopyWith<$Res> {
+  __$$RequestRoomLoadingStateImplCopyWithImpl(
+      _$RequestRoomLoadingStateImpl _value,
+      $Res Function(_$RequestRoomLoadingStateImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$RequestRoomLoadingState implements RequestRoomLoadingState {
-  const _$RequestRoomLoadingState();
+class _$RequestRoomLoadingStateImpl implements RequestRoomLoadingState {
+  const _$RequestRoomLoadingStateImpl();
 
   @override
   String toString() {
@@ -240,10 +244,10 @@ class _$RequestRoomLoadingState implements RequestRoomLoadingState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RequestRoomLoadingState);
+            other is _$RequestRoomLoadingStateImpl);
   }
 
   @override
@@ -331,24 +335,25 @@ class _$RequestRoomLoadingState implements RequestRoomLoadingState {
 }
 
 abstract class RequestRoomLoadingState implements RequestRoomState {
-  const factory RequestRoomLoadingState() = _$RequestRoomLoadingState;
+  const factory RequestRoomLoadingState() = _$RequestRoomLoadingStateImpl;
 }
 
 /// @nodoc
-abstract class _$$RequestRoomErrorStateCopyWith<$Res> {
-  factory _$$RequestRoomErrorStateCopyWith(_$RequestRoomErrorState value,
-          $Res Function(_$RequestRoomErrorState) then) =
-      __$$RequestRoomErrorStateCopyWithImpl<$Res>;
+abstract class _$$RequestRoomErrorStateImplCopyWith<$Res> {
+  factory _$$RequestRoomErrorStateImplCopyWith(
+          _$RequestRoomErrorStateImpl value,
+          $Res Function(_$RequestRoomErrorStateImpl) then) =
+      __$$RequestRoomErrorStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$RequestRoomErrorStateCopyWithImpl<$Res>
-    extends _$RequestRoomStateCopyWithImpl<$Res, _$RequestRoomErrorState>
-    implements _$$RequestRoomErrorStateCopyWith<$Res> {
-  __$$RequestRoomErrorStateCopyWithImpl(_$RequestRoomErrorState _value,
-      $Res Function(_$RequestRoomErrorState) _then)
+class __$$RequestRoomErrorStateImplCopyWithImpl<$Res>
+    extends _$RequestRoomStateCopyWithImpl<$Res, _$RequestRoomErrorStateImpl>
+    implements _$$RequestRoomErrorStateImplCopyWith<$Res> {
+  __$$RequestRoomErrorStateImplCopyWithImpl(_$RequestRoomErrorStateImpl _value,
+      $Res Function(_$RequestRoomErrorStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -356,7 +361,7 @@ class __$$RequestRoomErrorStateCopyWithImpl<$Res>
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$RequestRoomErrorState(
+    return _then(_$RequestRoomErrorStateImpl(
       null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -367,8 +372,8 @@ class __$$RequestRoomErrorStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RequestRoomErrorState implements RequestRoomErrorState {
-  const _$RequestRoomErrorState(this.message);
+class _$RequestRoomErrorStateImpl implements RequestRoomErrorState {
+  const _$RequestRoomErrorStateImpl(this.message);
 
   @override
   final String message;
@@ -379,10 +384,10 @@ class _$RequestRoomErrorState implements RequestRoomErrorState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RequestRoomErrorState &&
+            other is _$RequestRoomErrorStateImpl &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -392,9 +397,9 @@ class _$RequestRoomErrorState implements RequestRoomErrorState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$RequestRoomErrorStateCopyWith<_$RequestRoomErrorState> get copyWith =>
-      __$$RequestRoomErrorStateCopyWithImpl<_$RequestRoomErrorState>(
-          this, _$identity);
+  _$$RequestRoomErrorStateImplCopyWith<_$RequestRoomErrorStateImpl>
+      get copyWith => __$$RequestRoomErrorStateImplCopyWithImpl<
+          _$RequestRoomErrorStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -479,29 +484,31 @@ class _$RequestRoomErrorState implements RequestRoomErrorState {
 
 abstract class RequestRoomErrorState implements RequestRoomState {
   const factory RequestRoomErrorState(final String message) =
-      _$RequestRoomErrorState;
+      _$RequestRoomErrorStateImpl;
 
   String get message;
   @JsonKey(ignore: true)
-  _$$RequestRoomErrorStateCopyWith<_$RequestRoomErrorState> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$RequestRoomErrorStateImplCopyWith<_$RequestRoomErrorStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$RequestRoomLoadedStateCopyWith<$Res> {
-  factory _$$RequestRoomLoadedStateCopyWith(_$RequestRoomLoadedState value,
-          $Res Function(_$RequestRoomLoadedState) then) =
-      __$$RequestRoomLoadedStateCopyWithImpl<$Res>;
+abstract class _$$RequestRoomLoadedStateImplCopyWith<$Res> {
+  factory _$$RequestRoomLoadedStateImplCopyWith(
+          _$RequestRoomLoadedStateImpl value,
+          $Res Function(_$RequestRoomLoadedStateImpl) then) =
+      __$$RequestRoomLoadedStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<RequestRoom> requestRoomList});
 }
 
 /// @nodoc
-class __$$RequestRoomLoadedStateCopyWithImpl<$Res>
-    extends _$RequestRoomStateCopyWithImpl<$Res, _$RequestRoomLoadedState>
-    implements _$$RequestRoomLoadedStateCopyWith<$Res> {
-  __$$RequestRoomLoadedStateCopyWithImpl(_$RequestRoomLoadedState _value,
-      $Res Function(_$RequestRoomLoadedState) _then)
+class __$$RequestRoomLoadedStateImplCopyWithImpl<$Res>
+    extends _$RequestRoomStateCopyWithImpl<$Res, _$RequestRoomLoadedStateImpl>
+    implements _$$RequestRoomLoadedStateImplCopyWith<$Res> {
+  __$$RequestRoomLoadedStateImplCopyWithImpl(
+      _$RequestRoomLoadedStateImpl _value,
+      $Res Function(_$RequestRoomLoadedStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -509,7 +516,7 @@ class __$$RequestRoomLoadedStateCopyWithImpl<$Res>
   $Res call({
     Object? requestRoomList = null,
   }) {
-    return _then(_$RequestRoomLoadedState(
+    return _then(_$RequestRoomLoadedStateImpl(
       requestRoomList: null == requestRoomList
           ? _value._requestRoomList
           : requestRoomList // ignore: cast_nullable_to_non_nullable
@@ -520,8 +527,8 @@ class __$$RequestRoomLoadedStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RequestRoomLoadedState implements RequestRoomLoadedState {
-  const _$RequestRoomLoadedState(
+class _$RequestRoomLoadedStateImpl implements RequestRoomLoadedState {
+  const _$RequestRoomLoadedStateImpl(
       {required final List<RequestRoom> requestRoomList})
       : _requestRoomList = requestRoomList;
 
@@ -539,10 +546,10 @@ class _$RequestRoomLoadedState implements RequestRoomLoadedState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RequestRoomLoadedState &&
+            other is _$RequestRoomLoadedStateImpl &&
             const DeepCollectionEquality()
                 .equals(other._requestRoomList, _requestRoomList));
   }
@@ -554,9 +561,9 @@ class _$RequestRoomLoadedState implements RequestRoomLoadedState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$RequestRoomLoadedStateCopyWith<_$RequestRoomLoadedState> get copyWith =>
-      __$$RequestRoomLoadedStateCopyWithImpl<_$RequestRoomLoadedState>(
-          this, _$identity);
+  _$$RequestRoomLoadedStateImplCopyWith<_$RequestRoomLoadedStateImpl>
+      get copyWith => __$$RequestRoomLoadedStateImplCopyWithImpl<
+          _$RequestRoomLoadedStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -642,30 +649,32 @@ class _$RequestRoomLoadedState implements RequestRoomLoadedState {
 abstract class RequestRoomLoadedState implements RequestRoomState {
   const factory RequestRoomLoadedState(
           {required final List<RequestRoom> requestRoomList}) =
-      _$RequestRoomLoadedState;
+      _$RequestRoomLoadedStateImpl;
 
   List<RequestRoom> get requestRoomList;
   @JsonKey(ignore: true)
-  _$$RequestRoomLoadedStateCopyWith<_$RequestRoomLoadedState> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$RequestRoomLoadedStateImplCopyWith<_$RequestRoomLoadedStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$RequestRoomCancelledStateCopyWith<$Res> {
-  factory _$$RequestRoomCancelledStateCopyWith(
-          _$RequestRoomCancelledState value,
-          $Res Function(_$RequestRoomCancelledState) then) =
-      __$$RequestRoomCancelledStateCopyWithImpl<$Res>;
+abstract class _$$RequestRoomCancelledStateImplCopyWith<$Res> {
+  factory _$$RequestRoomCancelledStateImplCopyWith(
+          _$RequestRoomCancelledStateImpl value,
+          $Res Function(_$RequestRoomCancelledStateImpl) then) =
+      __$$RequestRoomCancelledStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$RequestRoomCancelledStateCopyWithImpl<$Res>
-    extends _$RequestRoomStateCopyWithImpl<$Res, _$RequestRoomCancelledState>
-    implements _$$RequestRoomCancelledStateCopyWith<$Res> {
-  __$$RequestRoomCancelledStateCopyWithImpl(_$RequestRoomCancelledState _value,
-      $Res Function(_$RequestRoomCancelledState) _then)
+class __$$RequestRoomCancelledStateImplCopyWithImpl<$Res>
+    extends _$RequestRoomStateCopyWithImpl<$Res,
+        _$RequestRoomCancelledStateImpl>
+    implements _$$RequestRoomCancelledStateImplCopyWith<$Res> {
+  __$$RequestRoomCancelledStateImplCopyWithImpl(
+      _$RequestRoomCancelledStateImpl _value,
+      $Res Function(_$RequestRoomCancelledStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -673,7 +682,7 @@ class __$$RequestRoomCancelledStateCopyWithImpl<$Res>
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$RequestRoomCancelledState(
+    return _then(_$RequestRoomCancelledStateImpl(
       null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -684,8 +693,8 @@ class __$$RequestRoomCancelledStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RequestRoomCancelledState implements RequestRoomCancelledState {
-  const _$RequestRoomCancelledState(this.message);
+class _$RequestRoomCancelledStateImpl implements RequestRoomCancelledState {
+  const _$RequestRoomCancelledStateImpl(this.message);
 
   @override
   final String message;
@@ -696,10 +705,10 @@ class _$RequestRoomCancelledState implements RequestRoomCancelledState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RequestRoomCancelledState &&
+            other is _$RequestRoomCancelledStateImpl &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -709,9 +718,9 @@ class _$RequestRoomCancelledState implements RequestRoomCancelledState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$RequestRoomCancelledStateCopyWith<_$RequestRoomCancelledState>
-      get copyWith => __$$RequestRoomCancelledStateCopyWithImpl<
-          _$RequestRoomCancelledState>(this, _$identity);
+  _$$RequestRoomCancelledStateImplCopyWith<_$RequestRoomCancelledStateImpl>
+      get copyWith => __$$RequestRoomCancelledStateImplCopyWithImpl<
+          _$RequestRoomCancelledStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -796,10 +805,10 @@ class _$RequestRoomCancelledState implements RequestRoomCancelledState {
 
 abstract class RequestRoomCancelledState implements RequestRoomState {
   const factory RequestRoomCancelledState(final String message) =
-      _$RequestRoomCancelledState;
+      _$RequestRoomCancelledStateImpl;
 
   String get message;
   @JsonKey(ignore: true)
-  _$$RequestRoomCancelledStateCopyWith<_$RequestRoomCancelledState>
+  _$$RequestRoomCancelledStateImplCopyWith<_$RequestRoomCancelledStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

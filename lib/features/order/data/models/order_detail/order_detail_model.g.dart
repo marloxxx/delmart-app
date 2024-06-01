@@ -6,13 +6,13 @@ part of 'order_detail_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_OrderDetail _$$_OrderDetailFromJson(Map<String, dynamic> json) =>
-    _$_OrderDetail(
+_$OrderDetailImpl _$$OrderDetailImplFromJson(Map<String, dynamic> json) =>
+    _$OrderDetailImpl(
       product: Product.fromJson(json['product'] as Map<String, dynamic>),
-      quantity: json['quantity'] as int,
+      quantity: (json['quantity'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_OrderDetailToJson(_$_OrderDetail instance) =>
+Map<String, dynamic> _$$OrderDetailImplToJson(_$OrderDetailImpl instance) =>
     <String, dynamic>{
       'product': instance.product,
       'quantity': instance.quantity,

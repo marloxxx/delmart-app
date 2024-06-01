@@ -12,7 +12,7 @@ part of 'credit_event.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$CreditEvent {
@@ -75,20 +75,20 @@ class _$CreditEventCopyWithImpl<$Res, $Val extends CreditEvent>
 }
 
 /// @nodoc
-abstract class _$$GetDataEventCopyWith<$Res> {
-  factory _$$GetDataEventCopyWith(
-          _$GetDataEvent value, $Res Function(_$GetDataEvent) then) =
-      __$$GetDataEventCopyWithImpl<$Res>;
+abstract class _$$GetDataEventImplCopyWith<$Res> {
+  factory _$$GetDataEventImplCopyWith(
+          _$GetDataEventImpl value, $Res Function(_$GetDataEventImpl) then) =
+      __$$GetDataEventImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String provider});
 }
 
 /// @nodoc
-class __$$GetDataEventCopyWithImpl<$Res>
-    extends _$CreditEventCopyWithImpl<$Res, _$GetDataEvent>
-    implements _$$GetDataEventCopyWith<$Res> {
-  __$$GetDataEventCopyWithImpl(
-      _$GetDataEvent _value, $Res Function(_$GetDataEvent) _then)
+class __$$GetDataEventImplCopyWithImpl<$Res>
+    extends _$CreditEventCopyWithImpl<$Res, _$GetDataEventImpl>
+    implements _$$GetDataEventImplCopyWith<$Res> {
+  __$$GetDataEventImplCopyWithImpl(
+      _$GetDataEventImpl _value, $Res Function(_$GetDataEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -96,7 +96,7 @@ class __$$GetDataEventCopyWithImpl<$Res>
   $Res call({
     Object? provider = null,
   }) {
-    return _then(_$GetDataEvent(
+    return _then(_$GetDataEventImpl(
       null == provider
           ? _value.provider
           : provider // ignore: cast_nullable_to_non_nullable
@@ -107,8 +107,8 @@ class __$$GetDataEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$GetDataEvent implements GetDataEvent {
-  const _$GetDataEvent(this.provider);
+class _$GetDataEventImpl implements GetDataEvent {
+  const _$GetDataEventImpl(this.provider);
 
   @override
   final String provider;
@@ -119,10 +119,10 @@ class _$GetDataEvent implements GetDataEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetDataEvent &&
+            other is _$GetDataEventImpl &&
             (identical(other.provider, provider) ||
                 other.provider == provider));
   }
@@ -133,8 +133,8 @@ class _$GetDataEvent implements GetDataEvent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetDataEventCopyWith<_$GetDataEvent> get copyWith =>
-      __$$GetDataEventCopyWithImpl<_$GetDataEvent>(this, _$identity);
+  _$$GetDataEventImplCopyWith<_$GetDataEventImpl> get copyWith =>
+      __$$GetDataEventImplCopyWithImpl<_$GetDataEventImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -200,19 +200,19 @@ class _$GetDataEvent implements GetDataEvent {
 }
 
 abstract class GetDataEvent implements CreditEvent {
-  const factory GetDataEvent(final String provider) = _$GetDataEvent;
+  const factory GetDataEvent(final String provider) = _$GetDataEventImpl;
 
   String get provider;
   @JsonKey(ignore: true)
-  _$$GetDataEventCopyWith<_$GetDataEvent> get copyWith =>
+  _$$GetDataEventImplCopyWith<_$GetDataEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$CreditCheckoutEventCopyWith<$Res> {
-  factory _$$CreditCheckoutEventCopyWith(_$CreditCheckoutEvent value,
-          $Res Function(_$CreditCheckoutEvent) then) =
-      __$$CreditCheckoutEventCopyWithImpl<$Res>;
+abstract class _$$CreditCheckoutEventImplCopyWith<$Res> {
+  factory _$$CreditCheckoutEventImplCopyWith(_$CreditCheckoutEventImpl value,
+          $Res Function(_$CreditCheckoutEventImpl) then) =
+      __$$CreditCheckoutEventImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Credit credit, String paymentMethod});
 
@@ -220,11 +220,11 @@ abstract class _$$CreditCheckoutEventCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$CreditCheckoutEventCopyWithImpl<$Res>
-    extends _$CreditEventCopyWithImpl<$Res, _$CreditCheckoutEvent>
-    implements _$$CreditCheckoutEventCopyWith<$Res> {
-  __$$CreditCheckoutEventCopyWithImpl(
-      _$CreditCheckoutEvent _value, $Res Function(_$CreditCheckoutEvent) _then)
+class __$$CreditCheckoutEventImplCopyWithImpl<$Res>
+    extends _$CreditEventCopyWithImpl<$Res, _$CreditCheckoutEventImpl>
+    implements _$$CreditCheckoutEventImplCopyWith<$Res> {
+  __$$CreditCheckoutEventImplCopyWithImpl(_$CreditCheckoutEventImpl _value,
+      $Res Function(_$CreditCheckoutEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -233,7 +233,7 @@ class __$$CreditCheckoutEventCopyWithImpl<$Res>
     Object? credit = null,
     Object? paymentMethod = null,
   }) {
-    return _then(_$CreditCheckoutEvent(
+    return _then(_$CreditCheckoutEventImpl(
       null == credit
           ? _value.credit
           : credit // ignore: cast_nullable_to_non_nullable
@@ -256,8 +256,8 @@ class __$$CreditCheckoutEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CreditCheckoutEvent implements CreditCheckoutEvent {
-  const _$CreditCheckoutEvent(this.credit, this.paymentMethod);
+class _$CreditCheckoutEventImpl implements CreditCheckoutEvent {
+  const _$CreditCheckoutEventImpl(this.credit, this.paymentMethod);
 
   @override
   final Credit credit;
@@ -270,10 +270,10 @@ class _$CreditCheckoutEvent implements CreditCheckoutEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CreditCheckoutEvent &&
+            other is _$CreditCheckoutEventImpl &&
             (identical(other.credit, credit) || other.credit == credit) &&
             (identical(other.paymentMethod, paymentMethod) ||
                 other.paymentMethod == paymentMethod));
@@ -285,8 +285,8 @@ class _$CreditCheckoutEvent implements CreditCheckoutEvent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CreditCheckoutEventCopyWith<_$CreditCheckoutEvent> get copyWith =>
-      __$$CreditCheckoutEventCopyWithImpl<_$CreditCheckoutEvent>(
+  _$$CreditCheckoutEventImplCopyWith<_$CreditCheckoutEventImpl> get copyWith =>
+      __$$CreditCheckoutEventImplCopyWithImpl<_$CreditCheckoutEventImpl>(
           this, _$identity);
 
   @override
@@ -354,11 +354,12 @@ class _$CreditCheckoutEvent implements CreditCheckoutEvent {
 
 abstract class CreditCheckoutEvent implements CreditEvent {
   const factory CreditCheckoutEvent(
-      final Credit credit, final String paymentMethod) = _$CreditCheckoutEvent;
+          final Credit credit, final String paymentMethod) =
+      _$CreditCheckoutEventImpl;
 
   Credit get credit;
   String get paymentMethod;
   @JsonKey(ignore: true)
-  _$$CreditCheckoutEventCopyWith<_$CreditCheckoutEvent> get copyWith =>
+  _$$CreditCheckoutEventImplCopyWith<_$CreditCheckoutEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

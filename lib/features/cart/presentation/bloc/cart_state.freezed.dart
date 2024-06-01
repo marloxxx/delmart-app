@@ -12,7 +12,7 @@ part of 'cart_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$CartState {
@@ -86,25 +86,25 @@ class _$CartStateCopyWithImpl<$Res, $Val extends CartState>
 }
 
 /// @nodoc
-abstract class _$$CartInitialStateCopyWith<$Res> {
-  factory _$$CartInitialStateCopyWith(
-          _$CartInitialState value, $Res Function(_$CartInitialState) then) =
-      __$$CartInitialStateCopyWithImpl<$Res>;
+abstract class _$$CartInitialStateImplCopyWith<$Res> {
+  factory _$$CartInitialStateImplCopyWith(_$CartInitialStateImpl value,
+          $Res Function(_$CartInitialStateImpl) then) =
+      __$$CartInitialStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$CartInitialStateCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$CartInitialState>
-    implements _$$CartInitialStateCopyWith<$Res> {
-  __$$CartInitialStateCopyWithImpl(
-      _$CartInitialState _value, $Res Function(_$CartInitialState) _then)
+class __$$CartInitialStateImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$CartInitialStateImpl>
+    implements _$$CartInitialStateImplCopyWith<$Res> {
+  __$$CartInitialStateImplCopyWithImpl(_$CartInitialStateImpl _value,
+      $Res Function(_$CartInitialStateImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$CartInitialState implements CartInitialState {
-  const _$CartInitialState();
+class _$CartInitialStateImpl implements CartInitialState {
+  const _$CartInitialStateImpl();
 
   @override
   String toString() {
@@ -112,9 +112,9 @@ class _$CartInitialState implements CartInitialState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$CartInitialState);
+        (other.runtimeType == runtimeType && other is _$CartInitialStateImpl);
   }
 
   @override
@@ -196,29 +196,29 @@ class _$CartInitialState implements CartInitialState {
 }
 
 abstract class CartInitialState implements CartState {
-  const factory CartInitialState() = _$CartInitialState;
+  const factory CartInitialState() = _$CartInitialStateImpl;
 }
 
 /// @nodoc
-abstract class _$$CartLoadingStateCopyWith<$Res> {
-  factory _$$CartLoadingStateCopyWith(
-          _$CartLoadingState value, $Res Function(_$CartLoadingState) then) =
-      __$$CartLoadingStateCopyWithImpl<$Res>;
+abstract class _$$CartLoadingStateImplCopyWith<$Res> {
+  factory _$$CartLoadingStateImplCopyWith(_$CartLoadingStateImpl value,
+          $Res Function(_$CartLoadingStateImpl) then) =
+      __$$CartLoadingStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$CartLoadingStateCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$CartLoadingState>
-    implements _$$CartLoadingStateCopyWith<$Res> {
-  __$$CartLoadingStateCopyWithImpl(
-      _$CartLoadingState _value, $Res Function(_$CartLoadingState) _then)
+class __$$CartLoadingStateImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$CartLoadingStateImpl>
+    implements _$$CartLoadingStateImplCopyWith<$Res> {
+  __$$CartLoadingStateImplCopyWithImpl(_$CartLoadingStateImpl _value,
+      $Res Function(_$CartLoadingStateImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$CartLoadingState implements CartLoadingState {
-  const _$CartLoadingState();
+class _$CartLoadingStateImpl implements CartLoadingState {
+  const _$CartLoadingStateImpl();
 
   @override
   String toString() {
@@ -226,9 +226,9 @@ class _$CartLoadingState implements CartLoadingState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$CartLoadingState);
+        (other.runtimeType == runtimeType && other is _$CartLoadingStateImpl);
   }
 
   @override
@@ -310,24 +310,24 @@ class _$CartLoadingState implements CartLoadingState {
 }
 
 abstract class CartLoadingState implements CartState {
-  const factory CartLoadingState() = _$CartLoadingState;
+  const factory CartLoadingState() = _$CartLoadingStateImpl;
 }
 
 /// @nodoc
-abstract class _$$CartErrorStateCopyWith<$Res> {
-  factory _$$CartErrorStateCopyWith(
-          _$CartErrorState value, $Res Function(_$CartErrorState) then) =
-      __$$CartErrorStateCopyWithImpl<$Res>;
+abstract class _$$CartErrorStateImplCopyWith<$Res> {
+  factory _$$CartErrorStateImplCopyWith(_$CartErrorStateImpl value,
+          $Res Function(_$CartErrorStateImpl) then) =
+      __$$CartErrorStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$CartErrorStateCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$CartErrorState>
-    implements _$$CartErrorStateCopyWith<$Res> {
-  __$$CartErrorStateCopyWithImpl(
-      _$CartErrorState _value, $Res Function(_$CartErrorState) _then)
+class __$$CartErrorStateImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$CartErrorStateImpl>
+    implements _$$CartErrorStateImplCopyWith<$Res> {
+  __$$CartErrorStateImplCopyWithImpl(
+      _$CartErrorStateImpl _value, $Res Function(_$CartErrorStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -335,7 +335,7 @@ class __$$CartErrorStateCopyWithImpl<$Res>
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$CartErrorState(
+    return _then(_$CartErrorStateImpl(
       null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -346,8 +346,8 @@ class __$$CartErrorStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CartErrorState implements CartErrorState {
-  const _$CartErrorState(this.message);
+class _$CartErrorStateImpl implements CartErrorState {
+  const _$CartErrorStateImpl(this.message);
 
   @override
   final String message;
@@ -358,10 +358,10 @@ class _$CartErrorState implements CartErrorState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CartErrorState &&
+            other is _$CartErrorStateImpl &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -371,8 +371,9 @@ class _$CartErrorState implements CartErrorState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CartErrorStateCopyWith<_$CartErrorState> get copyWith =>
-      __$$CartErrorStateCopyWithImpl<_$CartErrorState>(this, _$identity);
+  _$$CartErrorStateImplCopyWith<_$CartErrorStateImpl> get copyWith =>
+      __$$CartErrorStateImplCopyWithImpl<_$CartErrorStateImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -450,29 +451,29 @@ class _$CartErrorState implements CartErrorState {
 }
 
 abstract class CartErrorState implements CartState {
-  const factory CartErrorState(final String message) = _$CartErrorState;
+  const factory CartErrorState(final String message) = _$CartErrorStateImpl;
 
   String get message;
   @JsonKey(ignore: true)
-  _$$CartErrorStateCopyWith<_$CartErrorState> get copyWith =>
+  _$$CartErrorStateImplCopyWith<_$CartErrorStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$CartLoadedStateCopyWith<$Res> {
-  factory _$$CartLoadedStateCopyWith(
-          _$CartLoadedState value, $Res Function(_$CartLoadedState) then) =
-      __$$CartLoadedStateCopyWithImpl<$Res>;
+abstract class _$$CartLoadedStateImplCopyWith<$Res> {
+  factory _$$CartLoadedStateImplCopyWith(_$CartLoadedStateImpl value,
+          $Res Function(_$CartLoadedStateImpl) then) =
+      __$$CartLoadedStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<Cart> cartList, double totalPrice});
 }
 
 /// @nodoc
-class __$$CartLoadedStateCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$CartLoadedState>
-    implements _$$CartLoadedStateCopyWith<$Res> {
-  __$$CartLoadedStateCopyWithImpl(
-      _$CartLoadedState _value, $Res Function(_$CartLoadedState) _then)
+class __$$CartLoadedStateImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$CartLoadedStateImpl>
+    implements _$$CartLoadedStateImplCopyWith<$Res> {
+  __$$CartLoadedStateImplCopyWithImpl(
+      _$CartLoadedStateImpl _value, $Res Function(_$CartLoadedStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -481,7 +482,7 @@ class __$$CartLoadedStateCopyWithImpl<$Res>
     Object? cartList = null,
     Object? totalPrice = null,
   }) {
-    return _then(_$CartLoadedState(
+    return _then(_$CartLoadedStateImpl(
       cartList: null == cartList
           ? _value._cartList
           : cartList // ignore: cast_nullable_to_non_nullable
@@ -496,8 +497,8 @@ class __$$CartLoadedStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CartLoadedState implements CartLoadedState {
-  const _$CartLoadedState(
+class _$CartLoadedStateImpl implements CartLoadedState {
+  const _$CartLoadedStateImpl(
       {required final List<Cart> cartList, required this.totalPrice})
       : _cartList = cartList;
 
@@ -518,10 +519,10 @@ class _$CartLoadedState implements CartLoadedState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CartLoadedState &&
+            other is _$CartLoadedStateImpl &&
             const DeepCollectionEquality().equals(other._cartList, _cartList) &&
             (identical(other.totalPrice, totalPrice) ||
                 other.totalPrice == totalPrice));
@@ -534,8 +535,9 @@ class _$CartLoadedState implements CartLoadedState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CartLoadedStateCopyWith<_$CartLoadedState> get copyWith =>
-      __$$CartLoadedStateCopyWithImpl<_$CartLoadedState>(this, _$identity);
+  _$$CartLoadedStateImplCopyWith<_$CartLoadedStateImpl> get copyWith =>
+      __$$CartLoadedStateImplCopyWithImpl<_$CartLoadedStateImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -615,11 +617,11 @@ class _$CartLoadedState implements CartLoadedState {
 abstract class CartLoadedState implements CartState {
   const factory CartLoadedState(
       {required final List<Cart> cartList,
-      required final double totalPrice}) = _$CartLoadedState;
+      required final double totalPrice}) = _$CartLoadedStateImpl;
 
   List<Cart> get cartList;
   double get totalPrice;
   @JsonKey(ignore: true)
-  _$$CartLoadedStateCopyWith<_$CartLoadedState> get copyWith =>
+  _$$CartLoadedStateImplCopyWith<_$CartLoadedStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

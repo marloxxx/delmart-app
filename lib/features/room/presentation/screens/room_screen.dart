@@ -123,8 +123,8 @@ class _RoomScreenState extends State<RoomScreen> {
                               color: Colors.grey.withOpacity(0.5),
                             ),
                           ),
-                          child: Row(
-                            children: const [
+                          child: const Row(
+                            children: [
                               Icon(
                                 Icons.search,
                                 color: Colors.grey,

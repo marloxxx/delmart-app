@@ -12,7 +12,7 @@ part of 'order_event.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$OrderEvent {
@@ -95,22 +95,22 @@ class _$OrderEventCopyWithImpl<$Res, $Val extends OrderEvent>
 }
 
 /// @nodoc
-abstract class _$$GetOrdersEventCopyWith<$Res>
+abstract class _$$GetOrdersEventImplCopyWith<$Res>
     implements $OrderEventCopyWith<$Res> {
-  factory _$$GetOrdersEventCopyWith(
-          _$GetOrdersEvent value, $Res Function(_$GetOrdersEvent) then) =
-      __$$GetOrdersEventCopyWithImpl<$Res>;
+  factory _$$GetOrdersEventImplCopyWith(_$GetOrdersEventImpl value,
+          $Res Function(_$GetOrdersEventImpl) then) =
+      __$$GetOrdersEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String status});
 }
 
 /// @nodoc
-class __$$GetOrdersEventCopyWithImpl<$Res>
-    extends _$OrderEventCopyWithImpl<$Res, _$GetOrdersEvent>
-    implements _$$GetOrdersEventCopyWith<$Res> {
-  __$$GetOrdersEventCopyWithImpl(
-      _$GetOrdersEvent _value, $Res Function(_$GetOrdersEvent) _then)
+class __$$GetOrdersEventImplCopyWithImpl<$Res>
+    extends _$OrderEventCopyWithImpl<$Res, _$GetOrdersEventImpl>
+    implements _$$GetOrdersEventImplCopyWith<$Res> {
+  __$$GetOrdersEventImplCopyWithImpl(
+      _$GetOrdersEventImpl _value, $Res Function(_$GetOrdersEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -118,7 +118,7 @@ class __$$GetOrdersEventCopyWithImpl<$Res>
   $Res call({
     Object? status = null,
   }) {
-    return _then(_$GetOrdersEvent(
+    return _then(_$GetOrdersEventImpl(
       null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -129,8 +129,8 @@ class __$$GetOrdersEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$GetOrdersEvent implements GetOrdersEvent {
-  const _$GetOrdersEvent(this.status);
+class _$GetOrdersEventImpl implements GetOrdersEvent {
+  const _$GetOrdersEventImpl(this.status);
 
   @override
   final String status;
@@ -141,10 +141,10 @@ class _$GetOrdersEvent implements GetOrdersEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetOrdersEvent &&
+            other is _$GetOrdersEventImpl &&
             (identical(other.status, status) || other.status == status));
   }
 
@@ -154,8 +154,9 @@ class _$GetOrdersEvent implements GetOrdersEvent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetOrdersEventCopyWith<_$GetOrdersEvent> get copyWith =>
-      __$$GetOrdersEventCopyWithImpl<_$GetOrdersEvent>(this, _$identity);
+  _$$GetOrdersEventImplCopyWith<_$GetOrdersEventImpl> get copyWith =>
+      __$$GetOrdersEventImplCopyWithImpl<_$GetOrdersEventImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -221,22 +222,22 @@ class _$GetOrdersEvent implements GetOrdersEvent {
 }
 
 abstract class GetOrdersEvent implements OrderEvent {
-  const factory GetOrdersEvent(final String status) = _$GetOrdersEvent;
+  const factory GetOrdersEvent(final String status) = _$GetOrdersEventImpl;
 
   @override
   String get status;
   @override
   @JsonKey(ignore: true)
-  _$$GetOrdersEventCopyWith<_$GetOrdersEvent> get copyWith =>
+  _$$GetOrdersEventImplCopyWith<_$GetOrdersEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$CancelOrderEventCopyWith<$Res>
+abstract class _$$CancelOrderEventImplCopyWith<$Res>
     implements $OrderEventCopyWith<$Res> {
-  factory _$$CancelOrderEventCopyWith(
-          _$CancelOrderEvent value, $Res Function(_$CancelOrderEvent) then) =
-      __$$CancelOrderEventCopyWithImpl<$Res>;
+  factory _$$CancelOrderEventImplCopyWith(_$CancelOrderEventImpl value,
+          $Res Function(_$CancelOrderEventImpl) then) =
+      __$$CancelOrderEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String status, OrderModel order});
@@ -245,11 +246,11 @@ abstract class _$$CancelOrderEventCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CancelOrderEventCopyWithImpl<$Res>
-    extends _$OrderEventCopyWithImpl<$Res, _$CancelOrderEvent>
-    implements _$$CancelOrderEventCopyWith<$Res> {
-  __$$CancelOrderEventCopyWithImpl(
-      _$CancelOrderEvent _value, $Res Function(_$CancelOrderEvent) _then)
+class __$$CancelOrderEventImplCopyWithImpl<$Res>
+    extends _$OrderEventCopyWithImpl<$Res, _$CancelOrderEventImpl>
+    implements _$$CancelOrderEventImplCopyWith<$Res> {
+  __$$CancelOrderEventImplCopyWithImpl(_$CancelOrderEventImpl _value,
+      $Res Function(_$CancelOrderEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -258,7 +259,7 @@ class __$$CancelOrderEventCopyWithImpl<$Res>
     Object? status = null,
     Object? order = null,
   }) {
-    return _then(_$CancelOrderEvent(
+    return _then(_$CancelOrderEventImpl(
       null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -281,8 +282,8 @@ class __$$CancelOrderEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CancelOrderEvent implements CancelOrderEvent {
-  const _$CancelOrderEvent(this.status, this.order);
+class _$CancelOrderEventImpl implements CancelOrderEvent {
+  const _$CancelOrderEventImpl(this.status, this.order);
 
   @override
   final String status;
@@ -295,10 +296,10 @@ class _$CancelOrderEvent implements CancelOrderEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CancelOrderEvent &&
+            other is _$CancelOrderEventImpl &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.order, order) || other.order == order));
   }
@@ -309,8 +310,9 @@ class _$CancelOrderEvent implements CancelOrderEvent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CancelOrderEventCopyWith<_$CancelOrderEvent> get copyWith =>
-      __$$CancelOrderEventCopyWithImpl<_$CancelOrderEvent>(this, _$identity);
+  _$$CancelOrderEventImplCopyWith<_$CancelOrderEventImpl> get copyWith =>
+      __$$CancelOrderEventImplCopyWithImpl<_$CancelOrderEventImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -377,13 +379,13 @@ class _$CancelOrderEvent implements CancelOrderEvent {
 
 abstract class CancelOrderEvent implements OrderEvent {
   const factory CancelOrderEvent(final String status, final OrderModel order) =
-      _$CancelOrderEvent;
+      _$CancelOrderEventImpl;
 
   @override
   String get status;
   OrderModel get order;
   @override
   @JsonKey(ignore: true)
-  _$$CancelOrderEventCopyWith<_$CancelOrderEvent> get copyWith =>
+  _$$CancelOrderEventImplCopyWith<_$CancelOrderEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

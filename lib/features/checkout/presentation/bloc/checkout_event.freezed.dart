@@ -12,7 +12,7 @@ part of 'checkout_event.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$CheckoutEvent {
@@ -75,25 +75,25 @@ class _$CheckoutEventCopyWithImpl<$Res, $Val extends CheckoutEvent>
 }
 
 /// @nodoc
-abstract class _$$GetCartEventCopyWith<$Res> {
-  factory _$$GetCartEventCopyWith(
-          _$GetCartEvent value, $Res Function(_$GetCartEvent) then) =
-      __$$GetCartEventCopyWithImpl<$Res>;
+abstract class _$$GetCartEventImplCopyWith<$Res> {
+  factory _$$GetCartEventImplCopyWith(
+          _$GetCartEventImpl value, $Res Function(_$GetCartEventImpl) then) =
+      __$$GetCartEventImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GetCartEventCopyWithImpl<$Res>
-    extends _$CheckoutEventCopyWithImpl<$Res, _$GetCartEvent>
-    implements _$$GetCartEventCopyWith<$Res> {
-  __$$GetCartEventCopyWithImpl(
-      _$GetCartEvent _value, $Res Function(_$GetCartEvent) _then)
+class __$$GetCartEventImplCopyWithImpl<$Res>
+    extends _$CheckoutEventCopyWithImpl<$Res, _$GetCartEventImpl>
+    implements _$$GetCartEventImplCopyWith<$Res> {
+  __$$GetCartEventImplCopyWithImpl(
+      _$GetCartEventImpl _value, $Res Function(_$GetCartEventImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$GetCartEvent implements GetCartEvent {
-  const _$GetCartEvent();
+class _$GetCartEventImpl implements GetCartEvent {
+  const _$GetCartEventImpl();
 
   @override
   String toString() {
@@ -101,9 +101,9 @@ class _$GetCartEvent implements GetCartEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$GetCartEvent);
+        (other.runtimeType == runtimeType && other is _$GetCartEventImpl);
   }
 
   @override
@@ -173,24 +173,24 @@ class _$GetCartEvent implements GetCartEvent {
 }
 
 abstract class GetCartEvent implements CheckoutEvent {
-  const factory GetCartEvent() = _$GetCartEvent;
+  const factory GetCartEvent() = _$GetCartEventImpl;
 }
 
 /// @nodoc
-abstract class _$$CheckoutCartEventCopyWith<$Res> {
-  factory _$$CheckoutCartEventCopyWith(
-          _$CheckoutCartEvent value, $Res Function(_$CheckoutCartEvent) then) =
-      __$$CheckoutCartEventCopyWithImpl<$Res>;
+abstract class _$$CheckoutCartEventImplCopyWith<$Res> {
+  factory _$$CheckoutCartEventImplCopyWith(_$CheckoutCartEventImpl value,
+          $Res Function(_$CheckoutCartEventImpl) then) =
+      __$$CheckoutCartEventImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String paymentMethod});
 }
 
 /// @nodoc
-class __$$CheckoutCartEventCopyWithImpl<$Res>
-    extends _$CheckoutEventCopyWithImpl<$Res, _$CheckoutCartEvent>
-    implements _$$CheckoutCartEventCopyWith<$Res> {
-  __$$CheckoutCartEventCopyWithImpl(
-      _$CheckoutCartEvent _value, $Res Function(_$CheckoutCartEvent) _then)
+class __$$CheckoutCartEventImplCopyWithImpl<$Res>
+    extends _$CheckoutEventCopyWithImpl<$Res, _$CheckoutCartEventImpl>
+    implements _$$CheckoutCartEventImplCopyWith<$Res> {
+  __$$CheckoutCartEventImplCopyWithImpl(_$CheckoutCartEventImpl _value,
+      $Res Function(_$CheckoutCartEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -198,7 +198,7 @@ class __$$CheckoutCartEventCopyWithImpl<$Res>
   $Res call({
     Object? paymentMethod = null,
   }) {
-    return _then(_$CheckoutCartEvent(
+    return _then(_$CheckoutCartEventImpl(
       paymentMethod: null == paymentMethod
           ? _value.paymentMethod
           : paymentMethod // ignore: cast_nullable_to_non_nullable
@@ -209,8 +209,8 @@ class __$$CheckoutCartEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CheckoutCartEvent implements CheckoutCartEvent {
-  const _$CheckoutCartEvent({required this.paymentMethod});
+class _$CheckoutCartEventImpl implements CheckoutCartEvent {
+  const _$CheckoutCartEventImpl({required this.paymentMethod});
 
   @override
   final String paymentMethod;
@@ -221,10 +221,10 @@ class _$CheckoutCartEvent implements CheckoutCartEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CheckoutCartEvent &&
+            other is _$CheckoutCartEventImpl &&
             (identical(other.paymentMethod, paymentMethod) ||
                 other.paymentMethod == paymentMethod));
   }
@@ -235,8 +235,9 @@ class _$CheckoutCartEvent implements CheckoutCartEvent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CheckoutCartEventCopyWith<_$CheckoutCartEvent> get copyWith =>
-      __$$CheckoutCartEventCopyWithImpl<_$CheckoutCartEvent>(this, _$identity);
+  _$$CheckoutCartEventImplCopyWith<_$CheckoutCartEventImpl> get copyWith =>
+      __$$CheckoutCartEventImplCopyWithImpl<_$CheckoutCartEventImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -303,10 +304,10 @@ class _$CheckoutCartEvent implements CheckoutCartEvent {
 
 abstract class CheckoutCartEvent implements CheckoutEvent {
   const factory CheckoutCartEvent({required final String paymentMethod}) =
-      _$CheckoutCartEvent;
+      _$CheckoutCartEventImpl;
 
   String get paymentMethod;
   @JsonKey(ignore: true)
-  _$$CheckoutCartEventCopyWith<_$CheckoutCartEvent> get copyWith =>
+  _$$CheckoutCartEventImplCopyWith<_$CheckoutCartEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -12,7 +12,7 @@ part of 'checkout_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$CheckoutState {
@@ -93,25 +93,25 @@ class _$CheckoutStateCopyWithImpl<$Res, $Val extends CheckoutState>
 }
 
 /// @nodoc
-abstract class _$$CheckoutInitialStateCopyWith<$Res> {
-  factory _$$CheckoutInitialStateCopyWith(_$CheckoutInitialState value,
-          $Res Function(_$CheckoutInitialState) then) =
-      __$$CheckoutInitialStateCopyWithImpl<$Res>;
+abstract class _$$CheckoutInitialStateImplCopyWith<$Res> {
+  factory _$$CheckoutInitialStateImplCopyWith(_$CheckoutInitialStateImpl value,
+          $Res Function(_$CheckoutInitialStateImpl) then) =
+      __$$CheckoutInitialStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$CheckoutInitialStateCopyWithImpl<$Res>
-    extends _$CheckoutStateCopyWithImpl<$Res, _$CheckoutInitialState>
-    implements _$$CheckoutInitialStateCopyWith<$Res> {
-  __$$CheckoutInitialStateCopyWithImpl(_$CheckoutInitialState _value,
-      $Res Function(_$CheckoutInitialState) _then)
+class __$$CheckoutInitialStateImplCopyWithImpl<$Res>
+    extends _$CheckoutStateCopyWithImpl<$Res, _$CheckoutInitialStateImpl>
+    implements _$$CheckoutInitialStateImplCopyWith<$Res> {
+  __$$CheckoutInitialStateImplCopyWithImpl(_$CheckoutInitialStateImpl _value,
+      $Res Function(_$CheckoutInitialStateImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$CheckoutInitialState implements CheckoutInitialState {
-  const _$CheckoutInitialState();
+class _$CheckoutInitialStateImpl implements CheckoutInitialState {
+  const _$CheckoutInitialStateImpl();
 
   @override
   String toString() {
@@ -119,9 +119,10 @@ class _$CheckoutInitialState implements CheckoutInitialState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$CheckoutInitialState);
+        (other.runtimeType == runtimeType &&
+            other is _$CheckoutInitialStateImpl);
   }
 
   @override
@@ -209,29 +210,29 @@ class _$CheckoutInitialState implements CheckoutInitialState {
 }
 
 abstract class CheckoutInitialState implements CheckoutState {
-  const factory CheckoutInitialState() = _$CheckoutInitialState;
+  const factory CheckoutInitialState() = _$CheckoutInitialStateImpl;
 }
 
 /// @nodoc
-abstract class _$$CheckoutLoadingStateCopyWith<$Res> {
-  factory _$$CheckoutLoadingStateCopyWith(_$CheckoutLoadingState value,
-          $Res Function(_$CheckoutLoadingState) then) =
-      __$$CheckoutLoadingStateCopyWithImpl<$Res>;
+abstract class _$$CheckoutLoadingStateImplCopyWith<$Res> {
+  factory _$$CheckoutLoadingStateImplCopyWith(_$CheckoutLoadingStateImpl value,
+          $Res Function(_$CheckoutLoadingStateImpl) then) =
+      __$$CheckoutLoadingStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$CheckoutLoadingStateCopyWithImpl<$Res>
-    extends _$CheckoutStateCopyWithImpl<$Res, _$CheckoutLoadingState>
-    implements _$$CheckoutLoadingStateCopyWith<$Res> {
-  __$$CheckoutLoadingStateCopyWithImpl(_$CheckoutLoadingState _value,
-      $Res Function(_$CheckoutLoadingState) _then)
+class __$$CheckoutLoadingStateImplCopyWithImpl<$Res>
+    extends _$CheckoutStateCopyWithImpl<$Res, _$CheckoutLoadingStateImpl>
+    implements _$$CheckoutLoadingStateImplCopyWith<$Res> {
+  __$$CheckoutLoadingStateImplCopyWithImpl(_$CheckoutLoadingStateImpl _value,
+      $Res Function(_$CheckoutLoadingStateImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$CheckoutLoadingState implements CheckoutLoadingState {
-  const _$CheckoutLoadingState();
+class _$CheckoutLoadingStateImpl implements CheckoutLoadingState {
+  const _$CheckoutLoadingStateImpl();
 
   @override
   String toString() {
@@ -239,9 +240,10 @@ class _$CheckoutLoadingState implements CheckoutLoadingState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$CheckoutLoadingState);
+        (other.runtimeType == runtimeType &&
+            other is _$CheckoutLoadingStateImpl);
   }
 
   @override
@@ -329,24 +331,24 @@ class _$CheckoutLoadingState implements CheckoutLoadingState {
 }
 
 abstract class CheckoutLoadingState implements CheckoutState {
-  const factory CheckoutLoadingState() = _$CheckoutLoadingState;
+  const factory CheckoutLoadingState() = _$CheckoutLoadingStateImpl;
 }
 
 /// @nodoc
-abstract class _$$CheckoutErrorStateCopyWith<$Res> {
-  factory _$$CheckoutErrorStateCopyWith(_$CheckoutErrorState value,
-          $Res Function(_$CheckoutErrorState) then) =
-      __$$CheckoutErrorStateCopyWithImpl<$Res>;
+abstract class _$$CheckoutErrorStateImplCopyWith<$Res> {
+  factory _$$CheckoutErrorStateImplCopyWith(_$CheckoutErrorStateImpl value,
+          $Res Function(_$CheckoutErrorStateImpl) then) =
+      __$$CheckoutErrorStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$CheckoutErrorStateCopyWithImpl<$Res>
-    extends _$CheckoutStateCopyWithImpl<$Res, _$CheckoutErrorState>
-    implements _$$CheckoutErrorStateCopyWith<$Res> {
-  __$$CheckoutErrorStateCopyWithImpl(
-      _$CheckoutErrorState _value, $Res Function(_$CheckoutErrorState) _then)
+class __$$CheckoutErrorStateImplCopyWithImpl<$Res>
+    extends _$CheckoutStateCopyWithImpl<$Res, _$CheckoutErrorStateImpl>
+    implements _$$CheckoutErrorStateImplCopyWith<$Res> {
+  __$$CheckoutErrorStateImplCopyWithImpl(_$CheckoutErrorStateImpl _value,
+      $Res Function(_$CheckoutErrorStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -354,7 +356,7 @@ class __$$CheckoutErrorStateCopyWithImpl<$Res>
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$CheckoutErrorState(
+    return _then(_$CheckoutErrorStateImpl(
       null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -365,8 +367,8 @@ class __$$CheckoutErrorStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CheckoutErrorState implements CheckoutErrorState {
-  const _$CheckoutErrorState(this.message);
+class _$CheckoutErrorStateImpl implements CheckoutErrorState {
+  const _$CheckoutErrorStateImpl(this.message);
 
   @override
   final String message;
@@ -377,10 +379,10 @@ class _$CheckoutErrorState implements CheckoutErrorState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CheckoutErrorState &&
+            other is _$CheckoutErrorStateImpl &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -390,8 +392,8 @@ class _$CheckoutErrorState implements CheckoutErrorState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CheckoutErrorStateCopyWith<_$CheckoutErrorState> get copyWith =>
-      __$$CheckoutErrorStateCopyWithImpl<_$CheckoutErrorState>(
+  _$$CheckoutErrorStateImplCopyWith<_$CheckoutErrorStateImpl> get copyWith =>
+      __$$CheckoutErrorStateImplCopyWithImpl<_$CheckoutErrorStateImpl>(
           this, _$identity);
 
   @override
@@ -476,29 +478,30 @@ class _$CheckoutErrorState implements CheckoutErrorState {
 }
 
 abstract class CheckoutErrorState implements CheckoutState {
-  const factory CheckoutErrorState(final String message) = _$CheckoutErrorState;
+  const factory CheckoutErrorState(final String message) =
+      _$CheckoutErrorStateImpl;
 
   String get message;
   @JsonKey(ignore: true)
-  _$$CheckoutErrorStateCopyWith<_$CheckoutErrorState> get copyWith =>
+  _$$CheckoutErrorStateImplCopyWith<_$CheckoutErrorStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$CheckoutLoadedStateCopyWith<$Res> {
-  factory _$$CheckoutLoadedStateCopyWith(_$CheckoutLoadedState value,
-          $Res Function(_$CheckoutLoadedState) then) =
-      __$$CheckoutLoadedStateCopyWithImpl<$Res>;
+abstract class _$$CheckoutLoadedStateImplCopyWith<$Res> {
+  factory _$$CheckoutLoadedStateImplCopyWith(_$CheckoutLoadedStateImpl value,
+          $Res Function(_$CheckoutLoadedStateImpl) then) =
+      __$$CheckoutLoadedStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({double totalPrice, List<Cart> cartList});
 }
 
 /// @nodoc
-class __$$CheckoutLoadedStateCopyWithImpl<$Res>
-    extends _$CheckoutStateCopyWithImpl<$Res, _$CheckoutLoadedState>
-    implements _$$CheckoutLoadedStateCopyWith<$Res> {
-  __$$CheckoutLoadedStateCopyWithImpl(
-      _$CheckoutLoadedState _value, $Res Function(_$CheckoutLoadedState) _then)
+class __$$CheckoutLoadedStateImplCopyWithImpl<$Res>
+    extends _$CheckoutStateCopyWithImpl<$Res, _$CheckoutLoadedStateImpl>
+    implements _$$CheckoutLoadedStateImplCopyWith<$Res> {
+  __$$CheckoutLoadedStateImplCopyWithImpl(_$CheckoutLoadedStateImpl _value,
+      $Res Function(_$CheckoutLoadedStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -507,7 +510,7 @@ class __$$CheckoutLoadedStateCopyWithImpl<$Res>
     Object? totalPrice = null,
     Object? cartList = null,
   }) {
-    return _then(_$CheckoutLoadedState(
+    return _then(_$CheckoutLoadedStateImpl(
       totalPrice: null == totalPrice
           ? _value.totalPrice
           : totalPrice // ignore: cast_nullable_to_non_nullable
@@ -522,8 +525,8 @@ class __$$CheckoutLoadedStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CheckoutLoadedState implements CheckoutLoadedState {
-  const _$CheckoutLoadedState(
+class _$CheckoutLoadedStateImpl implements CheckoutLoadedState {
+  const _$CheckoutLoadedStateImpl(
       {required this.totalPrice, required final List<Cart> cartList})
       : _cartList = cartList;
 
@@ -543,10 +546,10 @@ class _$CheckoutLoadedState implements CheckoutLoadedState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CheckoutLoadedState &&
+            other is _$CheckoutLoadedStateImpl &&
             (identical(other.totalPrice, totalPrice) ||
                 other.totalPrice == totalPrice) &&
             const DeepCollectionEquality().equals(other._cartList, _cartList));
@@ -559,8 +562,8 @@ class _$CheckoutLoadedState implements CheckoutLoadedState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CheckoutLoadedStateCopyWith<_$CheckoutLoadedState> get copyWith =>
-      __$$CheckoutLoadedStateCopyWithImpl<_$CheckoutLoadedState>(
+  _$$CheckoutLoadedStateImplCopyWith<_$CheckoutLoadedStateImpl> get copyWith =>
+      __$$CheckoutLoadedStateImplCopyWithImpl<_$CheckoutLoadedStateImpl>(
           this, _$identity);
 
   @override
@@ -647,20 +650,20 @@ class _$CheckoutLoadedState implements CheckoutLoadedState {
 abstract class CheckoutLoadedState implements CheckoutState {
   const factory CheckoutLoadedState(
       {required final double totalPrice,
-      required final List<Cart> cartList}) = _$CheckoutLoadedState;
+      required final List<Cart> cartList}) = _$CheckoutLoadedStateImpl;
 
   double get totalPrice;
   List<Cart> get cartList;
   @JsonKey(ignore: true)
-  _$$CheckoutLoadedStateCopyWith<_$CheckoutLoadedState> get copyWith =>
+  _$$CheckoutLoadedStateImplCopyWith<_$CheckoutLoadedStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$CheckoutSuccessStateCopyWith<$Res> {
-  factory _$$CheckoutSuccessStateCopyWith(_$CheckoutSuccessState value,
-          $Res Function(_$CheckoutSuccessState) then) =
-      __$$CheckoutSuccessStateCopyWithImpl<$Res>;
+abstract class _$$CheckoutSuccessStateImplCopyWith<$Res> {
+  factory _$$CheckoutSuccessStateImplCopyWith(_$CheckoutSuccessStateImpl value,
+          $Res Function(_$CheckoutSuccessStateImpl) then) =
+      __$$CheckoutSuccessStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({OrderModel order});
 
@@ -668,11 +671,11 @@ abstract class _$$CheckoutSuccessStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$CheckoutSuccessStateCopyWithImpl<$Res>
-    extends _$CheckoutStateCopyWithImpl<$Res, _$CheckoutSuccessState>
-    implements _$$CheckoutSuccessStateCopyWith<$Res> {
-  __$$CheckoutSuccessStateCopyWithImpl(_$CheckoutSuccessState _value,
-      $Res Function(_$CheckoutSuccessState) _then)
+class __$$CheckoutSuccessStateImplCopyWithImpl<$Res>
+    extends _$CheckoutStateCopyWithImpl<$Res, _$CheckoutSuccessStateImpl>
+    implements _$$CheckoutSuccessStateImplCopyWith<$Res> {
+  __$$CheckoutSuccessStateImplCopyWithImpl(_$CheckoutSuccessStateImpl _value,
+      $Res Function(_$CheckoutSuccessStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -680,7 +683,7 @@ class __$$CheckoutSuccessStateCopyWithImpl<$Res>
   $Res call({
     Object? order = null,
   }) {
-    return _then(_$CheckoutSuccessState(
+    return _then(_$CheckoutSuccessStateImpl(
       order: null == order
           ? _value.order
           : order // ignore: cast_nullable_to_non_nullable
@@ -699,8 +702,8 @@ class __$$CheckoutSuccessStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CheckoutSuccessState implements CheckoutSuccessState {
-  const _$CheckoutSuccessState({required this.order});
+class _$CheckoutSuccessStateImpl implements CheckoutSuccessState {
+  const _$CheckoutSuccessStateImpl({required this.order});
 
   @override
   final OrderModel order;
@@ -711,10 +714,10 @@ class _$CheckoutSuccessState implements CheckoutSuccessState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CheckoutSuccessState &&
+            other is _$CheckoutSuccessStateImpl &&
             (identical(other.order, order) || other.order == order));
   }
 
@@ -724,9 +727,10 @@ class _$CheckoutSuccessState implements CheckoutSuccessState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CheckoutSuccessStateCopyWith<_$CheckoutSuccessState> get copyWith =>
-      __$$CheckoutSuccessStateCopyWithImpl<_$CheckoutSuccessState>(
-          this, _$identity);
+  _$$CheckoutSuccessStateImplCopyWith<_$CheckoutSuccessStateImpl>
+      get copyWith =>
+          __$$CheckoutSuccessStateImplCopyWithImpl<_$CheckoutSuccessStateImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -811,10 +815,10 @@ class _$CheckoutSuccessState implements CheckoutSuccessState {
 
 abstract class CheckoutSuccessState implements CheckoutState {
   const factory CheckoutSuccessState({required final OrderModel order}) =
-      _$CheckoutSuccessState;
+      _$CheckoutSuccessStateImpl;
 
   OrderModel get order;
   @JsonKey(ignore: true)
-  _$$CheckoutSuccessStateCopyWith<_$CheckoutSuccessState> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CheckoutSuccessStateImplCopyWith<_$CheckoutSuccessStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

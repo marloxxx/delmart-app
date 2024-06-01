@@ -12,7 +12,7 @@ part of 'register_event.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$RegisterEvent {
@@ -84,10 +84,10 @@ class _$RegisterEventCopyWithImpl<$Res, $Val extends RegisterEvent>
 }
 
 /// @nodoc
-abstract class _$$RegisterUserEventCopyWith<$Res> {
-  factory _$$RegisterUserEventCopyWith(
-          _$RegisterUserEvent value, $Res Function(_$RegisterUserEvent) then) =
-      __$$RegisterUserEventCopyWithImpl<$Res>;
+abstract class _$$RegisterUserEventImplCopyWith<$Res> {
+  factory _$$RegisterUserEventImplCopyWith(_$RegisterUserEventImpl value,
+          $Res Function(_$RegisterUserEventImpl) then) =
+      __$$RegisterUserEventImplCopyWithImpl<$Res>;
   @useResult
   $Res call({User user});
 
@@ -95,11 +95,11 @@ abstract class _$$RegisterUserEventCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$RegisterUserEventCopyWithImpl<$Res>
-    extends _$RegisterEventCopyWithImpl<$Res, _$RegisterUserEvent>
-    implements _$$RegisterUserEventCopyWith<$Res> {
-  __$$RegisterUserEventCopyWithImpl(
-      _$RegisterUserEvent _value, $Res Function(_$RegisterUserEvent) _then)
+class __$$RegisterUserEventImplCopyWithImpl<$Res>
+    extends _$RegisterEventCopyWithImpl<$Res, _$RegisterUserEventImpl>
+    implements _$$RegisterUserEventImplCopyWith<$Res> {
+  __$$RegisterUserEventImplCopyWithImpl(_$RegisterUserEventImpl _value,
+      $Res Function(_$RegisterUserEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -107,7 +107,7 @@ class __$$RegisterUserEventCopyWithImpl<$Res>
   $Res call({
     Object? user = null,
   }) {
-    return _then(_$RegisterUserEvent(
+    return _then(_$RegisterUserEventImpl(
       user: null == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
@@ -126,8 +126,8 @@ class __$$RegisterUserEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RegisterUserEvent implements RegisterUserEvent {
-  const _$RegisterUserEvent({required this.user});
+class _$RegisterUserEventImpl implements RegisterUserEvent {
+  const _$RegisterUserEventImpl({required this.user});
 
   @override
   final User user;
@@ -138,10 +138,10 @@ class _$RegisterUserEvent implements RegisterUserEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RegisterUserEvent &&
+            other is _$RegisterUserEventImpl &&
             (identical(other.user, user) || other.user == user));
   }
 
@@ -151,8 +151,9 @@ class _$RegisterUserEvent implements RegisterUserEvent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$RegisterUserEventCopyWith<_$RegisterUserEvent> get copyWith =>
-      __$$RegisterUserEventCopyWithImpl<_$RegisterUserEvent>(this, _$identity);
+  _$$RegisterUserEventImplCopyWith<_$RegisterUserEventImpl> get copyWith =>
+      __$$RegisterUserEventImplCopyWithImpl<_$RegisterUserEventImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -228,34 +229,36 @@ class _$RegisterUserEvent implements RegisterUserEvent {
 
 abstract class RegisterUserEvent implements RegisterEvent {
   const factory RegisterUserEvent({required final User user}) =
-      _$RegisterUserEvent;
+      _$RegisterUserEventImpl;
 
   User get user;
   @JsonKey(ignore: true)
-  _$$RegisterUserEventCopyWith<_$RegisterUserEvent> get copyWith =>
+  _$$RegisterUserEventImplCopyWith<_$RegisterUserEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$RegisterUserGoogleEventCopyWith<$Res> {
-  factory _$$RegisterUserGoogleEventCopyWith(_$RegisterUserGoogleEvent value,
-          $Res Function(_$RegisterUserGoogleEvent) then) =
-      __$$RegisterUserGoogleEventCopyWithImpl<$Res>;
+abstract class _$$RegisterUserGoogleEventImplCopyWith<$Res> {
+  factory _$$RegisterUserGoogleEventImplCopyWith(
+          _$RegisterUserGoogleEventImpl value,
+          $Res Function(_$RegisterUserGoogleEventImpl) then) =
+      __$$RegisterUserGoogleEventImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$RegisterUserGoogleEventCopyWithImpl<$Res>
-    extends _$RegisterEventCopyWithImpl<$Res, _$RegisterUserGoogleEvent>
-    implements _$$RegisterUserGoogleEventCopyWith<$Res> {
-  __$$RegisterUserGoogleEventCopyWithImpl(_$RegisterUserGoogleEvent _value,
-      $Res Function(_$RegisterUserGoogleEvent) _then)
+class __$$RegisterUserGoogleEventImplCopyWithImpl<$Res>
+    extends _$RegisterEventCopyWithImpl<$Res, _$RegisterUserGoogleEventImpl>
+    implements _$$RegisterUserGoogleEventImplCopyWith<$Res> {
+  __$$RegisterUserGoogleEventImplCopyWithImpl(
+      _$RegisterUserGoogleEventImpl _value,
+      $Res Function(_$RegisterUserGoogleEventImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$RegisterUserGoogleEvent implements RegisterUserGoogleEvent {
-  const _$RegisterUserGoogleEvent();
+class _$RegisterUserGoogleEventImpl implements RegisterUserGoogleEvent {
+  const _$RegisterUserGoogleEventImpl();
 
   @override
   String toString() {
@@ -263,10 +266,10 @@ class _$RegisterUserGoogleEvent implements RegisterUserGoogleEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RegisterUserGoogleEvent);
+            other is _$RegisterUserGoogleEventImpl);
   }
 
   @override
@@ -345,30 +348,31 @@ class _$RegisterUserGoogleEvent implements RegisterUserGoogleEvent {
 }
 
 abstract class RegisterUserGoogleEvent implements RegisterEvent {
-  const factory RegisterUserGoogleEvent() = _$RegisterUserGoogleEvent;
+  const factory RegisterUserGoogleEvent() = _$RegisterUserGoogleEventImpl;
 }
 
 /// @nodoc
-abstract class _$$RegisterUserFacebookEventCopyWith<$Res> {
-  factory _$$RegisterUserFacebookEventCopyWith(
-          _$RegisterUserFacebookEvent value,
-          $Res Function(_$RegisterUserFacebookEvent) then) =
-      __$$RegisterUserFacebookEventCopyWithImpl<$Res>;
+abstract class _$$RegisterUserFacebookEventImplCopyWith<$Res> {
+  factory _$$RegisterUserFacebookEventImplCopyWith(
+          _$RegisterUserFacebookEventImpl value,
+          $Res Function(_$RegisterUserFacebookEventImpl) then) =
+      __$$RegisterUserFacebookEventImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$RegisterUserFacebookEventCopyWithImpl<$Res>
-    extends _$RegisterEventCopyWithImpl<$Res, _$RegisterUserFacebookEvent>
-    implements _$$RegisterUserFacebookEventCopyWith<$Res> {
-  __$$RegisterUserFacebookEventCopyWithImpl(_$RegisterUserFacebookEvent _value,
-      $Res Function(_$RegisterUserFacebookEvent) _then)
+class __$$RegisterUserFacebookEventImplCopyWithImpl<$Res>
+    extends _$RegisterEventCopyWithImpl<$Res, _$RegisterUserFacebookEventImpl>
+    implements _$$RegisterUserFacebookEventImplCopyWith<$Res> {
+  __$$RegisterUserFacebookEventImplCopyWithImpl(
+      _$RegisterUserFacebookEventImpl _value,
+      $Res Function(_$RegisterUserFacebookEventImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$RegisterUserFacebookEvent implements RegisterUserFacebookEvent {
-  const _$RegisterUserFacebookEvent();
+class _$RegisterUserFacebookEventImpl implements RegisterUserFacebookEvent {
+  const _$RegisterUserFacebookEventImpl();
 
   @override
   String toString() {
@@ -376,10 +380,10 @@ class _$RegisterUserFacebookEvent implements RegisterUserFacebookEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RegisterUserFacebookEvent);
+            other is _$RegisterUserFacebookEventImpl);
   }
 
   @override
@@ -458,5 +462,5 @@ class _$RegisterUserFacebookEvent implements RegisterUserFacebookEvent {
 }
 
 abstract class RegisterUserFacebookEvent implements RegisterEvent {
-  const factory RegisterUserFacebookEvent() = _$RegisterUserFacebookEvent;
+  const factory RegisterUserFacebookEvent() = _$RegisterUserFacebookEventImpl;
 }

@@ -12,7 +12,7 @@ part of 'cart_event.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$CartEvent {
@@ -89,25 +89,25 @@ class _$CartEventCopyWithImpl<$Res, $Val extends CartEvent>
 }
 
 /// @nodoc
-abstract class _$$GetCartEventCopyWith<$Res> {
-  factory _$$GetCartEventCopyWith(
-          _$GetCartEvent value, $Res Function(_$GetCartEvent) then) =
-      __$$GetCartEventCopyWithImpl<$Res>;
+abstract class _$$GetCartEventImplCopyWith<$Res> {
+  factory _$$GetCartEventImplCopyWith(
+          _$GetCartEventImpl value, $Res Function(_$GetCartEventImpl) then) =
+      __$$GetCartEventImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GetCartEventCopyWithImpl<$Res>
-    extends _$CartEventCopyWithImpl<$Res, _$GetCartEvent>
-    implements _$$GetCartEventCopyWith<$Res> {
-  __$$GetCartEventCopyWithImpl(
-      _$GetCartEvent _value, $Res Function(_$GetCartEvent) _then)
+class __$$GetCartEventImplCopyWithImpl<$Res>
+    extends _$CartEventCopyWithImpl<$Res, _$GetCartEventImpl>
+    implements _$$GetCartEventImplCopyWith<$Res> {
+  __$$GetCartEventImplCopyWithImpl(
+      _$GetCartEventImpl _value, $Res Function(_$GetCartEventImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$GetCartEvent implements GetCartEvent {
-  const _$GetCartEvent();
+class _$GetCartEventImpl implements GetCartEvent {
+  const _$GetCartEventImpl();
 
   @override
   String toString() {
@@ -115,9 +115,9 @@ class _$GetCartEvent implements GetCartEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$GetCartEvent);
+        (other.runtimeType == runtimeType && other is _$GetCartEventImpl);
   }
 
   @override
@@ -202,24 +202,25 @@ class _$GetCartEvent implements GetCartEvent {
 }
 
 abstract class GetCartEvent implements CartEvent {
-  const factory GetCartEvent() = _$GetCartEvent;
+  const factory GetCartEvent() = _$GetCartEventImpl;
 }
 
 /// @nodoc
-abstract class _$$IncreaseQuantityEventCopyWith<$Res> {
-  factory _$$IncreaseQuantityEventCopyWith(_$IncreaseQuantityEvent value,
-          $Res Function(_$IncreaseQuantityEvent) then) =
-      __$$IncreaseQuantityEventCopyWithImpl<$Res>;
+abstract class _$$IncreaseQuantityEventImplCopyWith<$Res> {
+  factory _$$IncreaseQuantityEventImplCopyWith(
+          _$IncreaseQuantityEventImpl value,
+          $Res Function(_$IncreaseQuantityEventImpl) then) =
+      __$$IncreaseQuantityEventImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ProductCartEntity productCartEntity});
 }
 
 /// @nodoc
-class __$$IncreaseQuantityEventCopyWithImpl<$Res>
-    extends _$CartEventCopyWithImpl<$Res, _$IncreaseQuantityEvent>
-    implements _$$IncreaseQuantityEventCopyWith<$Res> {
-  __$$IncreaseQuantityEventCopyWithImpl(_$IncreaseQuantityEvent _value,
-      $Res Function(_$IncreaseQuantityEvent) _then)
+class __$$IncreaseQuantityEventImplCopyWithImpl<$Res>
+    extends _$CartEventCopyWithImpl<$Res, _$IncreaseQuantityEventImpl>
+    implements _$$IncreaseQuantityEventImplCopyWith<$Res> {
+  __$$IncreaseQuantityEventImplCopyWithImpl(_$IncreaseQuantityEventImpl _value,
+      $Res Function(_$IncreaseQuantityEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -227,7 +228,7 @@ class __$$IncreaseQuantityEventCopyWithImpl<$Res>
   $Res call({
     Object? productCartEntity = null,
   }) {
-    return _then(_$IncreaseQuantityEvent(
+    return _then(_$IncreaseQuantityEventImpl(
       productCartEntity: null == productCartEntity
           ? _value.productCartEntity
           : productCartEntity // ignore: cast_nullable_to_non_nullable
@@ -238,8 +239,8 @@ class __$$IncreaseQuantityEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$IncreaseQuantityEvent implements IncreaseQuantityEvent {
-  const _$IncreaseQuantityEvent({required this.productCartEntity});
+class _$IncreaseQuantityEventImpl implements IncreaseQuantityEvent {
+  const _$IncreaseQuantityEventImpl({required this.productCartEntity});
 
   @override
   final ProductCartEntity productCartEntity;
@@ -250,10 +251,10 @@ class _$IncreaseQuantityEvent implements IncreaseQuantityEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$IncreaseQuantityEvent &&
+            other is _$IncreaseQuantityEventImpl &&
             (identical(other.productCartEntity, productCartEntity) ||
                 other.productCartEntity == productCartEntity));
   }
@@ -264,9 +265,9 @@ class _$IncreaseQuantityEvent implements IncreaseQuantityEvent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$IncreaseQuantityEventCopyWith<_$IncreaseQuantityEvent> get copyWith =>
-      __$$IncreaseQuantityEventCopyWithImpl<_$IncreaseQuantityEvent>(
-          this, _$identity);
+  _$$IncreaseQuantityEventImplCopyWith<_$IncreaseQuantityEventImpl>
+      get copyWith => __$$IncreaseQuantityEventImplCopyWithImpl<
+          _$IncreaseQuantityEventImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -349,29 +350,30 @@ class _$IncreaseQuantityEvent implements IncreaseQuantityEvent {
 abstract class IncreaseQuantityEvent implements CartEvent {
   const factory IncreaseQuantityEvent(
           {required final ProductCartEntity productCartEntity}) =
-      _$IncreaseQuantityEvent;
+      _$IncreaseQuantityEventImpl;
 
   ProductCartEntity get productCartEntity;
   @JsonKey(ignore: true)
-  _$$IncreaseQuantityEventCopyWith<_$IncreaseQuantityEvent> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$IncreaseQuantityEventImplCopyWith<_$IncreaseQuantityEventImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$DecreaseQuantityEventCopyWith<$Res> {
-  factory _$$DecreaseQuantityEventCopyWith(_$DecreaseQuantityEvent value,
-          $Res Function(_$DecreaseQuantityEvent) then) =
-      __$$DecreaseQuantityEventCopyWithImpl<$Res>;
+abstract class _$$DecreaseQuantityEventImplCopyWith<$Res> {
+  factory _$$DecreaseQuantityEventImplCopyWith(
+          _$DecreaseQuantityEventImpl value,
+          $Res Function(_$DecreaseQuantityEventImpl) then) =
+      __$$DecreaseQuantityEventImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ProductCartEntity productCartEntity});
 }
 
 /// @nodoc
-class __$$DecreaseQuantityEventCopyWithImpl<$Res>
-    extends _$CartEventCopyWithImpl<$Res, _$DecreaseQuantityEvent>
-    implements _$$DecreaseQuantityEventCopyWith<$Res> {
-  __$$DecreaseQuantityEventCopyWithImpl(_$DecreaseQuantityEvent _value,
-      $Res Function(_$DecreaseQuantityEvent) _then)
+class __$$DecreaseQuantityEventImplCopyWithImpl<$Res>
+    extends _$CartEventCopyWithImpl<$Res, _$DecreaseQuantityEventImpl>
+    implements _$$DecreaseQuantityEventImplCopyWith<$Res> {
+  __$$DecreaseQuantityEventImplCopyWithImpl(_$DecreaseQuantityEventImpl _value,
+      $Res Function(_$DecreaseQuantityEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -379,7 +381,7 @@ class __$$DecreaseQuantityEventCopyWithImpl<$Res>
   $Res call({
     Object? productCartEntity = null,
   }) {
-    return _then(_$DecreaseQuantityEvent(
+    return _then(_$DecreaseQuantityEventImpl(
       productCartEntity: null == productCartEntity
           ? _value.productCartEntity
           : productCartEntity // ignore: cast_nullable_to_non_nullable
@@ -390,8 +392,8 @@ class __$$DecreaseQuantityEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DecreaseQuantityEvent implements DecreaseQuantityEvent {
-  const _$DecreaseQuantityEvent({required this.productCartEntity});
+class _$DecreaseQuantityEventImpl implements DecreaseQuantityEvent {
+  const _$DecreaseQuantityEventImpl({required this.productCartEntity});
 
   @override
   final ProductCartEntity productCartEntity;
@@ -402,10 +404,10 @@ class _$DecreaseQuantityEvent implements DecreaseQuantityEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DecreaseQuantityEvent &&
+            other is _$DecreaseQuantityEventImpl &&
             (identical(other.productCartEntity, productCartEntity) ||
                 other.productCartEntity == productCartEntity));
   }
@@ -416,9 +418,9 @@ class _$DecreaseQuantityEvent implements DecreaseQuantityEvent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$DecreaseQuantityEventCopyWith<_$DecreaseQuantityEvent> get copyWith =>
-      __$$DecreaseQuantityEventCopyWithImpl<_$DecreaseQuantityEvent>(
-          this, _$identity);
+  _$$DecreaseQuantityEventImplCopyWith<_$DecreaseQuantityEventImpl>
+      get copyWith => __$$DecreaseQuantityEventImplCopyWithImpl<
+          _$DecreaseQuantityEventImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -501,29 +503,29 @@ class _$DecreaseQuantityEvent implements DecreaseQuantityEvent {
 abstract class DecreaseQuantityEvent implements CartEvent {
   const factory DecreaseQuantityEvent(
           {required final ProductCartEntity productCartEntity}) =
-      _$DecreaseQuantityEvent;
+      _$DecreaseQuantityEventImpl;
 
   ProductCartEntity get productCartEntity;
   @JsonKey(ignore: true)
-  _$$DecreaseQuantityEventCopyWith<_$DecreaseQuantityEvent> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$DecreaseQuantityEventImplCopyWith<_$DecreaseQuantityEventImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$DeleteFromCartEventCopyWith<$Res> {
-  factory _$$DeleteFromCartEventCopyWith(_$DeleteFromCartEvent value,
-          $Res Function(_$DeleteFromCartEvent) then) =
-      __$$DeleteFromCartEventCopyWithImpl<$Res>;
+abstract class _$$DeleteFromCartEventImplCopyWith<$Res> {
+  factory _$$DeleteFromCartEventImplCopyWith(_$DeleteFromCartEventImpl value,
+          $Res Function(_$DeleteFromCartEventImpl) then) =
+      __$$DeleteFromCartEventImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ProductCartEntity productCartEntity});
 }
 
 /// @nodoc
-class __$$DeleteFromCartEventCopyWithImpl<$Res>
-    extends _$CartEventCopyWithImpl<$Res, _$DeleteFromCartEvent>
-    implements _$$DeleteFromCartEventCopyWith<$Res> {
-  __$$DeleteFromCartEventCopyWithImpl(
-      _$DeleteFromCartEvent _value, $Res Function(_$DeleteFromCartEvent) _then)
+class __$$DeleteFromCartEventImplCopyWithImpl<$Res>
+    extends _$CartEventCopyWithImpl<$Res, _$DeleteFromCartEventImpl>
+    implements _$$DeleteFromCartEventImplCopyWith<$Res> {
+  __$$DeleteFromCartEventImplCopyWithImpl(_$DeleteFromCartEventImpl _value,
+      $Res Function(_$DeleteFromCartEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -531,7 +533,7 @@ class __$$DeleteFromCartEventCopyWithImpl<$Res>
   $Res call({
     Object? productCartEntity = null,
   }) {
-    return _then(_$DeleteFromCartEvent(
+    return _then(_$DeleteFromCartEventImpl(
       productCartEntity: null == productCartEntity
           ? _value.productCartEntity
           : productCartEntity // ignore: cast_nullable_to_non_nullable
@@ -542,8 +544,8 @@ class __$$DeleteFromCartEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DeleteFromCartEvent implements DeleteFromCartEvent {
-  const _$DeleteFromCartEvent({required this.productCartEntity});
+class _$DeleteFromCartEventImpl implements DeleteFromCartEvent {
+  const _$DeleteFromCartEventImpl({required this.productCartEntity});
 
   @override
   final ProductCartEntity productCartEntity;
@@ -554,10 +556,10 @@ class _$DeleteFromCartEvent implements DeleteFromCartEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DeleteFromCartEvent &&
+            other is _$DeleteFromCartEventImpl &&
             (identical(other.productCartEntity, productCartEntity) ||
                 other.productCartEntity == productCartEntity));
   }
@@ -568,8 +570,8 @@ class _$DeleteFromCartEvent implements DeleteFromCartEvent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$DeleteFromCartEventCopyWith<_$DeleteFromCartEvent> get copyWith =>
-      __$$DeleteFromCartEventCopyWithImpl<_$DeleteFromCartEvent>(
+  _$$DeleteFromCartEventImplCopyWith<_$DeleteFromCartEventImpl> get copyWith =>
+      __$$DeleteFromCartEventImplCopyWithImpl<_$DeleteFromCartEventImpl>(
           this, _$identity);
 
   @override
@@ -653,10 +655,10 @@ class _$DeleteFromCartEvent implements DeleteFromCartEvent {
 abstract class DeleteFromCartEvent implements CartEvent {
   const factory DeleteFromCartEvent(
           {required final ProductCartEntity productCartEntity}) =
-      _$DeleteFromCartEvent;
+      _$DeleteFromCartEventImpl;
 
   ProductCartEntity get productCartEntity;
   @JsonKey(ignore: true)
-  _$$DeleteFromCartEventCopyWith<_$DeleteFromCartEvent> get copyWith =>
+  _$$DeleteFromCartEventImplCopyWith<_$DeleteFromCartEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
