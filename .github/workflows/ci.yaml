@@ -1,0 +1,33 @@
+name: Flutter CI/CD
+
+on:
+  push:
+    branches: [ main ]
+
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        channel: 'stable'
+
+    - name: Install dependencies
+      run: flutter pub get
+
+      # Verifies if the dart code is formatted well
+    - name: Verify formatting
+      run: dart format --output=none --set-exit-if-changed .
+
+    - name: Analyze project source
+      run: flutter analyze --fatal-warnings
+
+    - name: Build APK
+      run: flutter build apk --split-per-abi

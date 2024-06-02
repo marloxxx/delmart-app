@@ -9,7 +9,7 @@ import '../bloc/credit_event.dart';
 import '../shared/custom_text_form_field.dart';
 import 'credit_item.dart';
 
-const List<String> _Telkomsel = [
+const List<String> telkomsel = [
   '0811',
   '0812',
   '0813',
@@ -21,7 +21,7 @@ const List<String> _Telkomsel = [
   '0851',
 ];
 
-const List<String> _Indosat = [
+const List<String> indosat = [
   '0814',
   '0815',
   '0816',
@@ -31,7 +31,7 @@ const List<String> _Indosat = [
   '0858',
 ];
 
-const List<String> _XL = [
+const List<String> xl = [
   '0817',
   '0818',
   '0819',
@@ -40,21 +40,13 @@ const List<String> _XL = [
   '0878',
 ];
 
-const List<String> _Axis = [
+const List<String> axis = [
   '0831',
   '0832',
   '0838',
 ];
 
-const List<String> _Three = [
-  '0895',
-  '0896',
-  '0897',
-  '0898',
-  '0899',
-];
-
-const List<String> _Smartfren = [
+const List<String> smartfren = [
   '0881',
   '0882',
   '0883',
@@ -66,7 +58,7 @@ const List<String> _Smartfren = [
   '0889',
 ];
 
-const List<String> _Tri = [
+const List<String> tri = [
   '0895',
   '0896',
   '0897',
@@ -89,19 +81,17 @@ class _CreditScreenState extends State<CreditScreen> {
 
   void _findProvider(String number) {
     setState(() {
-      if (_Telkomsel.contains(number)) {
+      if (telkomsel.contains(number)) {
         _provider = 'Telkomsel';
-      } else if (_Indosat.contains(number)) {
+      } else if (indosat.contains(number)) {
         _provider = 'Indosat';
-      } else if (_XL.contains(number)) {
+      } else if (xl.contains(number)) {
         _provider = 'XL';
-      } else if (_Axis.contains(number)) {
+      } else if (axis.contains(number)) {
         _provider = 'Axis';
-      } else if (_Three.contains(number)) {
-        _provider = 'Three';
-      } else if (_Smartfren.contains(number)) {
+      } else if (smartfren.contains(number)) {
         _provider = 'Smartfren';
-      } else if (_Tri.contains(number)) {
+      } else if (tri.contains(number)) {
         _provider = 'Tri';
       }
       context.read<CreditBloc>().add(

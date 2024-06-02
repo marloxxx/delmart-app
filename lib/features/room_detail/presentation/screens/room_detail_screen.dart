@@ -38,14 +38,17 @@ class _RoomDetailScreenState extends State<RoomDetailScreen> {
   final TextEditingController _endDateController = TextEditingController();
 
   Future<TimeOfDay> _pickTime(BuildContext context) async {
-    final TimeOfDay? t = await showTimePicker(
-      context: context,
-      initialTime: TimeOfDay.now(),
-    );
-    return t!;
+    if (mounted) {
+      final TimeOfDay? t = await showTimePicker(
+        context: context,
+        initialTime: TimeOfDay.now(),
+      );
+      return t!;
+    }
+    return TimeOfDay.now();
   }
 
-  Future<DateTime> _selectStartDate(BuildContext context) async {
+  Future<DateTime?> _selectStartDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
       context: context,
       initialDate: _startDate ?? DateTime.now(),
@@ -57,10 +60,10 @@ class _RoomDetailScreenState extends State<RoomDetailScreen> {
         _startDate = picked;
       });
     }
-    return picked!;
+    return picked;
   }
 
-  Future<DateTime> _selectEndDate(BuildContext context) async {
+  Future<DateTime?> _selectEndDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
       context: context,
       initialDate: _endDate ?? DateTime.now(),
@@ -72,25 +75,35 @@ class _RoomDetailScreenState extends State<RoomDetailScreen> {
         _endDate = picked;
       });
     }
-    return picked!;
+    return picked;
   }
 
   Future<void> _pickStartDateTime(BuildContext context) async {
-    final DateTime pickedDate = await _selectStartDate(context);
-    final TimeOfDay pickedTime = await _pickTime(context);
-    setState(() {
-      _startDateController.text =
-          "${"${pickedDate.toLocal()}".split(' ')[0]} ${pickedTime.format(context)}";
-    });
+    final DateTime? pickedDate = await _selectStartDate(context);
+    if (pickedDate == null) {
+      return;
+    }
+    if (context.mounted) {
+      final TimeOfDay pickedTime = await _pickTime(context);
+      setState(() {
+        _startDateController.text =
+            "${"${pickedDate.toLocal()}".split(' ')[0]} ${pickedTime.format(context)}";
+      });
+    }
   }
 
   Future<void> _pickEndDateTime(BuildContext context) async {
-    final DateTime pickedDate = await _selectEndDate(context);
-    final TimeOfDay pickedTime = await _pickTime(context);
-    setState(() {
-      _endDateController.text =
-          "${"${pickedDate.toLocal()}".split(' ')[0]} ${pickedTime.format(context)}";
-    });
+    final DateTime? pickedDate = await _selectEndDate(context);
+    if (pickedDate == null) {
+      return;
+    }
+    if (context.mounted) {
+      final TimeOfDay pickedTime = await _pickTime(context);
+      setState(() {
+        _endDateController.text =
+            "${"${pickedDate.toLocal()}".split(' ')[0]} ${pickedTime.format(context)}";
+      });
+    }
   }
 
   @override
@@ -134,7 +147,7 @@ class _RoomDetailScreenState extends State<RoomDetailScreen> {
                     color: dark,
                   ),
                   onPressed: () {
-                    AutoRouter.of(context).pop();
+                    AutoRouter.of(context).maybePop();
                   },
                 ),
               ),

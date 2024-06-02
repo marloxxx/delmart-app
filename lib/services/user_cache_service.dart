@@ -5,7 +5,7 @@ import '../core/service_locator.dart';
 import '../features/login/data/models/user_model.dart';
 import '../features/register/data/models/user_model.dart' as register;
 
-const String USER_CACHE_KEY = 'usercache';
+const String userCacheKey = 'usercache';
 
 class UserCacheService {
   User? _user;
@@ -13,7 +13,7 @@ class UserCacheService {
   SharedPreferences get sharedPrefs => serviceLocator<SharedPreferences>();
   Future<bool> saveUser(User user) async {
     var map = user.toJson();
-    bool saved = await sharedPrefs.setString(USER_CACHE_KEY, jsonEncode(map));
+    bool saved = await sharedPrefs.setString(userCacheKey, jsonEncode(map));
     if (saved) {
       _user = await getUser();
     }
@@ -22,7 +22,7 @@ class UserCacheService {
 
   Future<bool> saveUserRegister(register.User userRegister) async {
     var map = userRegister.toJson();
-    bool saved = await sharedPrefs.setString(USER_CACHE_KEY, jsonEncode(map));
+    bool saved = await sharedPrefs.setString(userCacheKey, jsonEncode(map));
     if (saved) {
       _user = await getUser();
     }
@@ -31,7 +31,7 @@ class UserCacheService {
 
   Future<User?> getUser() async {
     User usr;
-    var userMap = sharedPrefs.getString(USER_CACHE_KEY);
+    var userMap = sharedPrefs.getString(userCacheKey);
     if (userMap == null) {
       return null;
     }
@@ -42,6 +42,6 @@ class UserCacheService {
 
   Future<bool> deleteUser() async {
     _user = null;
-    return await sharedPrefs.remove(USER_CACHE_KEY);
+    return await sharedPrefs.remove(userCacheKey);
   }
 }
