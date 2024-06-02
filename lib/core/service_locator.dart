@@ -1,4 +1,3 @@
-import 'package:delmart/features/credit/domain/usecases/checkout_usecase.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -17,6 +16,7 @@ import '../features/checkout/domain/usecases/get_cart.dart' as checkout;
 import '../features/credit/data/datasource/credit_remote_source.dart';
 import '../features/credit/data/repository/credit_repository.dart';
 import '../features/credit/domain/repository/credit_repository.dart';
+import '../features/credit/domain/usecases/checkout_usecase.dart';
 import '../features/credit/domain/usecases/get_credits.dart';
 import '../features/home/data/datasource/home_product_remote_source.dart'
     as home;
@@ -136,7 +136,7 @@ Future<void> setUpServiceLocator() async {
       .registerFactory<GetCreditsFromServer>(() => GetCreditsFromServer());
   serviceLocator
       .registerFactory<CreditCheckoutUseCase>(() => CreditCheckoutUseCase());
-      
+
 // datasource
   serviceLocator.registerFactory<CreditsRemoteDataSource>(
       () => CreditsRemoteDataSourceImpl());

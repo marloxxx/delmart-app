@@ -1,7 +1,3 @@
-Sure, here's a sample README for your Delmart application along with instructions for adding screenshots.
-
----
-
 # Delmart
 
 Delmart is a mobile shopping application for IT Del cooperative. This application is built using Flutter and follows Bloc and Clean Architecture principles. It allows users to log in using Google and interacts with a backend built using Laravel as a REST API.
