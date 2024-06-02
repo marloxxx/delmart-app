@@ -26,7 +26,7 @@ Delmart is a mobile shopping application for IT Del cooperative. This applicatio
 
 ## Screenshots
 
-Add screenshots of your app here.
+Here are some screenshot of the application
 
 <img src="screenshots/screen1.png" width="300">
 <img src="screenshots/screen2.png" width="300">
