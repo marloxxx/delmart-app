@@ -88,7 +88,7 @@ class OrderItem extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           Text(
-            order.description,
+            order.description ?? '',
             style: TextStyle(
               color: dark.withOpacity(0.5),
               fontSize: 14,

@@ -23,7 +23,7 @@ mixin _$OrderModel {
   int get id => throw _privateConstructorUsedError;
   String get code => throw _privateConstructorUsedError;
   double get total => throw _privateConstructorUsedError;
-  String get description => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
   String get paymentMethod => throw _privateConstructorUsedError;
   List<OrderDetail> get orderDetails => throw _privateConstructorUsedError;
   String get status => throw _privateConstructorUsedError;
@@ -45,7 +45,7 @@ abstract class $OrderModelCopyWith<$Res> {
       {int id,
       String code,
       double total,
-      String description,
+      String? description,
       String paymentMethod,
       List<OrderDetail> orderDetails,
       String status,
@@ -68,7 +68,7 @@ class _$OrderModelCopyWithImpl<$Res, $Val extends OrderModel>
     Object? id = null,
     Object? code = null,
     Object? total = null,
-    Object? description = null,
+    Object? description = freezed,
     Object? paymentMethod = null,
     Object? orderDetails = null,
     Object? status = null,
@@ -87,10 +87,10 @@ class _$OrderModelCopyWithImpl<$Res, $Val extends OrderModel>
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
               as double,
-      description: null == description
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       paymentMethod: null == paymentMethod
           ? _value.paymentMethod
           : paymentMethod // ignore: cast_nullable_to_non_nullable
@@ -123,7 +123,7 @@ abstract class _$$OrderModelImplCopyWith<$Res>
       {int id,
       String code,
       double total,
-      String description,
+      String? description,
       String paymentMethod,
       List<OrderDetail> orderDetails,
       String status,
@@ -144,7 +144,7 @@ class __$$OrderModelImplCopyWithImpl<$Res>
     Object? id = null,
     Object? code = null,
     Object? total = null,
-    Object? description = null,
+    Object? description = freezed,
     Object? paymentMethod = null,
     Object? orderDetails = null,
     Object? status = null,
@@ -163,10 +163,10 @@ class __$$OrderModelImplCopyWithImpl<$Res>
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
               as double,
-      description: null == description
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       paymentMethod: null == paymentMethod
           ? _value.paymentMethod
           : paymentMethod // ignore: cast_nullable_to_non_nullable
@@ -194,7 +194,7 @@ class _$OrderModelImpl implements _OrderModel {
       {required this.id,
       required this.code,
       required this.total,
-      required this.description,
+      this.description,
       required this.paymentMethod,
       required final List<OrderDetail> orderDetails,
       required this.status,
@@ -211,7 +211,7 @@ class _$OrderModelImpl implements _OrderModel {
   @override
   final double total;
   @override
-  final String description;
+  final String? description;
   @override
   final String paymentMethod;
   final List<OrderDetail> _orderDetails;
@@ -283,7 +283,7 @@ abstract class _OrderModel implements OrderModel {
       {required final int id,
       required final String code,
       required final double total,
-      required final String description,
+      final String? description,
       required final String paymentMethod,
       required final List<OrderDetail> orderDetails,
       required final String status,
@@ -299,7 +299,7 @@ abstract class _OrderModel implements OrderModel {
   @override
   double get total;
   @override
-  String get description;
+  String? get description;
   @override
   String get paymentMethod;
   @override

@@ -11,7 +11,7 @@ _$OrderModelImpl _$$OrderModelImplFromJson(Map<String, dynamic> json) =>
       id: (json['id'] as num).toInt(),
       code: json['code'] as String,
       total: (json['total'] as num).toDouble(),
-      description: json['description'] as String,
+      description: json['description'] as String?,
       paymentMethod: json['paymentMethod'] as String,
       orderDetails: (json['orderDetails'] as List<dynamic>)
           .map((e) => OrderDetail.fromJson(e as Map<String, dynamic>))

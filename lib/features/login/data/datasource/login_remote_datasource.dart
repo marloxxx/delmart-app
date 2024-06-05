@@ -43,34 +43,28 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
   // google login
   @override
   Future<Either<Failure, model.User>> loginUserWithGoogle() async {
-    try {
-      final GoogleSignInAccount? googleSignInAccount =
-          await _googleSignIn.signIn();
+    final GoogleSignInAccount? googleSignInAccount =
+        await _googleSignIn.signIn();
 
-      if (googleSignInAccount != null) {
-        final GoogleSignInAuthentication googleSignInAuthentication =
-            await googleSignInAccount.authentication;
+    if (googleSignInAccount != null) {
+      final GoogleSignInAuthentication googleSignInAuthentication =
+          await googleSignInAccount.authentication;
 
-        String? accessToken = googleSignInAuthentication.accessToken;
+      String? accessToken = googleSignInAuthentication.accessToken;
 
-        final response = await request.post(
-          '/auth/google',
-          data: {'token': accessToken},
-        );
-        if (response.statusCode == 200) {
-          request.updateAuthorization(response.data['data']['access_token']);
-          var data = response.data['data']['user'];
-          data['token'] = response.data['data']['access_token'];
-          return Right(model.User.fromJson(data));
-        } else {
-          return Left(ConnectionFailure(response.data['message']));
-        }
+      final response = await request.post(
+        '/auth/google',
+        data: {'token': accessToken},
+      );
+      if (response.statusCode == 200) {
+        request.updateAuthorization(response.data['data']['access_token']);
+        var data = response.data['data']['user'];
+        data['token'] = response.data['data']['access_token'];
+        return Right(model.User.fromJson(data));
       } else {
-        return const Left(
-          Exception('Exception Occured in LoginRemoteDataSourceImpl'),
-        );
+        return Left(ConnectionFailure(response.data['message']));
       }
-    } catch (e) {
+    } else {
       return const Left(
         Exception('Exception Occured in LoginRemoteDataSourceImpl'),
       );

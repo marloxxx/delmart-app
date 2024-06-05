@@ -20,11 +20,4 @@ class RegisterUserRepositoryImpl implements RegisterUserRepository {
   Future<Either<Failure, User>> registerWithGoogle() {
     return serviceLocator<RegisterRemoteDataSource>().registerUserWithGoogle();
   }
-
-  // facebook register
-  @override
-  Future<Either<Failure, User>> registerWithFacebook() {
-    return serviceLocator<RegisterRemoteDataSource>()
-        .registerUserWithFacebook();
-  }
 }

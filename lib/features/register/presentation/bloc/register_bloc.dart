@@ -40,21 +40,5 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
         );
       },
     );
-    // facebook register
-    on<RegisterUserFacebookEvent>(
-      (event, emit) async {
-        emit(const RegisterState.loading());
-        var result = await serviceLocator<RegisterUserUsecase>()
-            .registerUserWithFacebook();
-        result.fold(
-          (failure) {
-            emit(RegisterState.error(failure.message));
-          },
-          (data) {
-            emit(RegisterState.loaded(user: data));
-          },
-        );
-      },
-    );
   }
 }

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "849390710828",
+    "project_id": "helpful-lens-425114-h2",
+    "storage_bucket": "helpful-lens-425114-h2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849390710828:android:fb551daf5c044110eda189",
+        "android_client_info": {
+          "package_name": "com.example.delmart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "849390710828-u7kno455f52kkgf134iqff59lkae2677.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuwLhe2I10Xa-Vkx_6Uyu0rY9yv6nANIA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "849390710828-2gspv9lo5sa9s8jpfm9mkerfknfv0bli.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "849390710828-q33vug5olf93d3ihihqpigjk1h6l1j3c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.delmart"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -20,7 +20,6 @@ const List<String> status = [
 
 @RoutePage()
 class RequestRoomScreen extends StatefulWidget {
-  static const String routeName = '/request-room';
   const RequestRoomScreen({super.key});
 
   @override

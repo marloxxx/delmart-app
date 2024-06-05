@@ -11,7 +11,6 @@ final GoogleSignIn _googleSignIn = GoogleSignIn();
 abstract class RegisterRemoteDataSource {
   Future<Either<Failure, User>> registerUser({required User user});
   Future<Either<Failure, User>> registerUserWithGoogle();
-  Future<Either<Failure, User>> registerUserWithFacebook();
 }
 
 class RegisterRemoteDataSourceImpl implements RegisterRemoteDataSource {
@@ -39,54 +38,27 @@ class RegisterRemoteDataSourceImpl implements RegisterRemoteDataSource {
   // google register
   @override
   Future<Either<Failure, User>> registerUserWithGoogle() async {
-    try {
-      final GoogleSignInAccount? googleSignInAccount =
-          await _googleSignIn.signIn();
-
-      if (googleSignInAccount != null) {
-        final GoogleSignInAuthentication googleSignInAuthentication =
-            await googleSignInAccount.authentication;
-
-        String? accessToken = googleSignInAuthentication.accessToken;
-
-        final response = await request.post(
-          '/auth/google',
-          data: {'token': accessToken},
-        );
-        if (response.statusCode == 200) {
-          request.updateAuthorization(response.data['data']['access_token']);
-          var data = response.data['data']['user'];
-          data['token'] = response.data['data']['access_token'];
-          return Right(User.fromJson(data));
-        } else {
-          return Left(ConnectionFailure(response.data['message']));
-        }
-      } else {
-        return const Left(
-          Exception('Exception Occured in LoginRemoteDataSourceImpl'),
-        );
-      }
-    } catch (e) {
-      return const Left(
-        Exception('Exception Occured in RegisterRemoteDataSourceImpl'),
-      );
-    }
-  }
-
-  // facebook register
-  @override
-  Future<Either<Failure, User>> registerUserWithFacebook() async {
-    try {
+    final GoogleSignInAccount? googleSignInAccount =
+        await _googleSignIn.signIn();
+    if (googleSignInAccount != null) {
+      final GoogleSignInAuthentication googleSignInAuthentication =
+          await googleSignInAccount.authentication;
+      String? accessToken = googleSignInAuthentication.accessToken;
       final response = await request.post(
-        '/auth/facebook',
+        '/auth/google',
+        data: {'token': accessToken},
       );
       if (response.statusCode == 200) {
-        return Right(User.fromJson(response.data));
+        request.updateAuthorization(response.data['data']['access_token']);
+        var data = response.data['data']['user'];
+        data['token'] = response.data['data']['access_token'];
+        return Right(User.fromJson(data));
+      } else {
+        return Left(ConnectionFailure(response.data['message']));
       }
-      return Left(ConnectionFailure(response.data['message']));
-    } catch (e) {
+    } else {
       return const Left(
-        Exception('Exception Occured in RegisterRemoteDataSourceImpl'),
+        Exception('Exception Occured in GoogleSignInAccount'),
       );
     }
   }

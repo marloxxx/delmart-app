@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart'
-    show FontAwesomeIcons, FaIcon;
+    show FontAwesomeIcons;
+import 'package:quickalert/quickalert.dart';
 
 import '../../../../routes/app_routers.dart';
 import '../../../../shared/theme.dart';
@@ -16,14 +17,12 @@ import '../../data/models/user_model.dart';
 @RoutePage()
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
-  static const String routeName = '/register';
   @override
   State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
   final _formKey = GlobalKey<FormState>();
-  final TextEditingController _nikController = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
@@ -38,19 +37,17 @@ class _RegisterScreenState extends State<RegisterScreen> {
         backgroundColor: white,
         body: BlocConsumer<RegisterBloc, RegisterState>(
           listener: (context, state) {
-            // on success delete navigator stack and push to home
             if (state is RegisterLoadedState) {
               AutoRouter.of(context).pushAndPopUntil(
                 const HomeRoute(),
                 predicate: (_) => false,
               );
             } else if (state is RegisterErrorState) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text(
-                    state.message,
-                  ),
-                ),
+              QuickAlert.show(
+                context: context,
+                type: QuickAlertType.error,
+                title: 'Error',
+                text: state.message,
               );
             }
           },
@@ -89,24 +86,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         Form(
                           key: _formKey,
                           child: Column(children: [
-                            // NIK input
-                            CustomTextFormField(
-                              prefixIcon: Icon(
-                                const FaIcon(FontAwesomeIcons.idCard).icon,
-                                color: softGray,
-                              ),
-                              hintText: "NIK",
-                              validator: (value) {
-                                if (value == null || value.isEmpty) {
-                                  return 'Please enter your NIK';
-                                } else if (value.length != 16) {
-                                  return 'NIK must be 16 digits';
-                                }
-                                return null;
-                              },
-                              controller: _nikController,
-                              onSaved: (value) => _nikController.text = value!,
-                            ),
                             const SizedBox(
                               height: 10,
                             ),
@@ -235,35 +214,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             const SizedBox(
                               height: 10,
                             ),
-                            // google and facebook register
-                            Row(
-                              children: [
-                                Expanded(
-                                  child: CustomFilledButton(
-                                      color: const Color(0xffdb3236),
-                                      text: "Google",
-                                      onPressed: _googleRegister,
-                                      icon: Icon(
-                                        FontAwesomeIcons.google,
-                                        color: white,
-                                      )),
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Expanded(
-                                  child: CustomFilledButton(
-                                    color: const Color(0xff3b5998),
-                                    text: "Facebook",
-                                    onPressed: _facebookRegister,
-                                    icon: Icon(
-                                      FontAwesomeIcons.facebookF,
-                                      color: white,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
+                            CustomFilledButton(
+                                color: const Color(0xffdb3236),
+                                text: "Google",
+                                onPressed: _googleRegister,
+                                icon: Icon(
+                                  FontAwesomeIcons.google,
+                                  color: white,
+                                )),
                           ]),
                         ),
                         const SizedBox(
@@ -316,7 +274,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
       BlocProvider.of<RegisterBloc>(context).add(
         RegisterEvent.onRegisterTapped(
           user: User(
-            nik: _nikController.text,
             email: _emailController.text,
             password: _passwordController.text,
             phone: _phoneController.text,
@@ -330,12 +287,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
   void _googleRegister() {
     BlocProvider.of<RegisterBloc>(context).add(
       const RegisterEvent.onGoogleRegisterTapped(),
-    );
-  }
-
-  void _facebookRegister() {
-    BlocProvider.of<RegisterBloc>(context).add(
-      const RegisterEvent.onFacebookRegisterTapped(),
     );
   }
 }

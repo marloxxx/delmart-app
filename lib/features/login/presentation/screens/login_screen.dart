@@ -3,6 +3,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart'
     show FontAwesomeIcons;
+import 'package:quickalert/quickalert.dart';
 
 import '../../../../routes/app_routers.dart';
 import '../../../../shared/theme.dart';
@@ -35,14 +36,18 @@ class _LoginScreenState extends State<LoginScreen> {
         backgroundColor: white,
         body: BlocConsumer<LoginBloc, LoginState>(
           listener: (context, state) {
-            // on success delete navigator stack and push to home
             if (state is LoginLoadedState) {
               context.router.pushAndPopUntil(
                 const HomeRoute(),
                 predicate: (_) => false,
               );
             } else if (state is LoginErrorState) {
-              _showSnackBar(state.message);
+              QuickAlert.show(
+                context: context,
+                type: QuickAlertType.error,
+                title: "Login Failed",
+                text: state.message,
+              );
             }
           },
           builder: (context, state) {
@@ -145,7 +150,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                                 InkWell(
-                                  onTap: _showForgotPasswordPage,
+                                  onTap: () {},
                                   child: Text(
                                     "Forgot Password?",
                                     style: TextStyle(
@@ -232,10 +237,6 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  void _showForgotPasswordPage() {
-    // AutoRouter.of(context).push(const ForgotPasswordRoute());
-  }
-
   void _login() {
     if (_formKey.currentState!.validate()) {
       BlocProvider.of<LoginBloc>(context).add(
@@ -257,13 +258,5 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void _showRegisterPage() {
     AutoRouter.of(context).push(const RegisterRoute());
-  }
-
-  void _showSnackBar(String message) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(message),
-      ),
-    );
   }
 }

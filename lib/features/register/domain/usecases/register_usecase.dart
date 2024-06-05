@@ -35,18 +35,4 @@ class RegisterUserUsecase {
     }
     return response;
   }
-
-  // facebook Register
-  Future<Either<Failure, User>> registerUserWithFacebook() async {
-    final response =
-        await serviceLocator<RegisterUserRepository>().registerWithFacebook();
-    if (response.isRight()) {
-      final remoteUser = response.getOrElse(() => User());
-      serviceLocator<Request>().updateAuthorization(
-        remoteUser.token,
-      );
-      await serviceLocator<UserCacheService>().saveUserRegister(remoteUser);
-    }
-    return response;
-  }
 }

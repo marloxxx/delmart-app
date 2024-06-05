@@ -11,7 +11,7 @@ class OrderModel with _$OrderModel {
     required int id,
     required String code,
     required double total,
-    required String description,
+    String? description,
     required String paymentMethod,
     required OrderDetailList orderDetails,
     required String status,
