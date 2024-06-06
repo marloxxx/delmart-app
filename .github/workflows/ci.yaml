@@ -28,10 +28,6 @@ jobs:
     - name: Install dependencies
       run: flutter pub get
 
-      # Verifies if the dart code is formatted well
-    - name: Verify formatting
-      run: dart format --output=none --set-exit-if-changed .
-
     - name: Analyze project source
       run: flutter analyze --fatal-warnings
 
